@@ -127,26 +127,28 @@
   <div class="container">
     <div class="pd">
       <!-- LEFT COLUMN — Gallery (sticky) -->
-      <div style="position:sticky;top:90px;align-self:start;">
-        <div class="ph-img pd__main-img" style="height:380px;position:relative;">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><path d="M21 15l-5-5L5 21"/></svg>
-          <span>Hauptbild — Weinflasche / Produkt im Kontext</span>
+      <div>
+        <div style="position:sticky;top:90px;">
+          <div class="ph-img pd__main-img" style="height:380px;position:relative;">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><path d="M21 15l-5-5L5 21"/></svg>
+            <span>Hauptbild — Weinflasche / Produkt im Kontext</span>
+          </div>
+          <div class="pd__thumbs">
+            <div class="ph-img pd__thumb">
+              <span style="font-size:0.6rem;">Thumb 1</span>
+            </div>
+            <div class="ph-img pd__thumb">
+              <span style="font-size:0.6rem;">Thumb 2</span>
+            </div>
+            <div class="ph-img pd__thumb">
+              <span style="font-size:0.6rem;">Thumb 3</span>
+            </div>
+            <div class="ph-img pd__thumb">
+              <span style="font-size:0.6rem;">Thumb 4</span>
+            </div>
+          </div>
+          <div class="note">Inhalte scrollen mit — Galerie bleibt sichtbar beim Scrollen der Infospalte und erzeugt visuellen Anker.</div>
         </div>
-        <div class="pd__thumbs">
-          <div class="ph-img pd__thumb">
-            <span style="font-size:0.6rem;">Thumb 1</span>
-          </div>
-          <div class="ph-img pd__thumb">
-            <span style="font-size:0.6rem;">Thumb 2</span>
-          </div>
-          <div class="ph-img pd__thumb">
-            <span style="font-size:0.6rem;">Thumb 3</span>
-          </div>
-          <div class="ph-img pd__thumb">
-            <span style="font-size:0.6rem;">Thumb 4</span>
-          </div>
-        </div>
-        <div class="note">Inhalte scrollen mit — Galerie bleibt sichtbar beim Scrollen der Infospalte und erzeugt visuellen Anker.</div>
       </div>
 
       <!-- CENTER COLUMN — Product Info -->
@@ -892,6 +894,43 @@ function toggleMobileNav(){
   document.querySelector('.header__burger').classList.toggle('active');
   document.body.style.overflow=document.getElementById('mobile-nav').classList.contains('open')?'hidden':'';
 }
+</script>
+
+<!-- Sticky Add-to-Cart Bar -->
+<div class="sticky-atc" id="sticky-atc">
+  <div class="sticky-atc__inner">
+    <div class="sticky-atc__info">
+      <span class="sticky-atc__title">Riesling Spätlese 2023</span>
+      <span class="sticky-atc__price">24,90 €</span>
+    </div>
+    <div class="sticky-atc__actions">
+      <div class="sticky-atc__qty">
+        <button type="button" onclick="this.nextElementSibling.stepDown()">&#8722;</button>
+        <input type="number" value="6" min="1" max="99">
+        <button type="button" onclick="this.previousElementSibling.stepUp()">&#43;</button>
+      </div>
+      <button type="button" class="sticky-atc__btn" onclick="openCartDrawer()">In den Warenkorb</button>
+    </div>
+  </div>
+</div>
+
+<script>
+// Show sticky ATC bar when original cart row scrolls out of view
+(function(){
+  var cartRow = document.querySelector('.pd__cart-row');
+  var stickyBar = document.getElementById('sticky-atc');
+  if(!cartRow || !stickyBar) return;
+  function checkSticky(){
+    var rect = cartRow.getBoundingClientRect();
+    if(rect.bottom < 0){
+      stickyBar.classList.add('visible');
+    } else {
+      stickyBar.classList.remove('visible');
+    }
+  }
+  window.addEventListener('scroll', checkSticky, {passive:true});
+  checkSticky();
+})();
 </script>
 
 </body>
