@@ -31,7 +31,7 @@
 
 /* Reset */
 *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
-html{scroll-behavior:smooth;font-size:16px;-webkit-font-smoothing:antialiased}
+html{scroll-behavior:smooth;font-size:16px;-webkit-font-smoothing:antialiased;overflow-x:hidden}
 body{font-family:var(--font-body);color:var(--gray-900);background:var(--white);line-height:1.6;overflow-x:hidden}
 img{max-width:100%;display:block}
 a{color:inherit;text-decoration:none}
@@ -498,6 +498,47 @@ h4{font-family:var(--font-display);font-size:1.1rem;font-weight:500}
 .pd__legal a{color:var(--gray-400);text-decoration:underline;text-underline-offset:2px}
 .pd__legal a:hover{color:var(--gray-700)}
 
+/* ============================================================
+   FREE SHIPPING PROGRESS BAR
+   ============================================================ */
+.shipping-bar{padding:0 0 14px}
+.shipping-bar__text{font-size:0.75rem;color:var(--gray-700);margin-bottom:6px;text-align:center}
+.shipping-bar__text strong{color:#2E7D32;font-weight:600}
+.shipping-bar__track{width:100%;height:6px;background:var(--gray-200);border-radius:999px;overflow:hidden}
+.shipping-bar__fill{height:100%;background:linear-gradient(90deg,#66BB6A,#2E7D32);border-radius:999px;transition:width 0.4s ease}
+.shipping-bar--complete .shipping-bar__text{color:#2E7D32}
+.shipping-bar--complete .shipping-bar__fill{background:#2E7D32}
+
+/* ============================================================
+   MOBILE HAMBURGER & MENU
+   ============================================================ */
+.header__burger{
+  display:none;background:none;border:none;width:36px;height:36px;
+  flex-direction:column;gap:5px;align-items:center;justify-content:center;
+  cursor:pointer;padding:0;position:relative;z-index:1010;
+}
+.header__burger span{
+  display:block;width:20px;height:1.5px;background:var(--gray-900);
+  border-radius:2px;transition:all 0.3s ease;transform-origin:center;
+}
+.header__burger.active span:nth-child(1){transform:rotate(45deg) translate(4.5px,4.5px)}
+.header__burger.active span:nth-child(2){opacity:0}
+.header__burger.active span:nth-child(3){transform:rotate(-45deg) translate(4.5px,-4.5px)}
+
+.mobile-nav{
+  display:none;position:fixed;top:0;left:0;right:0;bottom:0;
+  background:var(--white);z-index:998;padding-top:80px;overflow-y:auto;
+}
+.mobile-nav.open{display:block}
+.mobile-nav__links{padding:20px 24px;display:flex;flex-direction:column}
+.mobile-nav__links a{
+  display:block;padding:16px 0;font-family:var(--font-display);font-size:1.5rem;
+  font-weight:400;color:var(--gray-900);border-bottom:1px solid var(--gray-100);
+  text-decoration:none;transition:color var(--ease);
+}
+.mobile-nav__links a:first-child{border-top:1px solid var(--gray-100)}
+.mobile-nav__links a:hover,.mobile-nav__links a.active{color:var(--black)}
+
 /* Fade-in */
 .fade-in{opacity:0;transform:translateY(24px);transition:opacity 0.7s ease,transform 0.7s ease}
 .fade-in.visible{opacity:1;transform:translateY(0)}
@@ -641,13 +682,148 @@ h4{font-family:var(--font-display);font-size:1.1rem;font-weight:500}
 }
 .cart-drawer__continue:hover{color:var(--gray-900)}
 
-@media(max-width:420px){
-  .cart-drawer{width:100%}
+/* cart drawer full-width handled in 768px breakpoint */
+
+/* ============================================================
+   WEINBERATUNG — Food Strip
+   ============================================================ */
+.fstrip{
+  display:flex;gap:28px;justify-content:center;flex-wrap:wrap;margin-top:0;
 }
+.fstrip__item{
+  display:flex;flex-direction:column;align-items:center;gap:10px;
+  cursor:pointer;transition:transform var(--ease);text-decoration:none;
+}
+.fstrip__item:hover{transform:translateY(-4px)}
+.fstrip__icon{
+  width:80px;height:80px;border-radius:50%;
+  background:rgba(255,255,255,0.06);border:1.5px dashed rgba(255,255,255,0.25);
+  display:flex;align-items:center;justify-content:center;
+  color:rgba(255,255,255,0.6);font-size:0.65rem;text-align:center;
+  transition:all var(--ease);padding:6px;
+}
+.fstrip__item:hover .fstrip__icon{
+  border-color:rgba(255,255,255,0.8);background:rgba(255,255,255,0.12);
+}
+.fstrip__icon svg{width:28px;height:28px;opacity:0.5;stroke:rgba(255,255,255,0.7)}
+.fstrip__label{
+  font-family:var(--font-body);font-size:0.75rem;font-weight:500;
+  color:var(--gray-400);text-align:center;letter-spacing:0.3px;
+  transition:color var(--ease);
+}
+.fstrip__item:hover .fstrip__label{color:var(--white)}
+
+/* ============================================================
+   WEINBERATUNG — Food Cards (Wein zum Essen)
+   ============================================================ */
+.fcard-grid{
+  display:grid;grid-template-columns:3fr 2fr;gap:16px;
+}
+.fcard-grid--3{grid-template-columns:repeat(3,1fr)}
+.fcard{
+  position:relative;overflow:hidden;border-radius:var(--r);
+  display:block;text-decoration:none;transition:transform var(--ease),box-shadow var(--ease);
+}
+.fcard:hover{transform:translateY(-2px);box-shadow:var(--shadow-md)}
+.fcard__img{
+  width:100%;height:300px;border-radius:var(--r);
+  transition:transform 0.4s ease;
+  display:flex;align-items:center;justify-content:center;flex-direction:column;gap:8px;
+}
+.fcard__img.ph-img{background:#C5CFC7;border-color:#A3B3A6 !important}
+.fcard-grid--3 .fcard__img{height:220px}
+.fcard:hover .fcard__img{transform:scale(1.02)}
+.fcard__overlay{
+  position:absolute;inset:0;
+  background:linear-gradient(to top,rgba(0,0,0,0.65) 0%,rgba(0,0,0,0.15) 50%,transparent 100%);
+  border-radius:var(--r);display:flex;flex-direction:column;
+  justify-content:flex-end;align-items:flex-start;padding:24px;gap:12px;
+}
+.fcard__category{
+  font-family:var(--font-display);font-size:clamp(1.3rem,2.2vw,1.8rem);
+  font-weight:500;color:var(--white);text-transform:uppercase;
+  letter-spacing:2px;line-height:1.1;
+}
+.fcard__cta{
+  font-size:0.78rem;padding:8px 20px;
+  opacity:0;transform:translateY(6px);
+  transition:opacity 0.25s ease,transform 0.25s ease;
+}
+.fcard:hover .fcard__cta{opacity:1;transform:translateY(0)}
+
+/* ============================================================
+   WEINBERATUNG — Moment Pill Strip
+   ============================================================ */
+.mstrip{
+  display:flex;gap:10px;justify-content:center;flex-wrap:wrap;
+}
+.mstrip__pill{
+  display:inline-flex;align-items:center;padding:8px 20px;
+  border-radius:999px;border:1.5px solid var(--gray-300);
+  font-family:var(--font-body);font-size:0.82rem;font-weight:500;
+  color:var(--gray-700);text-decoration:none;transition:all var(--ease);
+  background:var(--white);
+}
+.mstrip__pill:hover,
+.mstrip__pill--active{
+  border-color:var(--gray-900);background:var(--gray-900);color:var(--white);
+}
+
+/* ============================================================
+   WEINBERATUNG — Moment Cards (Weinmomente)
+   ============================================================ */
+.mcard-grid{
+  display:grid;grid-template-columns:3fr 2fr;gap:16px;
+}
+.mcard{
+  position:relative;overflow:hidden;border-radius:var(--r);
+  display:block;text-decoration:none;
+  transition:transform var(--ease),box-shadow var(--ease);
+}
+.mcard:hover{transform:translateY(-3px);box-shadow:var(--shadow-lg)}
+.mcard__img{
+  width:100%;border-radius:var(--r);transition:transform 0.5s ease;
+  display:flex;align-items:center;justify-content:center;flex-direction:column;gap:8px;
+  height:400px;
+}
+.mcard__img.ph-img{background:#C5CFC7;border-color:#A3B3A6 !important}
+.mcard:hover .mcard__img{transform:scale(1.03)}
+.mcard__overlay{
+  position:absolute;inset:0;
+  background:linear-gradient(to top,rgba(0,0,0,0.72) 0%,rgba(0,0,0,0.2) 45%,transparent 75%);
+  border-radius:var(--r);display:flex;flex-direction:column;
+  justify-content:flex-end;padding:28px;gap:10px;
+}
+.mcard__title{
+  font-family:var(--font-display);font-size:clamp(1.5rem,2.5vw,2.2rem);
+  font-weight:500;color:var(--white);text-transform:uppercase;
+  letter-spacing:2.5px;line-height:1.1;
+}
+.mcard__text{
+  font-size:0.88rem;color:rgba(255,255,255,0.75);
+  line-height:1.6;max-width:320px;margin:0;
+}
+.mcard__cta{
+  font-size:0.78rem;padding:8px 20px;
+  opacity:0;transform:translateY(6px);
+  transition:opacity 0.25s ease,transform 0.25s ease;
+  align-self:flex-start;
+}
+.mcard:hover .mcard__cta{opacity:1;transform:translateY(0)}
 
 /* ============================================================
    RESPONSIVE
    ============================================================ */
+
+/* Extra large screens (30"+) */
+@media(min-width:1600px){
+  .container{max-width:1400px}
+  .section{padding:100px 0}
+  .grid-2{gap:80px}
+  .footer__grid{gap:48px}
+}
+
+/* Desktop (1024px) */
 @media(max-width:1024px){
   .container{padding:0 24px}
   .grid-2,.pd{grid-template-columns:1fr;gap:36px}
@@ -657,16 +833,70 @@ h4{font-family:var(--font-display);font-size:1.1rem;font-weight:500}
   .srow{grid-template-columns:1fr 1fr}
   .footer__bar{flex-direction:column;text-align:center}
   .kp__grid{grid-template-columns:1fr}
+  .fcard-grid{grid-template-columns:1fr 1fr}
+  .mcard-grid{grid-template-columns:1fr 1fr}
+  .section{padding:60px 0}
+  .cats{gap:20px}
+  .cats__circle{width:84px;height:84px}
 }
+
+/* Tablet & Mobile (768px) */
 @media(max-width:768px){
   .header__inner{height:56px;padding:0 16px}
   .header__nav{display:none}
+  .header__burger{display:flex}
+  .section{padding:40px 0}
+  .announcement{font-size:0.72rem;padding:8px 16px}
   .grid-3,.grid-4{grid-template-columns:1fr 1fr}
-  .cats{gap:16px}
-  .cats__circle{width:76px;height:76px}
+  .cats{
+    gap:16px;flex-wrap:nowrap;overflow-x:auto;
+    -webkit-overflow-scrolling:touch;justify-content:flex-start;
+    padding-bottom:8px;scrollbar-width:none;
+  }
+  .cats::-webkit-scrollbar{display:none}
+  .cats__item{flex-shrink:0}
+  .cats__circle{width:72px;height:72px;font-size:0.6rem}
+  .cats__name{font-size:0.82rem}
   .nl__form-row{grid-template-columns:1fr !important}
   .footer__grid{grid-template-columns:1fr}
-  .footer__bottom{flex-direction:column;align-items:flex-start}
+  .footer__bottom{flex-direction:column;align-items:center;text-align:center;gap:16px}
+  .footer__bottom-left{flex-wrap:wrap;justify-content:center}
   .wf-cta__btns{flex-direction:column}
   .srow{grid-template-columns:1fr}
+  .fcard-grid,.fcard-grid--3,.mcard-grid{grid-template-columns:1fr}
+  .fcard__img{height:200px}
+  .fstrip{gap:16px}
+  .fstrip__icon{width:64px;height:64px}
+  .mcard__img{height:280px}
+  .cart-drawer{width:100%}
+  .gcard{padding:28px 20px}
+  .trust__inner{gap:16px}
+  .grid-2{gap:28px}
+}
+
+/* Small mobile (480px) */
+@media(max-width:480px){
+  .container{padding:0 16px}
+  .header__inner{padding:0 12px}
+  h1{font-size:1.6rem}
+  h2{font-size:1.35rem}
+  .grid-3,.grid-4{grid-template-columns:1fr;gap:16px}
+  .trust__inner{
+    flex-wrap:nowrap;overflow-x:auto;
+    -webkit-overflow-scrolling:touch;justify-content:flex-start;
+    padding-bottom:8px;scrollbar-width:none;
+  }
+  .trust__inner::-webkit-scrollbar{display:none}
+  .pcard__cart{flex-direction:column}
+  .pcard__add-btn{width:100%;text-align:center;justify-content:center}
+  .nl{padding:40px 0}
+  .footer{padding:40px 0 24px}
+  .fpay{flex-wrap:wrap;justify-content:center}
+  .section--dark .body-text{font-size:0.85rem}
+  .gcard p{font-size:0.82rem}
+  .tcard{padding:20px}
+  .pd__price{font-size:1.5rem}
+  .pd__cart-row{flex-direction:column}
+  .pd__qty{align-self:flex-start}
+  .pd__add-btn{width:100%;text-align:center}
 }

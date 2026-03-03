@@ -1,0 +1,676 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Weingut Mustertal — Weinberatung | Wireframe</title>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400&family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<!-- ============================================================
+     1. ANNOUNCEMENT BAR
+     ============================================================ -->
+<div class="announcement">
+  Dieser schmale Banner erzeugt Dringlichkeit durch ein zeitlich begrenztes Angebot — Versandkostenfrei ab 100 € &nbsp;|&nbsp; <a href="#">Jetzt Kennenlernpaket sichern</a>
+</div>
+
+<!-- ============================================================
+     2. HEADER
+     ============================================================ -->
+<header class="header">
+  <div class="header__inner">
+    <a href="index.html" class="header__logo">Weingut <em>Mustertal</em></a>
+    <ul class="header__nav">
+      <li><a href="index.html">Startseite</a></li>
+      <li>
+        <a href="weine.html">Alle Weine</a>
+        <!-- Mega Menu -->
+        <div class="mega">
+          <div class="mega__grid mega__grid--wide">
+            <div class="mega__col">
+              <h4>Sortiment</h4>
+              <ul>
+                <li><a href="kategorie.html">Weißweine</a></li>
+                <li><a href="kategorie.html">Rotweine</a></li>
+                <li><a href="kategorie.html">Rosé</a></li>
+                <li><a href="kategorie.html">Sekt & Secco</a></li>
+                <li><a href="kategorie.html">Spirituosen</a></li>
+                <li><a href="kategorie.html">Alkoholfrei</a></li>
+                <li><a href="weine.html">Alle Weine</a></li>
+              </ul>
+            </div>
+            <div class="mega__col">
+              <h4>Terroir</h4>
+              <ul>
+                <li><a href="kategorie.html">Unsere Böden</a></li>
+                <li><a href="kategorie.html">Muschelkalk</a></li>
+                <li><a href="kategorie.html">Löss & Lehm</a></li>
+                <li><a href="kategorie.html">Einzellagen</a></li>
+                <li><a href="kategorie.html">Lagenkarte</a></li>
+              </ul>
+            </div>
+            <div class="mega__col">
+              <h4>Sonstiges</h4>
+              <ul>
+                <li><a href="kategorie.html">Neuheiten</a></li>
+                <li><a href="kategorie.html">Bestseller</a></li>
+                <li><a href="kategorie.html">Kennenlernpakete</a></li>
+                <li><a href="kategorie.html">Geschenksets</a></li>
+                <li><a href="kategorie.html">Wein im Abo</a></li>
+              </ul>
+            </div>
+            <div class="mega__col">
+              <h4>Qualitätsstufen</h4>
+              <ul>
+                <li><a href="kategorie.html">Gutswein</a></li>
+                <li><a href="kategorie.html">Ortswein</a></li>
+                <li><a href="kategorie.html">Lagenwein</a></li>
+                <li><a href="kategorie.html">Große Gewächse</a></li>
+              </ul>
+            </div>
+            <div class="mega__col">
+              <div class="mega__product">
+                <div class="ph" style="height:90px">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1"><rect x="3" y="3" width="18" height="18" rx="2"/><line x1="3" y1="9" x2="21" y2="9"/></svg>
+                  <span>Paket-Teaser</span>
+                </div>
+                <div class="mega__product-name">Kennenlernpaket</div>
+                <div class="mega__product-price">49,90 €</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </li>
+      <li class="active"><a href="weinberatung.html">Weinberatung</a></li>
+      <li><a href="ueber-uns.html">Über Uns</a></li>
+      <li><a href="events.html">Events &amp; Weinprobe</a></li>
+      <li><a href="kontakt.html">Kontakt</a></li>
+    </ul>
+    <button class="header__burger" aria-label="Menü" onclick="toggleMobileNav()">
+      <span></span><span></span><span></span>
+    </button>
+    <div class="header__icons">
+      <!-- Search -->
+      <button aria-label="Suche">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+      </button>
+      <!-- Profile -->
+      <button aria-label="Mein Konto">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+      </button>
+      <!-- Cart -->
+      <button aria-label="Warenkorb" onclick="openCartDrawer()">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"/><line x1="3" y1="6" x2="21" y2="6"/><path d="M16 10a4 4 0 0 1-8 0"/></svg>
+        <span class="cart-badge">2</span>
+      </button>
+    </div>
+  </div>
+</header>
+
+<nav class="mobile-nav" id="mobile-nav">
+  <div class="mobile-nav__links">
+    <a href="index.html">Startseite</a>
+    <a href="weine.html">Alle Weine</a>
+    <a href="weinberatung.html" class="active">Weinberatung</a>
+    <a href="ueber-uns.html">Über Uns</a>
+    <a href="events.html">Events &amp; Weinprobe</a>
+    <a href="kontakt.html">Kontakt</a>
+  </div>
+</nav>
+
+<!-- ============================================================
+     3. HERO BANNER
+     ============================================================ -->
+<section class="hero-banner fade-in">
+  <div class="ph-img" style="min-height:460px;border-radius:0;">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><path d="M21 15l-5-5L5 21"/></svg>
+    <span>Hero-Bild — Gedeckter Tisch im Weinberg, Abendsonne, Weinflaschen und Speisen</span>
+  </div>
+  <div class="hero-banner__content">
+    <span class="label" style="color:var(--gray-400);">Weinberatung</span>
+    <h1>Der richtige Wein<br>für jeden Moment</h1>
+    <p>
+      Ob zum Sonntagsbraten, beim Mädelstag oder einfach nach Feierabend auf der Terrasse —
+      wir zeigen Ihnen, welcher Wein aus unserem Weingut zu Ihrem Moment passt.
+    </p>
+    <div style="display:flex;gap:12px;justify-content:center;flex-wrap:wrap;margin-top:12px;">
+      <a href="#wein-zum-essen" class="btn btn--white">Wein zum Essen</a>
+      <a href="#weinmomente" class="btn btn--outline" style="border-color:rgba(255,255,255,0.4);color:#fff;">Weinmomente</a>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================
+     4. WEIN ZUM ESSEN — Icon-Strip (dark)
+     ============================================================ -->
+<section id="wein-zum-essen" class="section section--dark fade-in">
+  <div class="container" style="text-align:center;">
+    <span class="label" style="color:var(--gray-400);">01 — Wein zum Essen</span>
+    <h2 style="color:var(--white);">Was gibt es heute zu essen?</h2>
+    <p class="body-text" style="margin:14px auto 40px;text-align:center;color:var(--gray-400);">
+      Klicken Sie auf eine Speise und wir zeigen Ihnen, welche Weine aus unserem Keller
+      am besten dazu passen.
+    </p>
+
+    <div class="fstrip">
+      <a href="kategorie.html" class="fstrip__item">
+        <div class="fstrip__icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2C8 2 4 6 4 10c0 3 2 5 4 6v2h8v-2c2-1 4-3 4-6 0-4-4-8-8-8z"/><line x1="8" y1="22" x2="16" y2="22"/></svg>
+        </div>
+        <span class="fstrip__label">Braten &<br>Schmorgerichte</span>
+      </a>
+      <a href="kategorie.html" class="fstrip__item">
+        <div class="fstrip__icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"><path d="M12 2c-3 0-5 2-5 5s2 5 5 5 5-2 5-5-2-5-5-5z"/><path d="M4 22c0-4 3.5-7 8-7s8 3 8 7"/></svg>
+        </div>
+        <span class="fstrip__label">Geflügel</span>
+      </a>
+      <a href="kategorie.html" class="fstrip__item">
+        <div class="fstrip__icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"><path d="M8 2l4 6 4-6"/><path d="M6 8h12l-2 14H8L6 8z"/></svg>
+        </div>
+        <span class="fstrip__label">Wild &<br>Herbstküche</span>
+      </a>
+      <a href="kategorie.html" class="fstrip__item">
+        <div class="fstrip__icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"><path d="M2 12c0 0 4-6 10-6s10 6 10 6-4 6-10 6S2 12 2 12z"/><path d="M18 12l3 4M18 12l3-4"/></svg>
+        </div>
+        <span class="fstrip__label">Fisch &<br>Meeresfrüchte</span>
+      </a>
+      <a href="kategorie.html" class="fstrip__item">
+        <div class="fstrip__icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"><rect x="3" y="6" width="18" height="12" rx="3"/><line x1="3" y1="12" x2="21" y2="12"/></svg>
+        </div>
+        <span class="fstrip__label">Käse &<br>Charcuterie</span>
+      </a>
+      <a href="kategorie.html" class="fstrip__item">
+        <div class="fstrip__icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"><path d="M12 2C6 2 2 6 2 10h20c0-4-4-8-8-8z"/><rect x="2" y="10" width="20" height="4" rx="1"/><path d="M4 14v4c0 2 3 4 8 4s8-2 8-4v-4"/></svg>
+        </div>
+        <span class="fstrip__label">Pasta &<br>Risotto</span>
+      </a>
+      <a href="kategorie.html" class="fstrip__item">
+        <div class="fstrip__icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"><path d="M12 22c-4 0-8-3-8-8 0-3 2-5 4-7l4-5 4 5c2 2 4 4 4 7 0 5-4 8-8 8z"/><path d="M12 18c-2 0-4-1.5-4-4"/></svg>
+        </div>
+        <span class="fstrip__label">Vegetarisch</span>
+      </a>
+      <a href="kategorie.html" class="fstrip__item">
+        <div class="fstrip__icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"><circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="3"/><line x1="12" y1="3" x2="12" y2="6"/><line x1="12" y1="18" x2="12" y2="21"/></svg>
+        </div>
+        <span class="fstrip__label">Apéro &<br>Snacks</span>
+      </a>
+      <a href="kategorie.html" class="fstrip__item">
+        <div class="fstrip__icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"><path d="M4 18h16"/><path d="M4 18l2-12h12l2 12"/><path d="M9 6V4c0-1 1-2 3-2s3 1 3 2v2"/></svg>
+        </div>
+        <span class="fstrip__label">Dessert &<br>Süßes</span>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================
+     5. WEIN ZUM ESSEN — Bild-Cards
+     ============================================================ -->
+<section class="section fade-in">
+  <div class="container">
+    <span class="label">Klassiker, die immer gehen</span>
+    <h2 style="margin-bottom:32px;">Unsere beliebtesten Speisenbegleiter</h2>
+
+    <!-- Row 1: 60/40 -->
+    <div class="fcard-grid">
+      <a href="kategorie.html" class="fcard">
+        <div class="fcard__img ph-img" style="border:1.5px dashed #B8C8BA;">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1" style="width:32px;height:32px;opacity:0.4;"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><path d="M21 15l-5-5L5 21"/></svg>
+          <span style="color:#8A9E8E;font-size:0.75rem;">Sonntagsbraten, dampfend, rustikaler Tisch</span>
+        </div>
+        <div class="fcard__overlay">
+          <span class="fcard__category">Braten &<br>Schmorgerichte</span>
+          <span class="btn btn--white fcard__cta">Jetzt entdecken</span>
+        </div>
+      </a>
+      <a href="kategorie.html" class="fcard">
+        <div class="fcard__img ph-img" style="border:1.5px dashed #B8C8BA;">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1" style="width:32px;height:32px;opacity:0.4;"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><path d="M21 15l-5-5L5 21"/></svg>
+          <span style="color:#8A9E8E;font-size:0.75rem;">Wildgulasch mit Rotwein, Herbststimmung</span>
+        </div>
+        <div class="fcard__overlay">
+          <span class="fcard__category">Wild &<br>Herbstküche</span>
+          <span class="btn btn--white fcard__cta">Jetzt entdecken</span>
+        </div>
+      </a>
+    </div>
+
+    <!-- Row 2: 3 columns -->
+    <div class="fcard-grid fcard-grid--3" style="margin-top:16px;">
+      <a href="kategorie.html" class="fcard">
+        <div class="fcard__img ph-img" style="border:1.5px dashed #B8C8BA;">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1" style="width:32px;height:32px;opacity:0.4;"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><path d="M21 15l-5-5L5 21"/></svg>
+          <span style="color:#8A9E8E;font-size:0.75rem;">Käseplatte, Trauben, Walnüsse</span>
+        </div>
+        <div class="fcard__overlay">
+          <span class="fcard__category">Käse &<br>Charcuterie</span>
+          <span class="btn btn--white fcard__cta">Jetzt entdecken</span>
+        </div>
+      </a>
+      <a href="kategorie.html" class="fcard">
+        <div class="fcard__img ph-img" style="border:1.5px dashed #B8C8BA;">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1" style="width:32px;height:32px;opacity:0.4;"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><path d="M21 15l-5-5L5 21"/></svg>
+          <span style="color:#8A9E8E;font-size:0.75rem;">Fischfilet, hell, frisch</span>
+        </div>
+        <div class="fcard__overlay">
+          <span class="fcard__category">Fisch &<br>Meeresfrüchte</span>
+          <span class="btn btn--white fcard__cta">Jetzt entdecken</span>
+        </div>
+      </a>
+      <a href="kategorie.html" class="fcard">
+        <div class="fcard__img ph-img" style="border:1.5px dashed #B8C8BA;">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1" style="width:32px;height:32px;opacity:0.4;"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><path d="M21 15l-5-5L5 21"/></svg>
+          <span style="color:#8A9E8E;font-size:0.75rem;">Apéro, Oliven, Brot, Gläser im Freien</span>
+        </div>
+        <div class="fcard__overlay">
+          <span class="fcard__category">Apéro &<br>Snacks</span>
+          <span class="btn btn--white fcard__cta">Jetzt entdecken</span>
+        </div>
+      </a>
+    </div>
+
+    <div class="note" style="margin-top:24px;">
+      <strong>Shopify-Hinweis:</strong> Jede Card verlinkt auf eine Smart Collection mit dem Tag „speise:[slug]" (z.B. <code>speise-braten</code>, <code>speise-wild</code>). Im Eurus-Theme: Metafield <code>collection.metafields.custom.hero_image</code> für die Card-Bilder nutzen.
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================
+     6. WEINMOMENTE — Intro + Pill-Strip
+     ============================================================ -->
+<section id="weinmomente" class="section section--alt fade-in">
+  <div class="container" style="text-align:center;">
+    <span class="label">02 — Weinmomente</span>
+    <h2>Welcher Moment wartet auf Sie?</h2>
+    <p class="body-text" style="margin:14px auto 32px;text-align:center;">
+      Manchmal weiß man einfach, wie der Abend werden soll — aber nicht welche Flasche
+      dazu passt. Hier finden Sie unsere Empfehlungen nach Stimmung und Anlass.
+    </p>
+
+    <div class="mstrip">
+      <a href="#moment-zweisamkeit" class="mstrip__pill mstrip__pill--active">Zweisamkeit</a>
+      <a href="#moment-gesellschaft" class="mstrip__pill">Gesellschaft & Feier</a>
+      <a href="#moment-natur" class="mstrip__pill">Draußen & Natur</a>
+      <a href="#moment-feierabend" class="mstrip__pill">Feierabend</a>
+      <a href="#moment-geschenk" class="mstrip__pill">Schenken</a>
+      <a href="#moment-saisonal" class="mstrip__pill">Saisonal</a>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================
+     7. WEINMOMENTE — Asymmetrisches Card-Grid
+     ============================================================ -->
+<section class="section fade-in">
+  <div class="container">
+
+    <div class="mcard-grid">
+
+      <!-- Row 1: Large left, small right -->
+      <a href="kategorie.html" class="mcard" id="moment-zweisamkeit">
+        <div class="mcard__img ph-img" style="border:1.5px dashed #B8C8BA;">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1" style="width:32px;height:32px;opacity:0.4;"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><path d="M21 15l-5-5L5 21"/></svg>
+          <span style="color:#8A9E8E;font-size:0.75rem;">Paar auf Weingut-Terrasse, Abendsonne, zwei Weingläser</span>
+        </div>
+        <div class="mcard__overlay">
+          <span class="mcard__title">Zweisamkeit genießen</span>
+          <p class="mcard__text">Für Abende, die man nicht vergisst — mit einem Wein, der dazu passt.</p>
+          <span class="btn btn--white mcard__cta">Zur Weinauswahl</span>
+        </div>
+      </a>
+
+      <a href="kategorie.html" class="mcard">
+        <div class="mcard__img ph-img" style="border:1.5px dashed #B8C8BA;">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1" style="width:32px;height:32px;opacity:0.4;"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><path d="M21 15l-5-5L5 21"/></svg>
+          <span style="color:#8A9E8E;font-size:0.75rem;">Freundinnen auf Terrasse, Rosé, Lachen</span>
+        </div>
+        <div class="mcard__overlay">
+          <span class="mcard__title">Mädelstag</span>
+          <span class="btn btn--white mcard__cta">Zur Weinauswahl</span>
+        </div>
+      </a>
+
+      <!-- Row 2: Small left, large right (HTML order swapped) -->
+      <a href="kategorie.html" class="mcard" id="moment-feierabend">
+        <div class="mcard__img ph-img" style="border:1.5px dashed #B8C8BA;">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1" style="width:32px;height:32px;opacity:0.4;"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><path d="M21 15l-5-5L5 21"/></svg>
+          <span style="color:#8A9E8E;font-size:0.75rem;">Person auf Gartenbank, Buch, Weinglas, Abendsonne</span>
+        </div>
+        <div class="mcard__overlay">
+          <span class="mcard__title">Einfach Feierabend</span>
+          <span class="btn btn--white mcard__cta">Zur Weinauswahl</span>
+        </div>
+      </a>
+
+      <a href="kategorie.html" class="mcard" id="moment-gesellschaft">
+        <div class="mcard__img ph-img" style="border:1.5px dashed #B8C8BA;">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1" style="width:32px;height:32px;opacity:0.4;"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><path d="M21 15l-5-5L5 21"/></svg>
+          <span style="color:#8A9E8E;font-size:0.75rem;">Große Tafel im Freien, Weinberghang, Gesellschaft</span>
+        </div>
+        <div class="mcard__overlay">
+          <span class="mcard__title">Gesellschaft & Geburtstag</span>
+          <p class="mcard__text">Wenn mehr Menschen mehr Wein bedeutet — und mehr Freude.</p>
+          <span class="btn btn--white mcard__cta">Zur Weinauswahl</span>
+        </div>
+      </a>
+
+      <!-- Row 3: Large left, small right -->
+      <a href="kategorie.html" class="mcard" id="moment-natur">
+        <div class="mcard__img ph-img" style="border:1.5px dashed #B8C8BA;">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1" style="width:32px;height:32px;opacity:0.4;"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><path d="M21 15l-5-5L5 21"/></svg>
+          <span style="color:#8A9E8E;font-size:0.75rem;">Picknick zwischen Rebzeilen, Korb, Flasche, Decke</span>
+        </div>
+        <div class="mcard__overlay">
+          <span class="mcard__title">Draußen in den Reben</span>
+          <p class="mcard__text">Sonne, Reben, guter Wein — mehr braucht es nicht.</p>
+          <span class="btn btn--white mcard__cta">Zur Weinauswahl</span>
+        </div>
+      </a>
+
+      <a href="kategorie.html" class="mcard" id="moment-saisonal">
+        <div class="mcard__img ph-img" style="border:1.5px dashed #B8C8BA;">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1" style="width:32px;height:32px;opacity:0.4;"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><path d="M21 15l-5-5L5 21"/></svg>
+          <span style="color:#8A9E8E;font-size:0.75rem;">Herbststimmung, Traubenkörbe, warmes Licht</span>
+        </div>
+        <div class="mcard__overlay">
+          <span class="mcard__title">Herbst & Ernte</span>
+          <span class="btn btn--white mcard__cta">Zur Weinauswahl</span>
+        </div>
+      </a>
+
+      <!-- Row 4: Small left, large right -->
+      <a href="kategorie.html" class="mcard" id="moment-geschenk">
+        <div class="mcard__img ph-img" style="border:1.5px dashed #B8C8BA;">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1" style="width:32px;height:32px;opacity:0.4;"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><path d="M21 15l-5-5L5 21"/></svg>
+          <span style="color:#8A9E8E;font-size:0.75rem;">Geschenkbox mit Weinflaschen, Schleife, edel</span>
+        </div>
+        <div class="mcard__overlay">
+          <span class="mcard__title">Wein verschenken</span>
+          <span class="btn btn--white mcard__cta">Zur Weinauswahl</span>
+        </div>
+      </a>
+
+      <a href="kategorie.html" class="mcard">
+        <div class="mcard__img ph-img" style="border:1.5px dashed #B8C8BA;">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1" style="width:32px;height:32px;opacity:0.4;"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><path d="M21 15l-5-5L5 21"/></svg>
+          <span style="color:#8A9E8E;font-size:0.75rem;">Weinkeller, Holzfässer, Verkostung, Abendlicht</span>
+        </div>
+        <div class="mcard__overlay">
+          <span class="mcard__title">Kellertour & Weinprobe</span>
+          <p class="mcard__text">Erleben Sie unsere Weine direkt dort, wo sie entstehen.</p>
+          <span class="btn btn--white mcard__cta">Zur Weinauswahl</span>
+        </div>
+      </a>
+
+    </div>
+
+    <div class="note" style="margin-top:24px;">
+      <strong>Shopify-Hinweis:</strong> Jeder Weinmoment wird als Smart Collection mit Tag „moment:[slug]" angelegt (z.B. <code>moment-zweisamkeit</code>, <code>moment-feierabend</code>). Die Card-Bilder kommen aus <code>collection.featured_image</code>, die Überschriften aus <code>collection.title</code>. Custom Page Template: <code>page.weinberatung.json</code>.
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================
+     8. PERSÖNLICHE BERATUNG — CTA-Box
+     ============================================================ -->
+<section class="wf-cta fade-in">
+  <div class="container">
+    <div class="wf-cta__box">
+      <span class="label">Persönliche Beratung</span>
+      <h2>Nicht das Richtige gefunden?</h2>
+      <p>
+        Unser Team berät Sie gerne persönlich — per Telefon, E-Mail oder direkt
+        bei uns auf dem Weingut. Einfach kurz schreiben, wir antworten schnell.
+      </p>
+      <div class="wf-cta__btns">
+        <a href="kontakt.html" class="btn btn--dark">Jetzt anfragen</a>
+        <a href="events.html" class="btn btn--outline">Weinprobe buchen</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================
+     9. NEWSLETTER
+     ============================================================ -->
+<div class="nl fade-in">
+  <div class="container">
+    <div class="nl__block">
+      <div class="nl__text">
+        <span class="label">Newsletter</span>
+        <h2>Newsletter & 10 % Rabatt</h2>
+        <p class="desc">
+          Erhalten Sie exklusive Angebote, Weinempfehlungen und Einladungen zu Events — max. 2x im Monat.
+        </p>
+      </div>
+      <div>
+        <form class="nl__form" onsubmit="return false;">
+          <div class="nl__form-row">
+            <input type="text" placeholder="Vorname" aria-label="Vorname">
+            <input type="text" placeholder="Nachname" aria-label="Nachname">
+          </div>
+          <input type="email" placeholder="Ihre E-Mail-Adresse" aria-label="E-Mail-Adresse">
+          <button type="submit">Anmelden und 10 % Rabatt sichern</button>
+        </form>
+        <p class="nl__legal">
+          Mit der Anmeldung stimmen Sie unserer Datenschutzerklärung zu. Abmeldung jederzeit möglich.
+        </p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ============================================================
+     10. FOOTER
+     ============================================================ -->
+<footer class="footer">
+  <div class="container">
+
+    <!-- Footer Grid -->
+    <div class="footer__grid">
+      <!-- Column 1: Contact -->
+      <div class="footer__col">
+        <div class="flogo">Weingut <em>Mustertal</em></div>
+        <p>Familienweingut seit 1876 — Handverlesene Weine aus dem Mustertal mit Leidenschaft und Tradition.</p>
+        <div class="fcontact">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+          Musterstraße 12, 79241 Mustertal
+        </div>
+        <div class="fcontact">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+          +49 (0) 7634 / 123 456
+        </div>
+        <div class="fcontact">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+          info@weingut-mustertal.de
+        </div>
+      </div>
+
+      <!-- Column 2: Service -->
+      <div class="footer__col">
+        <h4>Service</h4>
+        <ul>
+          <li><a href="kontakt.html">Kontakt</a></li>
+          <li><a href="#">FAQ / Hilfe</a></li>
+          <li><a href="#">Versandinformationen</a></li>
+          <li><a href="#">Retouren & Umtausch</a></li>
+          <li><a href="#">Geschenkgutscheine</a></li>
+          <li><a href="weinberatung.html">Weinberatung</a></li>
+        </ul>
+      </div>
+
+      <!-- Column 3: Lieferung & Zahlung -->
+      <div class="footer__col">
+        <h4>Lieferung & Zahlung</h4>
+        <ul>
+          <li><a href="#">Versandkostenfrei ab 100 €</a></li>
+          <li><a href="#">Lieferung in 2–4 Werktagen</a></li>
+          <li><a href="#">Klimaneutraler Versand</a></li>
+          <li><a href="#">Sichere Bezahlung (SSL)</a></li>
+          <li><a href="#">Kauf auf Rechnung</a></li>
+          <li><a href="#">Ratenzahlung möglich</a></li>
+        </ul>
+      </div>
+
+      <!-- Column 4: Unternehmen -->
+      <div class="footer__col">
+        <h4>Unternehmen</h4>
+        <ul>
+          <li><a href="ueber-uns.html">Über Uns</a></li>
+          <li><a href="#">Nachhaltigkeit</a></li>
+          <li><a href="events.html">Events & Weinproben</a></li>
+          <li><a href="#">Presse</a></li>
+          <li><a href="#">Karriere</a></li>
+          <li><a href="#">Händler werden</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- Footer Bottom -->
+    <div class="footer__bottom">
+      <!-- Legal Links -->
+      <div class="footer__bottom-left">
+        <a href="#">Impressum</a>
+        <a href="#">Datenschutz</a>
+        <a href="#">AGB</a>
+        <a href="widerrufsrecht.html" class="footer__widerruf">Vertrag widerrufen</a>
+        <span>&copy; 2026 Weingut Mustertal</span>
+      </div>
+
+      <!-- Payment Icons -->
+      <div class="fpay">
+        <div class="fpay__icon">VISA</div>
+        <div class="fpay__icon">MC</div>
+        <div class="fpay__icon">PayPal</div>
+        <div class="fpay__icon">Klarna</div>
+        <div class="fpay__icon">DHL</div>
+        <div class="fpay__icon">DPD</div>
+      </div>
+
+      <!-- Social Icons -->
+      <div class="fsocial">
+        <a href="#" aria-label="Instagram">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
+        </a>
+        <a href="#" aria-label="Facebook">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg>
+        </a>
+        <a href="#" aria-label="YouTube">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22.54 6.42a2.78 2.78 0 0 0-1.94-2C18.88 4 12 4 12 4s-6.88 0-8.6.46a2.78 2.78 0 0 0-1.94 2A29 29 0 0 0 1 11.75a29 29 0 0 0 .46 5.33A2.78 2.78 0 0 0 3.4 19.13C5.12 19.56 12 19.56 12 19.56s6.88 0 8.6-.46a2.78 2.78 0 0 0 1.94-2 29 29 0 0 0 .46-5.25 29 29 0 0 0-.46-5.33z"/><polygon points="9.75 15.02 15.5 11.75 9.75 8.48 9.75 15.02"/></svg>
+        </a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<!-- ============================================================
+     JAVASCRIPT
+     ============================================================ -->
+<script>
+// Header scroll
+window.addEventListener('scroll',()=>{document.querySelector('.header').classList.toggle('scrolled',window.scrollY>10)});
+// Fade-in observer
+const obs=new IntersectionObserver(entries=>{entries.forEach(e=>{if(e.isIntersecting)e.target.classList.add('visible')})},{rootMargin:'0px 0px -60px 0px',threshold:0.1});
+document.querySelectorAll('.fade-in').forEach(el=>obs.observe(el));
+// Smooth scroll
+document.querySelectorAll('a[href^="#"]').forEach(a=>{a.addEventListener('click',function(e){const h=this.getAttribute('href');if(h==='#')return;e.preventDefault();document.querySelector(h)?.scrollIntoView({behavior:'smooth'})})});
+</script>
+
+<!-- ============================================================
+     CART DRAWER
+     ============================================================ -->
+<div class="cart-overlay" id="cart-overlay" onclick="closeCartDrawer()"></div>
+<div class="cart-drawer" id="cart-drawer">
+  <div class="cart-drawer__header">
+    <h3>Warenkorb (2)</h3>
+    <button class="cart-drawer__close" onclick="closeCartDrawer()" aria-label="Warenkorb schliessen">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" style="width:18px;height:18px;"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+    </button>
+  </div>
+  <div class="cart-drawer__body">
+    <div class="cart-drawer__item">
+      <div class="cart-drawer__item-img">Bild</div>
+      <div class="cart-drawer__item-info">
+        <div class="cart-drawer__item-name">Riesling Spätlese 2023</div>
+        <div class="cart-drawer__item-price">14,90 &euro;</div>
+        <div class="cart-drawer__item-qty">
+          <button aria-label="Menge verringern">&minus;</button>
+          <span>1</span>
+          <button aria-label="Menge erhöhen">+</button>
+        </div>
+        <button class="cart-drawer__item-remove">Entfernen</button>
+      </div>
+    </div>
+    <div class="cart-drawer__item">
+      <div class="cart-drawer__item-img">Bild</div>
+      <div class="cart-drawer__item-info">
+        <div class="cart-drawer__item-name">Grauburgunder trocken 2023</div>
+        <div class="cart-drawer__item-price">10,90 &euro;</div>
+        <div class="cart-drawer__item-qty">
+          <button aria-label="Menge verringern">&minus;</button>
+          <span>2</span>
+          <button aria-label="Menge erhöhen">+</button>
+        </div>
+        <button class="cart-drawer__item-remove">Entfernen</button>
+      </div>
+    </div>
+    <div class="cart-drawer__upsell">
+      <div class="cart-drawer__upsell-title">Das könnte dir auch gefallen</div>
+      <div class="cart-drawer__upsell-grid">
+        <div class="cart-drawer__upsell-card">
+          <div class="cart-drawer__upsell-card-img">Bild</div>
+          <div class="cart-drawer__upsell-card-name">Chardonnay Réserve 2022</div>
+          <div class="cart-drawer__upsell-card-price">18,90 &euro; <span style="font-weight:400;color:var(--gray-400);font-size:0.6rem;">(25,20 &euro;/l)</span></div>
+          <div class="cart-drawer__upsell-card-btn">+ Hinzufügen</div>
+        </div>
+        <div class="cart-drawer__upsell-card">
+          <div class="cart-drawer__upsell-card-img">Bild</div>
+          <div class="cart-drawer__upsell-card-name">Kennenlernpaket</div>
+          <div class="cart-drawer__upsell-card-price">49,90 &euro; <span style="font-weight:400;color:var(--gray-400);font-size:0.6rem;">(11,09 &euro;/l)</span></div>
+          <div class="cart-drawer__upsell-card-btn">+ Hinzufügen</div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="cart-drawer__footer">
+    <div class="shipping-bar">
+      <div class="shipping-bar__text">Noch <strong>63,30 &euro;</strong> bis Versandkostenfrei</div>
+      <div class="shipping-bar__track">
+        <div class="shipping-bar__fill" style="width:37%"></div>
+      </div>
+    </div>
+    <div class="cart-drawer__subtotal">
+      <span class="cart-drawer__subtotal-label">Zwischensumme</span>
+      <span class="cart-drawer__subtotal-value">36,70 &euro;</span>
+    </div>
+    <div class="cart-drawer__shipping">Versandkostenfrei ab 100 &euro; &middot; inkl. MwSt.</div>
+    <button class="cart-drawer__checkout">Zur Kasse</button>
+    <button class="cart-drawer__continue" onclick="closeCartDrawer()">Weiter einkaufen</button>
+  </div>
+</div>
+<script>
+function openCartDrawer(){document.getElementById('cart-drawer').classList.add('open');document.getElementById('cart-overlay').classList.add('open');document.body.style.overflow='hidden';}
+function closeCartDrawer(){document.getElementById('cart-drawer').classList.remove('open');document.getElementById('cart-overlay').classList.remove('open');document.body.style.overflow='';}
+document.addEventListener('keydown',function(e){if(e.key==='Escape')closeCartDrawer();});
+</script>
+
+<script>
+function toggleMobileNav(){
+  document.getElementById('mobile-nav').classList.toggle('open');
+  document.querySelector('.header__burger').classList.toggle('active');
+  document.body.style.overflow=document.getElementById('mobile-nav').classList.contains('open')?'hidden':'';
+}
+</script>
+
+</body>
+</html>

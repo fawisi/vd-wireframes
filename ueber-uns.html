@@ -13,7 +13,7 @@
      1. ANNOUNCEMENT BAR
      ============================================================ -->
 <div class="announcement">
-  Dieser schmale Banner erzeugt Dringlichkeit durch ein zeitlich begrenztes Angebot — Versandkostenfrei ab 69 € &nbsp;|&nbsp; <a href="#">Jetzt Kennenlernpaket sichern</a>
+  Dieser schmale Banner erzeugt Dringlichkeit durch ein zeitlich begrenztes Angebot — Versandkostenfrei ab 100 € &nbsp;|&nbsp; <a href="#">Jetzt Kennenlernpaket sichern</a>
 </div>
 
 <!-- ============================================================
@@ -25,7 +25,7 @@
     <ul class="header__nav">
       <li><a href="index.html">Startseite</a></li>
       <li>
-        <a href="kategorie.html">Weine</a>
+        <a href="weine.html">Alle Weine</a>
         <!-- Mega Menu -->
         <div class="mega">
           <div class="mega__grid mega__grid--wide">
@@ -37,7 +37,8 @@
                 <li><a href="kategorie.html">Rosé</a></li>
                 <li><a href="kategorie.html">Sekt & Secco</a></li>
                 <li><a href="kategorie.html">Spirituosen</a></li>
-                <li><a href="kategorie.html">Alle Weine</a></li>
+                <li><a href="kategorie.html">Alkoholfrei</a></li>
+                <li><a href="weine.html">Alle Weine</a></li>
               </ul>
             </div>
             <div class="mega__col">
@@ -82,11 +83,14 @@
           </div>
         </div>
       </li>
-      <li><a href="ueber-uns.html">Weingut</a></li>
+      <li><a href="weinberatung.html">Weinberatung</a></li>
       <li class="active"><a href="ueber-uns.html">Über Uns</a></li>
-      <li><a href="events.html">Events</a></li>
+      <li><a href="events.html">Events &amp; Weinprobe</a></li>
       <li><a href="kontakt.html">Kontakt</a></li>
     </ul>
+    <button class="header__burger" aria-label="Menü" onclick="toggleMobileNav()">
+      <span></span><span></span><span></span>
+    </button>
     <div class="header__icons">
       <!-- Search -->
       <button aria-label="Suche">
@@ -104,6 +108,17 @@
     </div>
   </div>
 </header>
+
+<nav class="mobile-nav" id="mobile-nav">
+  <div class="mobile-nav__links">
+    <a href="index.html">Startseite</a>
+    <a href="weine.html">Alle Weine</a>
+    <a href="weinberatung.html">Weinberatung</a>
+    <a href="ueber-uns.html" class="active">Über Uns</a>
+    <a href="events.html">Events &amp; Weinprobe</a>
+    <a href="kontakt.html">Kontakt</a>
+  </div>
+</nav>
 
 
 <!-- ============================================================
@@ -460,7 +475,7 @@
           <li><a href="#">Versandinformationen</a></li>
           <li><a href="#">Retouren & Umtausch</a></li>
           <li><a href="#">Geschenkgutscheine</a></li>
-          <li><a href="#">Weinberatung</a></li>
+          <li><a href="weinberatung.html">Weinberatung</a></li>
         </ul>
       </div>
 
@@ -468,7 +483,7 @@
       <div class="footer__col">
         <h4>Lieferung & Zahlung</h4>
         <ul>
-          <li><a href="#">Versandkostenfrei ab 69 €</a></li>
+          <li><a href="#">Versandkostenfrei ab 100 €</a></li>
           <li><a href="#">Lieferung in 2–4 Werktagen</a></li>
           <li><a href="#">Klimaneutraler Versand</a></li>
           <li><a href="#">Sichere Bezahlung (SSL)</a></li>
@@ -583,24 +598,30 @@ document.querySelectorAll('.fade-in').forEach(el=>obs.observe(el));
         <div class="cart-drawer__upsell-card">
           <div class="cart-drawer__upsell-card-img">Bild</div>
           <div class="cart-drawer__upsell-card-name">Chardonnay Réserve 2022</div>
-          <div class="cart-drawer__upsell-card-price">18,90 &euro;</div>
+          <div class="cart-drawer__upsell-card-price">18,90 &euro; <span style="font-weight:400;color:var(--gray-400);font-size:0.6rem;">(25,20 &euro;/l)</span></div>
           <div class="cart-drawer__upsell-card-btn">+ Hinzufügen</div>
         </div>
         <div class="cart-drawer__upsell-card">
           <div class="cart-drawer__upsell-card-img">Bild</div>
           <div class="cart-drawer__upsell-card-name">Kennenlernpaket</div>
-          <div class="cart-drawer__upsell-card-price">49,90 &euro;</div>
+          <div class="cart-drawer__upsell-card-price">49,90 &euro; <span style="font-weight:400;color:var(--gray-400);font-size:0.6rem;">(11,09 &euro;/l)</span></div>
           <div class="cart-drawer__upsell-card-btn">+ Hinzufügen</div>
         </div>
       </div>
     </div>
   </div>
   <div class="cart-drawer__footer">
+    <div class="shipping-bar">
+      <div class="shipping-bar__text">Noch <strong>63,30 &euro;</strong> bis Versandkostenfrei</div>
+      <div class="shipping-bar__track">
+        <div class="shipping-bar__fill" style="width:37%"></div>
+      </div>
+    </div>
     <div class="cart-drawer__subtotal">
       <span class="cart-drawer__subtotal-label">Zwischensumme</span>
       <span class="cart-drawer__subtotal-value">36,70 &euro;</span>
     </div>
-    <div class="cart-drawer__shipping">Versandkostenfrei ab 69 &euro; &middot; inkl. MwSt.</div>
+    <div class="cart-drawer__shipping">Versandkostenfrei ab 100 &euro; &middot; inkl. MwSt.</div>
     <button class="cart-drawer__checkout">Zur Kasse</button>
     <button class="cart-drawer__continue" onclick="closeCartDrawer()">Weiter einkaufen</button>
   </div>
@@ -609,6 +630,14 @@ document.querySelectorAll('.fade-in').forEach(el=>obs.observe(el));
 function openCartDrawer(){document.getElementById('cart-drawer').classList.add('open');document.getElementById('cart-overlay').classList.add('open');document.body.style.overflow='hidden';}
 function closeCartDrawer(){document.getElementById('cart-drawer').classList.remove('open');document.getElementById('cart-overlay').classList.remove('open');document.body.style.overflow='';}
 document.addEventListener('keydown',function(e){if(e.key==='Escape')closeCartDrawer();});
+</script>
+
+<script>
+function toggleMobileNav(){
+  document.getElementById('mobile-nav').classList.toggle('open');
+  document.querySelector('.header__burger').classList.toggle('active');
+  document.body.style.overflow=document.getElementById('mobile-nav').classList.contains('open')?'hidden':'';
+}
 </script>
 
 </body>
