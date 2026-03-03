@@ -91,11 +91,11 @@ h4{font-family:var(--font-display);font-size:1.1rem;font-weight:500}
   font-family:var(--font-body);font-size:0.85rem;font-weight:500;
   border:none;border-radius:6px;transition:all var(--ease);text-decoration:none;
 }
-.btn--dark{padding:12px 28px;background:var(--gray-900);color:var(--white)}
+.btn--dark{padding:12px 28px;background:var(--gray-900);color:var(--white);border-radius:999px}
 .btn--dark::after{content:'→';opacity:0.6;transition:transform var(--ease)}
 .btn--dark:hover{background:var(--black);transform:translateY(-1px);box-shadow:var(--shadow-md)}
 .btn--dark:hover::after{transform:translateX(3px)}
-.btn--outline{padding:10px 24px;background:transparent;color:var(--gray-900);border:1.5px solid var(--gray-300)}
+.btn--outline{padding:10px 24px;background:transparent;color:var(--gray-900);border:1.5px solid #d0d0d0;border-radius:999px}
 .btn--outline:hover{border-color:var(--gray-900);transform:translateY(-1px)}
 .btn--white{padding:12px 28px;background:var(--white);color:var(--gray-900)}
 .btn--white::after{content:'→';opacity:0.5}
@@ -208,6 +208,7 @@ h4{font-family:var(--font-display);font-size:1.1rem;font-weight:500}
 .pcard__title{font-family:var(--font-display);font-size:0.95rem;font-weight:500;margin-bottom:2px}
 .pcard__price{font-size:0.85rem;font-weight:600;color:var(--gray-900)}
 .pcard__price .old{text-decoration:line-through;color:var(--gray-400);font-weight:400;margin-left:6px;font-size:0.78rem}
+.pcard__liter{font-weight:400;color:var(--gray-400);font-size:0.72rem;margin-left:2px}
 
 /* ============================================================
    TESTIMONIALS
@@ -437,53 +438,65 @@ h4{font-family:var(--font-display);font-size:1.1rem;font-weight:500}
 }
 
 /* ============================================================
-   PRODUCT CARD — Cart Controls (Category Page)
+   PRODUCT CARD — Cart Controls (Category Page) — Eurus Style
    ============================================================ */
 .pcard__link{display:block;text-decoration:none;color:inherit}
-.pcard__cart{padding:0 14px 14px;display:flex;flex-direction:column;gap:8px}
-.pcard__qty{display:flex;align-items:center;justify-content:center;gap:0}
+.pcard__legal{padding:0 14px;font-size:0.68rem;color:var(--gray-400);line-height:1.4;margin-top:-4px;margin-bottom:6px}
+.pcard__legal a{color:var(--gray-400);text-decoration:underline;text-underline-offset:2px}
+.pcard__legal a:hover{color:var(--gray-700)}
+.pcard__cart{padding:0 14px 14px;display:flex;align-items:center;gap:8px}
+.pcard__qty{display:flex;align-items:center;gap:0;flex-shrink:0}
 .pcard__qty button{
-  width:32px;height:32px;border:1.5px solid var(--gray-200);background:var(--white);
-  display:flex;align-items:center;justify-content:center;font-size:0.95rem;
+  width:30px;height:30px;border:1px solid #d0d0d0;background:transparent;
+  display:flex;align-items:center;justify-content:center;font-size:0.9rem;
   color:var(--gray-700);cursor:pointer;transition:all var(--ease);
 }
-.pcard__qty button:first-child{border-radius:4px 0 0 4px}
-.pcard__qty button:last-child{border-radius:0 4px 4px 0}
+.pcard__qty button:first-child{border-radius:999px 0 0 999px}
+.pcard__qty button:last-child{border-radius:0 999px 999px 0}
 .pcard__qty button:hover{background:var(--gray-100);border-color:var(--gray-900)}
 .pcard__qty input{
-  width:44px;height:32px;border:1.5px solid var(--gray-200);border-left:none;border-right:none;
-  text-align:center;font-family:var(--font-body);font-size:0.85rem;font-weight:500;
-  background:var(--white);color:var(--gray-900);-moz-appearance:textfield;
+  width:36px;height:30px;border:1px solid #d0d0d0;border-left:none;border-right:none;
+  text-align:center;font-family:var(--font-body);font-size:0.8rem;font-weight:500;
+  background:transparent;color:var(--gray-900);-moz-appearance:textfield;
 }
 .pcard__qty input::-webkit-outer-spin-button,
 .pcard__qty input::-webkit-inner-spin-button{-webkit-appearance:none;margin:0}
 .pcard__add-btn{
-  width:100%;padding:9px 14px;background:var(--gray-900);color:var(--white);
-  border:none;border-radius:6px;font-family:var(--font-body);font-size:0.78rem;
-  font-weight:500;cursor:pointer;transition:all var(--ease);
+  flex:1;padding:8px 12px;background:transparent;color:var(--gray-900);
+  border:1px solid #d0d0d0;border-radius:999px;font-family:var(--font-body);font-size:0.75rem;
+  font-weight:500;cursor:pointer;transition:all var(--ease);white-space:nowrap;
 }
-.pcard__add-btn:hover{background:var(--black);transform:translateY(-1px);box-shadow:var(--shadow-sm)}
+.pcard__add-btn:hover{background:var(--gray-900);color:var(--white);border-color:var(--gray-900)}
 
 /* ============================================================
-   PRODUCT DETAIL — Quantity Selector
+   PRODUCT DETAIL — Quantity Selector & Cart — Eurus Style
    ============================================================ */
 .pd__cart-row{display:flex;gap:12px;align-items:stretch;margin-bottom:12px}
 .pd__qty{display:flex;align-items:center;gap:0;flex-shrink:0}
 .pd__qty button{
-  width:40px;height:44px;border:1.5px solid var(--gray-200);background:var(--white);
+  width:44px;height:48px;border:1px solid #d0d0d0;background:transparent;
   display:flex;align-items:center;justify-content:center;font-size:1.1rem;
   color:var(--gray-700);cursor:pointer;transition:all var(--ease);
 }
-.pd__qty button:first-child{border-radius:6px 0 0 6px}
-.pd__qty button:last-child{border-radius:0 6px 6px 0}
+.pd__qty button:first-child{border-radius:999px 0 0 999px}
+.pd__qty button:last-child{border-radius:0 999px 999px 0}
 .pd__qty button:hover{background:var(--gray-100);border-color:var(--gray-900)}
 .pd__qty input{
-  width:52px;height:44px;border:1.5px solid var(--gray-200);border-left:none;border-right:none;
+  width:52px;height:48px;border:1px solid #d0d0d0;border-left:none;border-right:none;
   text-align:center;font-family:var(--font-body);font-size:0.95rem;font-weight:500;
-  background:var(--white);color:var(--gray-900);-moz-appearance:textfield;
+  background:transparent;color:var(--gray-900);-moz-appearance:textfield;
 }
 .pd__qty input::-webkit-outer-spin-button,
 .pd__qty input::-webkit-inner-spin-button{-webkit-appearance:none;margin:0}
+.pd__add-btn{
+  flex:1;padding:14px 28px;background:transparent;color:var(--gray-900);
+  border:1px solid #d0d0d0;border-radius:999px;font-family:var(--font-body);
+  font-size:0.88rem;font-weight:500;cursor:pointer;transition:all var(--ease);
+}
+.pd__add-btn:hover{background:var(--gray-900);color:var(--white);border-color:var(--gray-900)}
+.pd__legal{font-size:0.72rem;color:var(--gray-400);margin-bottom:14px;line-height:1.5}
+.pd__legal a{color:var(--gray-400);text-decoration:underline;text-underline-offset:2px}
+.pd__legal a:hover{color:var(--gray-700)}
 
 /* Fade-in */
 .fade-in{opacity:0;transform:translateY(24px);transition:opacity 0.7s ease,transform 0.7s ease}
@@ -614,7 +627,7 @@ h4{font-family:var(--font-display);font-size:1.1rem;font-weight:500}
 .cart-drawer__checkout{
   display:flex;align-items:center;justify-content:center;gap:6px;
   width:100%;padding:13px 28px;background:var(--gray-900);color:var(--white);
-  border:none;border-radius:6px;font-family:var(--font-body);
+  border:none;border-radius:999px;font-family:var(--font-body);
   font-size:0.88rem;font-weight:500;cursor:pointer;transition:all var(--ease);
 }
 .cart-drawer__checkout::after{content:'\2192';opacity:0.6;transition:transform var(--ease)}

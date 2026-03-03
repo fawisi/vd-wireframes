@@ -211,8 +211,8 @@
         </div>
 
         <!-- Price -->
-        <div class="pd__price">24,90 €</div>
-        <div style="font-size:0.72rem;color:var(--gray-400);margin-top:-6px;margin-bottom:10px;">inkl. MwSt. zzgl. <a href="#" style="color:var(--gray-400);text-decoration:underline;">Versand</a></div>
+        <div class="pd__price">24,90 € <span style="font-size:0.85rem;font-weight:400;color:var(--gray-400);">(0,75 l &ndash; 33,20 €/l)</span></div>
+        <div class="pd__legal">inkl. MwSt., zzgl. <a href="#">Versandkosten</a> · Enthält Sulfite</div>
 
         <!-- Quantity Selector + Add to Cart -->
         <div class="pd__cart-row">
@@ -221,7 +221,7 @@
             <input type="number" value="6" min="1" max="99">
             <button type="button" onclick="this.previousElementSibling.stepUp()">&#43;</button>
           </div>
-          <button type="button" class="btn btn--dark btn--full" onclick="openCartDrawer()" style="margin-bottom:0;">In den Warenkorb</button>
+          <button type="button" class="pd__add-btn" onclick="openCartDrawer()">In den Warenkorb</button>
         </div>
 
         <!-- Trust Badges -->
@@ -335,7 +335,9 @@
           <div style="display:flex;flex-direction:column;gap:5px;font-size:0.8rem;">
             <div style="display:flex;justify-content:space-between;"><span style="color:var(--gray-500);">Inhalt</span><span>0,75 l</span></div>
             <div style="display:flex;justify-content:space-between;"><span style="color:var(--gray-500);">Verschluss</span><span>Naturkork</span></div>
-            <div style="display:flex;justify-content:space-between;"><span style="color:var(--gray-500);">Allergene</span><span>Sulfite</span></div>
+            <div style="display:flex;justify-content:space-between;"><span style="color:var(--gray-500);">Allergene</span><span>Enthält Sulfite</span></div>
+            <div style="display:flex;justify-content:space-between;"><span style="color:var(--gray-500);">Abfüller</span><span>Weingut Mustertal, 65366 Musterstadt</span></div>
+            <div style="display:flex;justify-content:space-between;"><span style="color:var(--gray-500);">Zutaten</span><span>Trauben, Sulfite</span></div>
             <div style="display:flex;justify-content:space-between;"><span style="color:var(--gray-500);">EAN</span><span>4012345678901</span></div>
             <div style="display:flex;justify-content:space-between;"><span style="color:var(--gray-500);">Art.-Nr.</span><span>WM-RIE-23-SL</span></div>
           </div>
