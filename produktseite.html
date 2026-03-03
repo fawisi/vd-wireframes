@@ -214,8 +214,15 @@
         <div class="pd__price">24,90 €</div>
         <div style="font-size:0.72rem;color:var(--gray-400);margin-top:-6px;margin-bottom:10px;">inkl. MwSt. zzgl. <a href="#" style="color:var(--gray-400);text-decoration:underline;">Versand</a></div>
 
-        <!-- Add to Cart -->
-        <a href="#" class="btn btn--dark btn--full" style="margin-bottom:12px;">In den Warenkorb</a>
+        <!-- Quantity Selector + Add to Cart -->
+        <div class="pd__cart-row">
+          <div class="pd__qty">
+            <button type="button" onclick="this.nextElementSibling.stepDown()">&#8722;</button>
+            <input type="number" value="6" min="1" max="99">
+            <button type="button" onclick="this.previousElementSibling.stepUp()">&#43;</button>
+          </div>
+          <button type="button" class="btn btn--dark btn--full" onclick="openCartDrawer()" style="margin-bottom:0;">In den Warenkorb</button>
+        </div>
 
         <!-- Trust Badges -->
         <div style="display:flex;gap:16px;justify-content:center;flex-wrap:wrap;font-size:0.72rem;color:var(--gray-500);">
