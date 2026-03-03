@@ -6,7 +6,7 @@ HTML/CSS-Wireframe-Prototyp zur Veranschaulichung der idealen Informationsarchit
 
 **Auftraggeber:** Fabian Willis-Simon
 **Projekt:** VD FFM Shop-Wireframes
-**Status:** Phase 6 — Mobile-Optimierung, Versandkosten-Bar & Kategorien-Update abgeschlossen
+**Status:** Phase 7 — Sticky Fixes, Add-to-Cart Bar & Katalog-Grid abgeschlossen
 **Letztes Update:** 2026-03-03
 
 ---
@@ -16,7 +16,7 @@ HTML/CSS-Wireframe-Prototyp zur Veranschaulichung der idealen Informationsarchit
 - **Reine HTML5 + CSS3** (kein Framework, kein Build-Tool)
 - **Fonts:** Google Fonts — Cormorant Garamond (Display) + Outfit (Body)
 - **Design:** Minimales Wireframe-Aesthetic mit grünen Bild-Platzhaltern (`#E8EFEA`)
-- **JS:** IntersectionObserver (Fade-in), Sticky Header, Smooth Scroll, Cart Drawer, Widerrufs-Formular, Mobile-Navigation Toggle
+- **JS:** IntersectionObserver (Fade-in), Sticky Header, Smooth Scroll, Cart Drawer, Widerrufs-Formular, Mobile-Navigation Toggle, Sticky Add-to-Cart Bar (Scroll-Event)
 - **Server:** `npx http-server -p 8080 -c-1` (konfiguriert in `.claude/launch.json`)
 - **Bilder:** Alle durch grüne Platzhalter (`.ph-img`) ersetzt — keine echten Bilder im HTML
 - **Git Remote:** `git@github.com:fawisi/vd-wireframes.git` (SSH), Branch: `main`
@@ -267,7 +267,7 @@ Sektionen:
 2. Header + Mega Menu + Hamburger
 3. Mobile Navigation
 4. Kategorie-Bubbles (6 Kreise) + Titel "Alle Weine" + Beschreibungstext
-5. **Produkt-Grid:** Filter-Sidebar + 24 Produkte in 4 Spalten + "96 Weine gefunden" + Sortierung + Pagination
+5. **Produkt-Grid:** Filter-Sidebar (`.catalog-sidebar`) + 24 Produkte in 3 Spalten (`.catalog-grid .grid-3`) + "96 Weine gefunden" + Sortierung + Pagination
 6. Kategorie-Beschreibung + Bild
 7. **Qualitätspyramide (dark)** — SVG-Pyramide
 8. Weitere Kategorien (6 Kreise)
@@ -286,7 +286,7 @@ Sektionen:
 3. Mobile Navigation
 4. Kategorie-Header + Banner (kurzer SEO-Text)
 5. Quickview-Card (kompakt, max-width:220px) + Pin-Note
-6. **Produkt-Grid (SOFORT sichtbar, kein fade-in)**: Filter-Sidebar + 24 Produkte in 4 Spalten + Pagination
+6. **Produkt-Grid (SOFORT sichtbar, kein fade-in)**: Filter-Sidebar (`.catalog-sidebar`) + 24 Produkte in 3 Spalten (`.catalog-grid .grid-3`) + Pagination
 7. "Über diese Kategorie" Section (Text + Video)
 8. **Qualitätspyramide (light)** — SVG-Pyramide
 9. Weitere Kategorien (6 Kreise)
@@ -310,8 +310,9 @@ Sektionen:
 3. Mobile Navigation
 4. Promo Bar (Aktionshinweis)
 5. **Produktdetail (2-spaltig):**
-   - Links: **Sticky Gallery** (`position:sticky;top:90px`) — Hauptbild (380px) + 4 Thumbnails
+   - Links: **Sticky Gallery** (`position:sticky;top:90px`) — Hauptbild (380px) + 4 Thumbnails (Outer-Div stretcht auf volle Grid-Höhe, Inner-Div ist sticky)
    - Rechts: Titel, Bewertungen, Meta, Beschreibung, **Preis mit "inkl. MwSt. zzgl. Versand"**, **Versandkosten-Fortschrittsleiste (15% / 85,10 € verbleibend)**, Mengenauswahl (Pill-Shape), Warenkorb-Button, "Passende Weine" (3-spaltig inline)
+6. **Sticky Add-to-Cart Bar** (fixiert am unteren Bildschirmrand, erscheint per Scroll-Event wenn `.pd__cart-row` aus dem Viewport scrollt)
 6. **USPs (3 nebeneinander, kompakt):** Familienweingut, Versandkostenfrei ab 100€, 14 Tage Rückgabe
 7. **"Details & Lagerempfehlung"** — Expandierbar mit Chevron-SVG, 4-spaltig innen
 8. Kategorie-Beschreibung + Bild
@@ -460,7 +461,9 @@ Implementiert gemäß **§356a BGB** (ab 19. Juni 2026):
 | `.tcard` / `.tcard__avatar` | Testimonial-Card + Avatar |
 | `.gcard` | Geschenk/Abo-Card |
 | `.kp` / `.kp__grid` | Kennenlernpaket-Box |
-| `.pd` | Produktdetail (2-spaltig, align-items:start) |
+| `.pd` | Produktdetail (2-spaltig CSS Grid) |
+| `.sticky-atc` / `__inner` / `__info` / `__actions` | Sticky Add-to-Cart Bar (fixed bottom, scroll-gesteuert) |
+| `.catalog-layout` / `.catalog-sidebar` / `.catalog-grid` | Katalog-Layout (Flex: Sidebar + Grid) |
 | `.ecard` / `.ecard__img` | Event-Card + Bild |
 | `.cats` / `.cats__circle` | Kategorie-Bubbles (6 Stück) |
 | `.filters` | Filter-Sidebar (sticky) |
@@ -578,8 +581,34 @@ Implementiert gemäß **§356a BGB** (ab 19. Juni 2026):
 | **Mega Menu**: "Alkoholfrei" zum Sortiment hinzugefügt | alle 9 HTML | ✅ |
 | **Pin-Note** für "Wein verschenken & Abo" Section | 4 HTML | ✅ |
 | **Cart Drawer full-width** ab 768px (statt 420px) | styles.css | ✅ |
-| **`overflow-x: hidden`** auf `html` (verhindert horizontalen Overflow durch Cart Drawer) | styles.css | ✅ |
+| **`overflow-x: clip`** auf `html` (verhindert horizontalen Overflow, ohne Sticky zu brechen) | styles.css | ✅ |
 | **toggleMobileNav() JS** auf allen 9 Seiten | alle 9 HTML | ✅ |
+
+### Phase 7: Sticky Fixes, Add-to-Cart Bar & Katalog-Grid (Session 6)
+
+#### Sticky Produktbild Fix:
+| Änderung | Dateien | Status |
+|----------|---------|--------|
+| `overflow-x: hidden` → `overflow-x: clip` auf `html` (verhindert Scroll-Container, der Sticky bricht) | styles.css | ✅ |
+| `overflow-x: hidden` von `body` entfernt | styles.css | ✅ |
+| `.fade-in.visible` `transform: translateY(0)` → `transform: none` (kein Containing Block) | styles.css | ✅ |
+| `.pd` Grid: `align-items: start` entfernt (linke Spalte muss auf volle Höhe stretchen) | styles.css | ✅ |
+| Linke Spalte HTML umstrukturiert: Outer-Div stretcht, Inner-Div hat `position:sticky;top:90px` | produktseite.html | ✅ |
+
+#### Sticky Add-to-Cart Bar:
+| Änderung | Dateien | Status |
+|----------|---------|--------|
+| Fixierte Leiste am unteren Bildschirmrand (`.sticky-atc`) | styles.css, produktseite.html | ✅ |
+| Scroll-Event: Erscheint wenn `.pd__cart-row` aus dem Viewport scrollt (`rect.bottom < 0`) | produktseite.html | ✅ |
+| Responsive: Titel ausgeblendet auf 480px, kompakteres Padding | styles.css | ✅ |
+| Pill-Shape Qty-Selector + "In den Warenkorb" Button (Eurus-Stil) | styles.css | ✅ |
+
+#### Katalog-Grid (3 Spalten):
+| Änderung | Dateien | Status |
+|----------|---------|--------|
+| Produkt-Grid von `grid-4` (4 Spalten) auf `grid-3` (3 Spalten) geändert | kategorie.html, weine.html | ✅ |
+| Inline-Styles durch CSS-Klassen ersetzt (`.catalog-layout`, `.catalog-sidebar`, `.catalog-grid`) | kategorie.html, weine.html, styles.css | ✅ |
+| Responsive: Sidebar ausgeblendet ab 1024px, Grid 2-spaltig ab 768px, 1-spaltig ab 480px | styles.css | ✅ |
 
 ---
 
@@ -606,6 +635,8 @@ Implementiert gemäß **§356a BGB** (ab 19. Juni 2026):
 | Cart Drawer HTML/JS | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ |
 | Shipping Bar (Cart) | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ |
 | Shipping Bar (Produkt) | — | — | — | ✅ | — | — | — | — | — |
+| Sticky Add-to-Cart Bar | — | — | — | ✅ | — | — | — | — | — |
+| Katalog-Layout (3-Spalten) | — | ✅ | ✅ | — | — | — | — | — | — |
 | Mega Menu "Alkoholfrei" | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ |
 | Kategorie-Bubbles (6x) | ✅ | ✅ 2x | ✅ | ✅ | — | — | — | — | — |
 | Pin-Note "Wein verschenken" | ✅ | ✅ | ✅ | ✅ | — | — | — | — | — |
@@ -638,6 +669,10 @@ Implementiert gemäß **§356a BGB** (ab 19. Juni 2026):
 - **Eurus-Design:** Pill-Shape (`border-radius: 999px`) für Buttons, Qty-Selectors, Shipping Bar
 - **6 Kategorien:** Weißwein, Rotwein, Rosé, Sekt & Seco, Spirituosen, Alkoholfrei
 - **100 € Versandkostenfrei-Schwelle** (vorher 69 €)
+- **`overflow-x: clip` statt `hidden`** auf `html` — verhindert horizontalen Overflow ohne Sticky zu brechen
+- **`.fade-in.visible` mit `transform: none`** statt `translateY(0)` — vermeidet Containing Block für Sticky
+- **Sticky Add-to-Cart Bar** per Scroll-Event (nicht IntersectionObserver) — zuverlässiger in allen Umgebungen
+- **Katalog-Grid: 3 Spalten** statt 4, mit CSS-Klassen statt Inline-Styles
 
 ### Mögliche nächste Schritte
 - [ ] Generische Bilder durch weingut-spezifische KI-Bilder ersetzen (Prompts in BILD-PROMPTS.md)
