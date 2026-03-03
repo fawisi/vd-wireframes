@@ -1,0 +1,410 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Weingut Mustertal — Kontakt | Wireframe</title>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400&family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<!-- ============================================================
+     1. ANNOUNCEMENT BAR
+     ============================================================ -->
+<div class="announcement">
+  Dieser schmale Banner erzeugt Dringlichkeit durch ein zeitlich begrenztes Angebot — Versandkostenfrei ab 69 € &nbsp;|&nbsp; <a href="#">Jetzt Kennenlernpaket sichern</a>
+</div>
+
+<!-- ============================================================
+     2. HEADER
+     ============================================================ -->
+<header class="header">
+  <div class="header__inner">
+    <a href="index.html" class="header__logo">Weingut <em>Mustertal</em></a>
+    <ul class="header__nav">
+      <li><a href="index.html">Startseite</a></li>
+      <li>
+        <a href="kategorie.html">Weine</a>
+        <!-- Mega Menu -->
+        <div class="mega">
+          <div class="mega__grid mega__grid--wide">
+            <div class="mega__col">
+              <h4>Sortiment</h4>
+              <ul>
+                <li><a href="kategorie.html">Weißweine</a></li>
+                <li><a href="kategorie.html">Rotweine</a></li>
+                <li><a href="kategorie.html">Rosé</a></li>
+                <li><a href="kategorie.html">Sekt & Secco</a></li>
+                <li><a href="kategorie.html">Spirituosen</a></li>
+                <li><a href="kategorie.html">Alle Weine</a></li>
+              </ul>
+            </div>
+            <div class="mega__col">
+              <h4>Terroir</h4>
+              <ul>
+                <li><a href="kategorie.html">Unsere Böden</a></li>
+                <li><a href="kategorie.html">Muschelkalk</a></li>
+                <li><a href="kategorie.html">Löss & Lehm</a></li>
+                <li><a href="kategorie.html">Einzellagen</a></li>
+                <li><a href="kategorie.html">Lagenkarte</a></li>
+              </ul>
+            </div>
+            <div class="mega__col">
+              <h4>Sonstiges</h4>
+              <ul>
+                <li><a href="kategorie.html">Neuheiten</a></li>
+                <li><a href="kategorie.html">Bestseller</a></li>
+                <li><a href="kategorie.html">Kennenlernpakete</a></li>
+                <li><a href="kategorie.html">Geschenksets</a></li>
+                <li><a href="kategorie.html">Wein im Abo</a></li>
+              </ul>
+            </div>
+            <div class="mega__col">
+              <h4>Qualitätsstufen</h4>
+              <ul>
+                <li><a href="kategorie.html">Gutswein</a></li>
+                <li><a href="kategorie.html">Ortswein</a></li>
+                <li><a href="kategorie.html">Lagenwein</a></li>
+                <li><a href="kategorie.html">Große Gewächse</a></li>
+              </ul>
+            </div>
+            <div class="mega__col">
+              <div class="mega__product">
+                <div class="ph" style="height:90px">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1"><rect x="3" y="3" width="18" height="18" rx="2"/><line x1="3" y1="9" x2="21" y2="9"/></svg>
+                  <span>Paket-Teaser</span>
+                </div>
+                <div class="mega__product-name">Kennenlernpaket</div>
+                <div class="mega__product-price">49,90 €</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </li>
+      <li><a href="ueber-uns.html">Weingut</a></li>
+      <li><a href="ueber-uns.html">Über Uns</a></li>
+      <li><a href="events.html">Events</a></li>
+      <li class="active"><a href="kontakt.html">Kontakt</a></li>
+    </ul>
+    <div class="header__icons">
+      <button aria-label="Suche">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+      </button>
+      <button aria-label="Mein Konto">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+      </button>
+      <button aria-label="Warenkorb" onclick="openCartDrawer()">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"/><line x1="3" y1="6" x2="21" y2="6"/><path d="M16 10a4 4 0 0 1-8 0"/></svg>
+        <span class="cart-badge">2</span>
+      </button>
+    </div>
+  </div>
+</header>
+
+<!-- ============================================================
+     3. KONTAKT HERO
+     ============================================================ -->
+<section class="section fade-in">
+  <div class="container" style="text-align:center;">
+    <span class="label">01 — Kontakt</span>
+    <h1>
+      Kontaktieren Sie uns
+      <span class="char">(20 Zeichen)</span>
+    </h1>
+    <p class="body-text" style="margin:16px auto 0;text-align:center;">
+      Wir freuen uns auf Ihre Nachricht — ob Frage zu unseren Weinen, Bestellungen oder Veranstaltungen. Schreiben Sie uns oder rufen Sie direkt an.
+      <span class="char">(142 Zeichen)</span>
+    </p>
+  </div>
+</section>
+
+<!-- ============================================================
+     4. KONTAKTFORMULAR + KONTAKTDATEN
+     ============================================================ -->
+<section class="section section--alt fade-in" style="padding-top:40px;">
+  <div class="container">
+    <div class="grid-2" style="gap:64px;align-items:start;">
+      <!-- Left: Kontaktformular -->
+      <div>
+        <span class="label">02 — Formular</span>
+        <h2 style="margin-bottom:24px;">
+          Schreiben Sie uns
+          <span class="char">(17 Zeichen)</span>
+        </h2>
+        <div class="form" style="max-width:100%;">
+          <div style="display:grid;grid-template-columns:1fr 1fr;gap:12px;">
+            <div class="form__group">
+              <input type="text" placeholder="Vorname" aria-label="Vorname">
+            </div>
+            <div class="form__group">
+              <input type="text" placeholder="Nachname" aria-label="Nachname">
+            </div>
+          </div>
+          <div class="form__group">
+            <input type="email" placeholder="E-Mail-Adresse" aria-label="E-Mail-Adresse">
+          </div>
+          <div class="form__group">
+            <input type="tel" placeholder="Telefonnummer (optional)" aria-label="Telefonnummer">
+          </div>
+          <div class="form__group">
+            <select aria-label="Betreff" style="width:100%;padding:10px 14px;border:1.5px solid var(--gray-200);border-radius:6px;font-family:var(--font-body);font-size:0.88rem;background:var(--white);color:var(--gray-500);">
+              <option value="">Betreff wählen…</option>
+              <option>Frage zu einem Produkt</option>
+              <option>Bestellung & Versand</option>
+              <option>Weinberatung</option>
+              <option>Events & Weinproben</option>
+              <option>Geschenkgutscheine</option>
+              <option>Sonstiges</option>
+            </select>
+          </div>
+          <div class="form__group">
+            <textarea placeholder="Ihre Nachricht" aria-label="Nachricht" style="min-height:140px;"></textarea>
+          </div>
+          <button type="submit" class="btn btn--dark btn--full" style="margin-top:8px;">Nachricht senden</button>
+          <p style="font-size:0.68rem;color:var(--gray-400);margin-top:10px;text-align:center;">
+            Wir antworten in der Regel innerhalb von 24 Stunden. Mit dem Absenden stimmen Sie unserer <a href="#" style="text-decoration:underline;">Datenschutzerklärung</a> zu.
+          </p>
+        </div>
+      </div>
+
+      <!-- Right: Kontaktdaten -->
+      <div>
+        <span class="label">03 — Kontaktdaten</span>
+        <h2 style="margin-bottom:24px;">
+          So erreichen Sie uns
+          <span class="char">(20 Zeichen)</span>
+        </h2>
+
+        <!-- Kontakt-Karten -->
+        <div style="display:flex;flex-direction:column;gap:16px;">
+          <!-- Adresse -->
+          <div style="display:flex;gap:14px;align-items:flex-start;padding:18px;background:var(--white);border:1px solid var(--gray-200);border-radius:var(--r);">
+            <div style="width:40px;height:40px;border-radius:50%;background:var(--gray-100);border:1px solid var(--gray-200);display:flex;align-items:center;justify-content:center;flex-shrink:0;">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="width:18px;height:18px;"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+            </div>
+            <div>
+              <div style="font-weight:600;font-size:0.88rem;margin-bottom:2px;">Adresse</div>
+              <div style="font-size:0.85rem;color:var(--gray-700);">Weingut Mustertal<br>Musterstraße 12<br>79241 Mustertal</div>
+            </div>
+          </div>
+          <!-- Telefon -->
+          <div style="display:flex;gap:14px;align-items:flex-start;padding:18px;background:var(--white);border:1px solid var(--gray-200);border-radius:var(--r);">
+            <div style="width:40px;height:40px;border-radius:50%;background:var(--gray-100);border:1px solid var(--gray-200);display:flex;align-items:center;justify-content:center;flex-shrink:0;">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="width:18px;height:18px;"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+            </div>
+            <div>
+              <div style="font-weight:600;font-size:0.88rem;margin-bottom:2px;">Telefon</div>
+              <div style="font-size:0.85rem;color:var(--gray-700);">+49 (0) 7634 / 123 456</div>
+              <div style="font-size:0.75rem;color:var(--gray-500);margin-top:2px;">Mo–Fr 9:00–17:00 Uhr</div>
+            </div>
+          </div>
+          <!-- E-Mail -->
+          <div style="display:flex;gap:14px;align-items:flex-start;padding:18px;background:var(--white);border:1px solid var(--gray-200);border-radius:var(--r);">
+            <div style="width:40px;height:40px;border-radius:50%;background:var(--gray-100);border:1px solid var(--gray-200);display:flex;align-items:center;justify-content:center;flex-shrink:0;">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="width:18px;height:18px;"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+            </div>
+            <div>
+              <div style="font-weight:600;font-size:0.88rem;margin-bottom:2px;">E-Mail</div>
+              <div style="font-size:0.85rem;color:var(--gray-700);">info@weingut-mustertal.de</div>
+              <div style="font-size:0.75rem;color:var(--gray-500);margin-top:2px;">Antwort innerhalb von 24 Stunden</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Öffnungszeiten -->
+        <div style="margin-top:24px;padding:20px;background:var(--white);border:1px solid var(--gray-200);border-radius:var(--r);">
+          <h4 style="margin-bottom:12px;">Öffnungszeiten Vinothek</h4>
+          <div style="display:flex;flex-direction:column;gap:6px;font-size:0.85rem;">
+            <div style="display:flex;justify-content:space-between;color:var(--gray-700);">
+              <span>Montag – Freitag</span>
+              <span style="font-weight:500;">10:00 – 18:00 Uhr</span>
+            </div>
+            <div style="display:flex;justify-content:space-between;color:var(--gray-700);">
+              <span>Samstag</span>
+              <span style="font-weight:500;">10:00 – 16:00 Uhr</span>
+            </div>
+            <div style="display:flex;justify-content:space-between;color:var(--gray-700);">
+              <span>Sonntag</span>
+              <span style="font-weight:500;">Geschlossen</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Karte Platzhalter -->
+        <div class="ph-img" style="height:200px;margin-top:24px;border-radius:var(--r);">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+          <span>Google Maps / Karteneinbettung</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================
+     5. FOOTER
+     ============================================================ -->
+<footer class="footer">
+  <div class="container">
+    <div class="footer__grid">
+      <div class="footer__col">
+        <div class="flogo">Weingut <em>Mustertal</em></div>
+        <p>Familienweingut seit 1876 — Handverlesene Weine aus dem Mustertal mit Leidenschaft und Tradition.</p>
+        <div class="fcontact">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+          Musterstraße 12, 79241 Mustertal
+        </div>
+        <div class="fcontact">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+          +49 (0) 7634 / 123 456
+        </div>
+        <div class="fcontact">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+          info@weingut-mustertal.de
+        </div>
+      </div>
+      <div class="footer__col">
+        <h4>Service</h4>
+        <ul>
+          <li><a href="kontakt.html">Kontakt</a></li>
+          <li><a href="#">FAQ / Hilfe</a></li>
+          <li><a href="#">Versandinformationen</a></li>
+          <li><a href="#">Retouren & Umtausch</a></li>
+          <li><a href="#">Geschenkgutscheine</a></li>
+          <li><a href="#">Weinberatung</a></li>
+        </ul>
+      </div>
+      <div class="footer__col">
+        <h4>Lieferung & Zahlung</h4>
+        <ul>
+          <li><a href="#">Versandkostenfrei ab 69 €</a></li>
+          <li><a href="#">Lieferung in 2–4 Werktagen</a></li>
+          <li><a href="#">Klimaneutraler Versand</a></li>
+          <li><a href="#">Sichere Bezahlung (SSL)</a></li>
+          <li><a href="#">Kauf auf Rechnung</a></li>
+          <li><a href="#">Ratenzahlung möglich</a></li>
+        </ul>
+      </div>
+      <div class="footer__col">
+        <h4>Unternehmen</h4>
+        <ul>
+          <li><a href="ueber-uns.html">Über Uns</a></li>
+          <li><a href="#">Nachhaltigkeit</a></li>
+          <li><a href="events.html">Events & Weinproben</a></li>
+          <li><a href="#">Presse</a></li>
+          <li><a href="#">Karriere</a></li>
+          <li><a href="#">Händler werden</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer__bottom">
+      <div class="footer__bottom-left">
+        <a href="#">Impressum</a>
+        <a href="#">Datenschutz</a>
+        <a href="#">AGB</a>
+        <a href="widerrufsrecht.html" class="footer__widerruf">Vertrag widerrufen</a>
+        <span>&copy; 2026 Weingut Mustertal</span>
+      </div>
+      <div class="fpay">
+        <div class="fpay__icon">VISA</div>
+        <div class="fpay__icon">MC</div>
+        <div class="fpay__icon">PayPal</div>
+        <div class="fpay__icon">Klarna</div>
+        <div class="fpay__icon">DHL</div>
+        <div class="fpay__icon">DPD</div>
+      </div>
+      <div class="fsocial">
+        <a href="#" aria-label="Instagram">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
+        </a>
+        <a href="#" aria-label="Facebook">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg>
+        </a>
+        <a href="#" aria-label="YouTube">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22.54 6.42a2.78 2.78 0 0 0-1.94-2C18.88 4 12 4 12 4s-6.88 0-8.6.46a2.78 2.78 0 0 0-1.94 2A29 29 0 0 0 1 11.75a29 29 0 0 0 .46 5.33A2.78 2.78 0 0 0 3.4 19.13C5.12 19.56 12 19.56 12 19.56s6.88 0 8.6-.46a2.78 2.78 0 0 0 1.94-2 29 29 0 0 0 .46-5.25 29 29 0 0 0-.46-5.33z"/><polygon points="9.75 15.02 15.5 11.75 9.75 8.48 9.75 15.02"/></svg>
+        </a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script>
+window.addEventListener('scroll',()=>{document.querySelector('.header').classList.toggle('scrolled',window.scrollY>10)});
+const obs=new IntersectionObserver(entries=>{entries.forEach(e=>{if(e.isIntersecting)e.target.classList.add('visible')})},{rootMargin:'0px 0px -60px 0px',threshold:0.1});
+document.querySelectorAll('.fade-in').forEach(el=>obs.observe(el));
+</script>
+
+<!-- ============================================================
+     CART DRAWER
+     ============================================================ -->
+<div class="cart-overlay" id="cart-overlay" onclick="closeCartDrawer()"></div>
+<div class="cart-drawer" id="cart-drawer">
+  <div class="cart-drawer__header">
+    <h3>Warenkorb (2)</h3>
+    <button class="cart-drawer__close" onclick="closeCartDrawer()" aria-label="Warenkorb schliessen">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" style="width:18px;height:18px;"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+    </button>
+  </div>
+  <div class="cart-drawer__body">
+    <div class="cart-drawer__item">
+      <div class="cart-drawer__item-img">Bild</div>
+      <div class="cart-drawer__item-info">
+        <div class="cart-drawer__item-name">Riesling Spätlese 2023</div>
+        <div class="cart-drawer__item-price">14,90 &euro;</div>
+        <div class="cart-drawer__item-qty">
+          <button aria-label="Menge verringern">&minus;</button>
+          <span>1</span>
+          <button aria-label="Menge erhöhen">+</button>
+        </div>
+        <button class="cart-drawer__item-remove">Entfernen</button>
+      </div>
+    </div>
+    <div class="cart-drawer__item">
+      <div class="cart-drawer__item-img">Bild</div>
+      <div class="cart-drawer__item-info">
+        <div class="cart-drawer__item-name">Grauburgunder trocken 2023</div>
+        <div class="cart-drawer__item-price">10,90 &euro;</div>
+        <div class="cart-drawer__item-qty">
+          <button aria-label="Menge verringern">&minus;</button>
+          <span>2</span>
+          <button aria-label="Menge erhöhen">+</button>
+        </div>
+        <button class="cart-drawer__item-remove">Entfernen</button>
+      </div>
+    </div>
+    <div class="cart-drawer__upsell">
+      <div class="cart-drawer__upsell-title">Das könnte dir auch gefallen</div>
+      <div class="cart-drawer__upsell-grid">
+        <div class="cart-drawer__upsell-card">
+          <div class="cart-drawer__upsell-card-img">Bild</div>
+          <div class="cart-drawer__upsell-card-name">Chardonnay Réserve 2022</div>
+          <div class="cart-drawer__upsell-card-price">18,90 &euro;</div>
+          <div class="cart-drawer__upsell-card-btn">+ Hinzufügen</div>
+        </div>
+        <div class="cart-drawer__upsell-card">
+          <div class="cart-drawer__upsell-card-img">Bild</div>
+          <div class="cart-drawer__upsell-card-name">Kennenlernpaket</div>
+          <div class="cart-drawer__upsell-card-price">49,90 &euro;</div>
+          <div class="cart-drawer__upsell-card-btn">+ Hinzufügen</div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="cart-drawer__footer">
+    <div class="cart-drawer__subtotal">
+      <span class="cart-drawer__subtotal-label">Zwischensumme</span>
+      <span class="cart-drawer__subtotal-value">36,70 &euro;</span>
+    </div>
+    <div class="cart-drawer__shipping">Versandkostenfrei ab 69 &euro; &middot; inkl. MwSt.</div>
+    <button class="cart-drawer__checkout">Zur Kasse</button>
+    <button class="cart-drawer__continue" onclick="closeCartDrawer()">Weiter einkaufen</button>
+  </div>
+</div>
+<script>
+function openCartDrawer(){document.getElementById('cart-drawer').classList.add('open');document.getElementById('cart-overlay').classList.add('open');document.body.style.overflow='hidden';}
+function closeCartDrawer(){document.getElementById('cart-drawer').classList.remove('open');document.getElementById('cart-overlay').classList.remove('open');document.body.style.overflow='';}
+document.addEventListener('keydown',function(e){if(e.key==='Escape')closeCartDrawer();});
+</script>
+
+</body>
+</html>

@@ -1,0 +1,615 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Weingut Mustertal — Über Uns | Wireframe</title>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400&family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<!-- ============================================================
+     1. ANNOUNCEMENT BAR
+     ============================================================ -->
+<div class="announcement">
+  Dieser schmale Banner erzeugt Dringlichkeit durch ein zeitlich begrenztes Angebot — Versandkostenfrei ab 69 € &nbsp;|&nbsp; <a href="#">Jetzt Kennenlernpaket sichern</a>
+</div>
+
+<!-- ============================================================
+     2. HEADER
+     ============================================================ -->
+<header class="header">
+  <div class="header__inner">
+    <a href="index.html" class="header__logo">Weingut <em>Mustertal</em></a>
+    <ul class="header__nav">
+      <li><a href="index.html">Startseite</a></li>
+      <li>
+        <a href="kategorie.html">Weine</a>
+        <!-- Mega Menu -->
+        <div class="mega">
+          <div class="mega__grid mega__grid--wide">
+            <div class="mega__col">
+              <h4>Sortiment</h4>
+              <ul>
+                <li><a href="kategorie.html">Weißweine</a></li>
+                <li><a href="kategorie.html">Rotweine</a></li>
+                <li><a href="kategorie.html">Rosé</a></li>
+                <li><a href="kategorie.html">Sekt & Secco</a></li>
+                <li><a href="kategorie.html">Spirituosen</a></li>
+                <li><a href="kategorie.html">Alle Weine</a></li>
+              </ul>
+            </div>
+            <div class="mega__col">
+              <h4>Terroir</h4>
+              <ul>
+                <li><a href="kategorie.html">Unsere Böden</a></li>
+                <li><a href="kategorie.html">Muschelkalk</a></li>
+                <li><a href="kategorie.html">Löss & Lehm</a></li>
+                <li><a href="kategorie.html">Einzellagen</a></li>
+                <li><a href="kategorie.html">Lagenkarte</a></li>
+              </ul>
+            </div>
+            <div class="mega__col">
+              <h4>Sonstiges</h4>
+              <ul>
+                <li><a href="kategorie.html">Neuheiten</a></li>
+                <li><a href="kategorie.html">Bestseller</a></li>
+                <li><a href="kategorie.html">Kennenlernpakete</a></li>
+                <li><a href="kategorie.html">Geschenksets</a></li>
+                <li><a href="kategorie.html">Wein im Abo</a></li>
+              </ul>
+            </div>
+            <div class="mega__col">
+              <h4>Qualitätsstufen</h4>
+              <ul>
+                <li><a href="kategorie.html">Gutswein</a></li>
+                <li><a href="kategorie.html">Ortswein</a></li>
+                <li><a href="kategorie.html">Lagenwein</a></li>
+                <li><a href="kategorie.html">Große Gewächse</a></li>
+              </ul>
+            </div>
+            <div class="mega__col">
+              <div class="mega__product">
+                <div class="ph" style="height:90px">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1"><rect x="3" y="3" width="18" height="18" rx="2"/><line x1="3" y1="9" x2="21" y2="9"/></svg>
+                  <span>Paket-Teaser</span>
+                </div>
+                <div class="mega__product-name">Kennenlernpaket</div>
+                <div class="mega__product-price">49,90 €</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </li>
+      <li><a href="ueber-uns.html">Weingut</a></li>
+      <li class="active"><a href="ueber-uns.html">Über Uns</a></li>
+      <li><a href="events.html">Events</a></li>
+      <li><a href="kontakt.html">Kontakt</a></li>
+    </ul>
+    <div class="header__icons">
+      <!-- Search -->
+      <button aria-label="Suche">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+      </button>
+      <!-- Profile -->
+      <button aria-label="Mein Konto">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+      </button>
+      <!-- Cart -->
+      <button aria-label="Warenkorb" onclick="openCartDrawer()">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"/><line x1="3" y1="6" x2="21" y2="6"/><path d="M16 10a4 4 0 0 1-8 0"/></svg>
+        <span class="cart-badge">2</span>
+      </button>
+    </div>
+  </div>
+</header>
+
+
+<!-- ============================================================
+     4. WEINGUT PITCH
+     ============================================================ -->
+<section class="section fade-in">
+  <div class="container">
+    <div class="grid-2">
+      <div>
+        <span class="label">01 — Weingut Pitch</span>
+        <h2>
+          Deshalb unser Weingut
+          <span class="char">(21 Zeichen)</span>
+        </h2>
+        <p class="body-text" style="margin-top:16px;">
+          Authentizität und Herkunft erzeugen Vertrauen, das über rationale Argumente hinausgeht. Dieser erste Abschnitt nutzt das Primacy-Prinzip: Die erste Information auf der Über-Uns-Seite prägt die gesamte Wahrnehmung des Weinguts. Der Text sollte den zentralen Markenkern in wenigen Sätzen emotional verdichten und einen klaren Grund liefern, warum genau dieses Weingut die richtige Wahl ist. Die parasoziale Beziehung beginnt hier.
+          <span class="char">(432 Zeichen)</span>
+        </p>
+        <a href="kategorie.html" class="btn btn--dark" style="margin-top:24px;">Weine entdecken</a>
+      </div>
+      <div class="ph-img" style="height:380px;position:relative;">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><path d="M21 15l-5-5L5 21"/></svg>
+        <span>Video, dann wird das Weingut vorgestellt</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================
+     5. TEAM SECTION
+     ============================================================ -->
+<section class="section section--alt fade-in">
+  <div class="container" style="text-align:center;">
+    <span class="label">02 — Team</span>
+    <h2 style="margin-bottom:36px;">
+      Unser Team
+      <span class="char">(10 Zeichen)</span>
+    </h2>
+    <div style="display:flex;flex-direction:column;gap:48px;max-width:720px;margin:0 auto;text-align:left;">
+      <!-- Team Member 1 -->
+      <div style="display:flex;gap:28px;align-items:flex-start;">
+        <div style="flex-shrink:0;">
+          <div class="ph-img" style="width:160px;height:200px;border-radius:var(--r);">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><path d="M21 15l-5-5L5 21"/></svg>
+            <span style="font-size:0.6rem;">Foto</span>
+          </div>
+        </div>
+        <div>
+          <div style="display:inline-block;background:var(--gray-100);border:1px dashed var(--gray-300);border-radius:16px;padding:3px 10px;font-size:0.68rem;color:var(--gray-400);margin-bottom:6px;">1. Generation</div>
+          <div style="font-family:var(--font-display);font-size:1.15rem;font-weight:500;margin-bottom:2px;">Friedrich Muster</div>
+          <div style="font-size:0.78rem;color:var(--gray-500);margin-bottom:10px;">Seniorwinzer &amp; Gründer</div>
+          <p style="font-size:0.88rem;color:var(--gray-700);line-height:1.7;margin-bottom:12px;">
+            Platzhalter-Text über Friedrich — seine Philosophie, seine Leidenschaft für den Weinbau und was ihn antreibt. Persönliche Worte schaffen Nähe und Vertrauen.
+          </p>
+          <div style="display:flex;align-items:center;gap:10px;padding:10px 14px;background:var(--gray-50);border:1px solid var(--gray-200);border-radius:var(--r);font-size:0.82rem;">
+            <span style="color:var(--gray-400);">&#9829;</span>
+            <span style="font-weight:500;">Lieblingswein:</span>
+            <span style="color:var(--gray-700);">Riesling Spätlese 2019 — „Der Wein meines Lebens"</span>
+          </div>
+        </div>
+      </div>
+      <!-- Team Member 2 -->
+      <div style="display:flex;gap:28px;align-items:flex-start;">
+        <div style="flex-shrink:0;">
+          <div class="ph-img" style="width:160px;height:200px;border-radius:var(--r);">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><path d="M21 15l-5-5L5 21"/></svg>
+            <span style="font-size:0.6rem;">Foto</span>
+          </div>
+        </div>
+        <div>
+          <div style="display:inline-block;background:var(--gray-100);border:1px dashed var(--gray-300);border-radius:16px;padding:3px 10px;font-size:0.68rem;color:var(--gray-400);margin-bottom:6px;">2. Generation</div>
+          <div style="font-family:var(--font-display);font-size:1.15rem;font-weight:500;margin-bottom:2px;">Katharina Muster</div>
+          <div style="font-size:0.78rem;color:var(--gray-500);margin-bottom:10px;">Geschäftsführung &amp; Vertrieb</div>
+          <p style="font-size:0.88rem;color:var(--gray-700);line-height:1.7;margin-bottom:12px;">
+            Platzhalter-Text über Katharina — ihre Vision für das Weingut, wie sie Tradition und Moderne verbindet und was ihr an der Arbeit im Familienbetrieb besonders am Herzen liegt.
+          </p>
+          <div style="display:flex;align-items:center;gap:10px;padding:10px 14px;background:var(--gray-50);border:1px solid var(--gray-200);border-radius:var(--r);font-size:0.82rem;">
+            <span style="color:var(--gray-400);">&#9829;</span>
+            <span style="font-weight:500;">Lieblingswein:</span>
+            <span style="color:var(--gray-700);">Chardonnay Réserve 2021 — „Eleganz trifft Kraft"</span>
+          </div>
+        </div>
+      </div>
+      <!-- Team Member 3 -->
+      <div style="display:flex;gap:28px;align-items:flex-start;">
+        <div style="flex-shrink:0;">
+          <div class="ph-img" style="width:160px;height:200px;border-radius:var(--r);">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><path d="M21 15l-5-5L5 21"/></svg>
+            <span style="font-size:0.6rem;">Foto</span>
+          </div>
+        </div>
+        <div>
+          <div style="display:inline-block;background:var(--gray-100);border:1px dashed var(--gray-300);border-radius:16px;padding:3px 10px;font-size:0.68rem;color:var(--gray-400);margin-bottom:6px;">2. Generation</div>
+          <div style="font-family:var(--font-display);font-size:1.15rem;font-weight:500;margin-bottom:2px;">Maximilian Muster</div>
+          <div style="font-size:0.78rem;color:var(--gray-500);margin-bottom:10px;">Kellermeister &amp; Weinbau</div>
+          <p style="font-size:0.88rem;color:var(--gray-700);line-height:1.7;margin-bottom:12px;">
+            Platzhalter-Text über Maximilian — sein Handwerk im Keller, seine Experimentierfreude und die Verbindung zu den Weinbergen, die er jeden Tag pflegt.
+          </p>
+          <div style="display:flex;align-items:center;gap:10px;padding:10px 14px;background:var(--gray-50);border:1px solid var(--gray-200);border-radius:var(--r);font-size:0.82rem;">
+            <span style="color:var(--gray-400);">&#9829;</span>
+            <span style="font-weight:500;">Lieblingswein:</span>
+            <span style="color:var(--gray-700);">Spätburgunder Lagenwein 2020 — „Mein Meisterstück"</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================
+     6. VERTIEFUNG BÖDEN / HANDWERK
+     ============================================================ -->
+<section class="section fade-in">
+  <div class="container">
+    <div class="grid-2">
+      <div class="ph-img" style="height:400px;position:relative;">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><path d="M21 15l-5-5L5 21"/></svg>
+        <span>Video / Bild — Weinberge, Böden, Handwerk in Nahaufnahme</span>
+      </div>
+      <div>
+        <span class="label">03 — Terroir & Handwerk</span>
+        <h2>
+          Unser Terroir &amp; Klima
+          <span class="char">(20 Zeichen)</span>
+        </h2>
+        <p class="body-text" style="margin-top:16px;">
+          Terroir ist ein unkopierbares Alleinstellungsmerkmal. Dieser Abschnitt vermittelt geballte Expertise über Böden, Klima und Handwerk. Sensorische Sprache wie Muschelkalk, Löss oder Vulkangestein erzeugt mentale Bilder und rechtfertigt den Premiumpreis. Die kognitive Autorität steigt, wenn Fachwissen zugänglich und nicht belehrend vermittelt wird — der Kunde fühlt sich informiert, nicht überfordert.
+          <span class="char">(396 Zeichen)</span>
+        </p>
+        <div class="note" style="margin-top:16px;">
+          Hier alles unterbringen was verstreut auf aktueller Website steht (Weinberge, Handwerk, etc)
+        </div>
+        <a href="#" class="btn btn--dark" style="margin-top:24px;">Zur Weingutseite</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================
+     7. LAGENKARTE
+     ============================================================ -->
+<section class="section section--alt fade-in">
+  <div class="container">
+    <div class="lkarte">
+      <span class="label">04 — Lagen</span>
+      <h3>
+        Unsere Lagen
+        <span class="char">(12 Zeichen)</span>
+      </h3>
+      <div class="ph-img" style="height:280px;">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+        <span>Interaktive Lagenkarte — Weinberge und Einzellagen des Weinguts</span>
+      </div>
+      <p class="body-text" style="margin:20px auto 0;text-align:center;">
+        Eine Lagenkarte liefert geografischen Beweis für die Herkunft und nutzt den Ursprungsland-Effekt: Kunden vertrauen Produkten stärker, wenn sie den genauen Ort der Herstellung kennen. Die visuelle Verortung stärkt die wahrgenommene Authentizität und das Terroir-Narrativ.
+        <span class="char">(274 Zeichen)</span>
+      </p>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================
+     8. QUALITÄTSPYRAMIDE
+     ============================================================ -->
+<section class="section section--dark fade-in">
+  <div class="container">
+    <div class="grid-2">
+      <div>
+        <span class="label">05 — Qualitätsstufen</span>
+        <h2>
+          Unsere Qualitätsstufen
+          <span class="char">(22 Zeichen)</span>
+        </h2>
+        <p class="body-text" style="margin-top:16px;">
+          Die visuelle Pyramide macht das Qualitätssystem sofort verständlich — Hierarchie erzeugt Orientierung und senkt die Kaufhemmung bei höheren Stufen. Das deutsche Weinklassifikationssystem wirkt für viele Kunden verwirrend. Durch die visuelle Vereinfachung als Pyramide entsteht ein Aha-Erlebnis, das die Selbstwirksamkeit des Kunden stärkt. Wer versteht, was er kauft, kauft mit höherer Wahrscheinlichkeit — und greift dabei häufiger zur nächsthöheren Qualitätsstufe.
+          <span class="char">(475 Zeichen)</span>
+        </p>
+        <a href="kategorie.html" class="btn btn--white" style="margin-top:24px;">Alle Weine nach Qualität</a>
+      </div>
+      <div>
+        <div style="display:flex;align-items:center;justify-content:center;">
+          <svg viewBox="0 0 400 300" style="width:100%;max-width:400px;">
+            <polygon points="200,10 380,290 20,290" fill="none" stroke="rgba(255,255,255,0.25)" stroke-width="1.5"/>
+            <line x1="140" y1="103" x2="260" y2="103" stroke="rgba(255,255,255,0.2)" stroke-width="1"/>
+            <line x1="80" y1="196" x2="320" y2="196" stroke="rgba(255,255,255,0.2)" stroke-width="1"/>
+            <polygon points="200,10 260,103 140,103" fill="rgba(255,255,255,0.12)"/>
+            <polygon points="140,103 260,103 320,196 80,196" fill="rgba(255,255,255,0.06)"/>
+            <polygon points="80,196 320,196 380,290 20,290" fill="rgba(255,255,255,0.02)"/>
+            <text x="200" y="62" text-anchor="middle" fill="white" font-family="Cormorant Garamond, serif" font-size="16" font-weight="500">Lagenwein</text>
+            <text x="200" y="80" text-anchor="middle" fill="rgba(255,255,255,0.45)" font-family="Outfit, sans-serif" font-size="7.5" letter-spacing="1.5">PRESTIGE AUS EINZELLAGEN</text>
+            <text x="200" y="155" text-anchor="middle" fill="white" font-family="Cormorant Garamond, serif" font-size="18" font-weight="500">Ortswein</text>
+            <text x="200" y="175" text-anchor="middle" fill="rgba(255,255,255,0.45)" font-family="Outfit, sans-serif" font-size="7.5" letter-spacing="1.5">CHARAKTER UNSERER BESTEN LAGEN</text>
+            <text x="200" y="248" text-anchor="middle" fill="white" font-family="Cormorant Garamond, serif" font-size="20" font-weight="500">Gutswein</text>
+            <text x="200" y="270" text-anchor="middle" fill="rgba(255,255,255,0.45)" font-family="Outfit, sans-serif" font-size="7.5" letter-spacing="1.5">VIELSEITIGE ALLTAGSBEGLEITER</text>
+          </svg>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================
+     9. KENNENLERNPAKET PITCH
+     ============================================================ -->
+<section class="section fade-in">
+  <div class="container">
+    <div class="kp">
+      <div class="kp__grid">
+        <!-- Left: Story & Description -->
+        <div>
+          <span class="label">06 — Kennenlernpaket</span>
+          <h2 style="margin-bottom:12px;">
+            Das Kennenlernpaket
+            <span class="char">(19 Zeichen)</span>
+          </h2>
+          <p class="body-text">
+            Ein emotionaler Einstieg in die Welt des Weinguts. Das Kennenlernpaket nutzt die Foot-in-the-Door-Technik: Eine kleine, risikoarme Zusage führt zu einer stärkeren langfristigen Bindung. Der vergünstigte Einstiegspreis senkt die Hemmschwelle und aktiviert den Endowment-Effekt — sobald der Kunde die Weine probiert hat, fühlt er Besitztumseffekte und bestellt mit höherer Wahrscheinlichkeit erneut.
+            <span class="char">(399 Zeichen)</span>
+          </p>
+        </div>
+        <!-- Right: Product Placeholder -->
+        <div class="kp__product">
+          <div class="ph" style="height:180px;background:#E8EFEA;border:1.5px dashed #B8C8BA;">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><path d="M21 15l-5-5L5 21"/></svg>
+            <span>Kennenlernpaket — 6 Flaschen</span>
+          </div>
+          <div class="kp__product-name">Kennenlernpaket „Mustertal Entdecken"</div>
+          <div class="kp__product-price">49,90 €</div>
+          <a href="produktseite.html" class="btn btn--dark btn--full" style="margin-top:14px;">In den Warenkorb</a>
+        </div>
+      </div>
+      <!-- Badge Buttons: Package Variations -->
+      <div style="display:flex;gap:8px;flex-wrap:wrap;margin-top:24px;justify-content:center;">
+        <span style="display:inline-block;padding:6px 14px;border:1.5px solid var(--gray-300);border-radius:20px;font-size:0.78rem;color:var(--gray-700);cursor:pointer;transition:all 0.25s ease;background:var(--white);">6er Weißwein-Paket</span>
+        <span style="display:inline-block;padding:6px 14px;border:1.5px solid var(--gray-300);border-radius:20px;font-size:0.78rem;color:var(--gray-700);cursor:pointer;transition:all 0.25s ease;background:var(--white);">6er Rotwein-Paket</span>
+        <span style="display:inline-block;padding:6px 14px;border:1.5px solid var(--gray-300);border-radius:20px;font-size:0.78rem;color:var(--gray-700);cursor:pointer;transition:all 0.25s ease;background:var(--white);">Mixed-Paket</span>
+        <span style="display:inline-block;padding:6px 14px;border:1.5px solid var(--gray-300);border-radius:20px;font-size:0.78rem;color:var(--gray-700);cursor:pointer;transition:all 0.25s ease;background:var(--white);">Rosé & Sekt Paket</span>
+        <span style="display:inline-block;padding:6px 14px;border:1.5px solid var(--gray-300);border-radius:20px;font-size:0.78rem;color:var(--gray-700);cursor:pointer;transition:all 0.25s ease;background:var(--white);">Premium-Paket</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================
+     10. WEINVERKOSTUNG / VERANSTALTUNGEN
+     ============================================================ -->
+<section class="section section--alt fade-in" style="text-align:center;">
+  <div class="container" style="text-align:center;">
+    <span class="label">07 — Erlebnisse</span>
+    <h2 style="margin-bottom:16px;">
+      Erlebnisse vor Ort
+      <span class="char">(18 Zeichen)</span>
+    </h2>
+    <p class="body-text" style="margin-bottom:36px;margin-left:auto;margin-right:auto;">
+      Persönliche Erlebnisse vertiefen die Bindung zum Weingut — vom digitalen Kontakt zur realen Beziehung.
+      <span class="char">(101 Zeichen)</span>
+    </p>
+    <div class="grid-2" style="gap:24px;">
+      <!-- Card 1: Weinverkostung -->
+      <div class="gcard">
+        <div class="gcard__icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M8 2h8l-1 7H9L8 2z"/><line x1="12" y1="9" x2="12" y2="16"/><path d="M7 16h10"/>
+            <path d="M6 20h12"/><line x1="12" y1="16" x2="12" y2="20"/>
+          </svg>
+        </div>
+        <h3>Weinverkostung buchen</h3>
+        <p>
+          Eine persönliche Verkostung nutzt den IKEA-Effekt: Erlebnisse, an denen man aktiv teilnimmt, werden höher bewertet. Der Besuch vor Ort transformiert den anonymen Online-Kauf in eine emotionale Beziehung mit multisensorischer Verankerung.
+          <span class="char">(240 Zeichen)</span>
+        </p>
+        <a href="events.html" class="btn btn--dark">Verkostung buchen</a>
+      </div>
+      <!-- Card 2: Veranstaltungen -->
+      <div class="gcard">
+        <div class="gcard__icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+            <rect x="3" y="4" width="18" height="18" rx="2" ry="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/>
+          </svg>
+        </div>
+        <h3>Veranstaltungen</h3>
+        <p>
+          Events nutzen den Social-Proof-Effekt in Echtzeit: Wer andere Menschen beim Genießen erlebt, bewertet das Produkt automatisch positiver. Gemeinsame Erlebnisse schaffen kollektive Erinnerungen, die langfristige Markenbindung erzeugen.
+          <span class="char">(237 Zeichen)</span>
+        </p>
+        <a href="events.html" class="btn btn--dark">Alle Events ansehen</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================
+     11. NEWSLETTER
+     ============================================================ -->
+<div class="nl fade-in">
+  <div class="container">
+    <div class="nl__block">
+      <div class="nl__text">
+        <span class="label">Newsletter</span>
+        <h2>Newsletter &amp; 10 % Rabatt</h2>
+        <p class="desc">
+          Erhalten Sie exklusive Angebote, Weinempfehlungen und Einladungen zu Events — max. 2x im Monat.
+        </p>
+      </div>
+      <div>
+        <form class="nl__form" onsubmit="return false;">
+          <div class="nl__form-row">
+            <input type="text" placeholder="Vorname" aria-label="Vorname">
+            <input type="text" placeholder="Nachname" aria-label="Nachname">
+          </div>
+          <input type="email" placeholder="Ihre E-Mail-Adresse" aria-label="E-Mail-Adresse">
+          <button type="submit">Anmelden und 10 % Rabatt sichern</button>
+        </form>
+        <p class="nl__legal">
+          Mit der Anmeldung stimmen Sie unserer Datenschutzerklärung zu. Abmeldung jederzeit möglich.
+        </p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ============================================================
+     12. FOOTER
+     ============================================================ -->
+<footer class="footer">
+  <div class="container">
+
+    <!-- Footer Grid -->
+    <div class="footer__grid">
+      <!-- Column 1: Contact -->
+      <div class="footer__col">
+        <div class="flogo">Weingut <em>Mustertal</em></div>
+        <p>Familienweingut seit 1876 — Handverlesene Weine aus dem Mustertal mit Leidenschaft und Tradition.</p>
+        <div class="fcontact">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+          Musterstraße 12, 79241 Mustertal
+        </div>
+        <div class="fcontact">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+          +49 (0) 7634 / 123 456
+        </div>
+        <div class="fcontact">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+          info@weingut-mustertal.de
+        </div>
+      </div>
+
+      <!-- Column 2: Service -->
+      <div class="footer__col">
+        <h4>Service</h4>
+        <ul>
+          <li><a href="kontakt.html">Kontakt</a></li>
+          <li><a href="#">FAQ / Hilfe</a></li>
+          <li><a href="#">Versandinformationen</a></li>
+          <li><a href="#">Retouren & Umtausch</a></li>
+          <li><a href="#">Geschenkgutscheine</a></li>
+          <li><a href="#">Weinberatung</a></li>
+        </ul>
+      </div>
+
+      <!-- Column 3: Lieferung & Zahlung -->
+      <div class="footer__col">
+        <h4>Lieferung & Zahlung</h4>
+        <ul>
+          <li><a href="#">Versandkostenfrei ab 69 €</a></li>
+          <li><a href="#">Lieferung in 2–4 Werktagen</a></li>
+          <li><a href="#">Klimaneutraler Versand</a></li>
+          <li><a href="#">Sichere Bezahlung (SSL)</a></li>
+          <li><a href="#">Kauf auf Rechnung</a></li>
+          <li><a href="#">Ratenzahlung möglich</a></li>
+        </ul>
+      </div>
+
+      <!-- Column 4: Unternehmen -->
+      <div class="footer__col">
+        <h4>Unternehmen</h4>
+        <ul>
+          <li><a href="ueber-uns.html">Über Uns</a></li>
+          <li><a href="#">Nachhaltigkeit</a></li>
+          <li><a href="events.html">Events & Weinproben</a></li>
+          <li><a href="#">Presse</a></li>
+          <li><a href="#">Karriere</a></li>
+          <li><a href="#">Händler werden</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- Footer Bottom -->
+    <div class="footer__bottom">
+      <!-- Legal Links -->
+      <div class="footer__bottom-left">
+        <a href="#">Impressum</a>
+        <a href="#">Datenschutz</a>
+        <a href="#">AGB</a>
+        <a href="widerrufsrecht.html" class="footer__widerruf">Vertrag widerrufen</a>
+        <span>&copy; 2026 Weingut Mustertal</span>
+      </div>
+
+      <!-- Payment Icons -->
+      <div class="fpay">
+        <div class="fpay__icon">VISA</div>
+        <div class="fpay__icon">MC</div>
+        <div class="fpay__icon">PayPal</div>
+        <div class="fpay__icon">Klarna</div>
+        <div class="fpay__icon">DHL</div>
+        <div class="fpay__icon">DPD</div>
+      </div>
+
+      <!-- Social Icons -->
+      <div class="fsocial">
+        <a href="#" aria-label="Instagram">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
+        </a>
+        <a href="#" aria-label="Facebook">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg>
+        </a>
+        <a href="#" aria-label="YouTube">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22.54 6.42a2.78 2.78 0 0 0-1.94-2C18.88 4 12 4 12 4s-6.88 0-8.6.46a2.78 2.78 0 0 0-1.94 2A29 29 0 0 0 1 11.75a29 29 0 0 0 .46 5.33A2.78 2.78 0 0 0 3.4 19.13C5.12 19.56 12 19.56 12 19.56s6.88 0 8.6-.46a2.78 2.78 0 0 0 1.94-2 29 29 0 0 0 .46-5.25 29 29 0 0 0-.46-5.33z"/><polygon points="9.75 15.02 15.5 11.75 9.75 8.48 9.75 15.02"/></svg>
+        </a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<!-- ============================================================
+     JAVASCRIPT
+     ============================================================ -->
+<script>
+// Header scroll
+window.addEventListener('scroll',()=>{document.querySelector('.header').classList.toggle('scrolled',window.scrollY>10)});
+// Fade-in observer
+const obs=new IntersectionObserver(entries=>{entries.forEach(e=>{if(e.isIntersecting)e.target.classList.add('visible')})},{rootMargin:'0px 0px -60px 0px',threshold:0.1});
+document.querySelectorAll('.fade-in').forEach(el=>obs.observe(el));
+</script>
+
+<!-- ============================================================
+     CART DRAWER
+     ============================================================ -->
+<div class="cart-overlay" id="cart-overlay" onclick="closeCartDrawer()"></div>
+<div class="cart-drawer" id="cart-drawer">
+  <div class="cart-drawer__header">
+    <h3>Warenkorb (2)</h3>
+    <button class="cart-drawer__close" onclick="closeCartDrawer()" aria-label="Warenkorb schliessen">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" style="width:18px;height:18px;"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+    </button>
+  </div>
+  <div class="cart-drawer__body">
+    <div class="cart-drawer__item">
+      <div class="cart-drawer__item-img">Bild</div>
+      <div class="cart-drawer__item-info">
+        <div class="cart-drawer__item-name">Riesling Spätlese 2023</div>
+        <div class="cart-drawer__item-price">14,90 &euro;</div>
+        <div class="cart-drawer__item-qty">
+          <button aria-label="Menge verringern">&minus;</button>
+          <span>1</span>
+          <button aria-label="Menge erhöhen">+</button>
+        </div>
+        <button class="cart-drawer__item-remove">Entfernen</button>
+      </div>
+    </div>
+    <div class="cart-drawer__item">
+      <div class="cart-drawer__item-img">Bild</div>
+      <div class="cart-drawer__item-info">
+        <div class="cart-drawer__item-name">Grauburgunder trocken 2023</div>
+        <div class="cart-drawer__item-price">10,90 &euro;</div>
+        <div class="cart-drawer__item-qty">
+          <button aria-label="Menge verringern">&minus;</button>
+          <span>2</span>
+          <button aria-label="Menge erhöhen">+</button>
+        </div>
+        <button class="cart-drawer__item-remove">Entfernen</button>
+      </div>
+    </div>
+    <div class="cart-drawer__upsell">
+      <div class="cart-drawer__upsell-title">Das könnte dir auch gefallen</div>
+      <div class="cart-drawer__upsell-grid">
+        <div class="cart-drawer__upsell-card">
+          <div class="cart-drawer__upsell-card-img">Bild</div>
+          <div class="cart-drawer__upsell-card-name">Chardonnay Réserve 2022</div>
+          <div class="cart-drawer__upsell-card-price">18,90 &euro;</div>
+          <div class="cart-drawer__upsell-card-btn">+ Hinzufügen</div>
+        </div>
+        <div class="cart-drawer__upsell-card">
+          <div class="cart-drawer__upsell-card-img">Bild</div>
+          <div class="cart-drawer__upsell-card-name">Kennenlernpaket</div>
+          <div class="cart-drawer__upsell-card-price">49,90 &euro;</div>
+          <div class="cart-drawer__upsell-card-btn">+ Hinzufügen</div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="cart-drawer__footer">
+    <div class="cart-drawer__subtotal">
+      <span class="cart-drawer__subtotal-label">Zwischensumme</span>
+      <span class="cart-drawer__subtotal-value">36,70 &euro;</span>
+    </div>
+    <div class="cart-drawer__shipping">Versandkostenfrei ab 69 &euro; &middot; inkl. MwSt.</div>
+    <button class="cart-drawer__checkout">Zur Kasse</button>
+    <button class="cart-drawer__continue" onclick="closeCartDrawer()">Weiter einkaufen</button>
+  </div>
+</div>
+<script>
+function openCartDrawer(){document.getElementById('cart-drawer').classList.add('open');document.getElementById('cart-overlay').classList.add('open');document.body.style.overflow='hidden';}
+function closeCartDrawer(){document.getElementById('cart-drawer').classList.remove('open');document.getElementById('cart-overlay').classList.remove('open');document.body.style.overflow='';}
+document.addEventListener('keydown',function(e){if(e.key==='Escape')closeCartDrawer();});
+</script>
+
+</body>
+</html>

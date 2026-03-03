@@ -1,0 +1,716 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Weingut Mustertal — Startseite | Wireframe</title>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400&family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<!-- ============================================================
+     1. ANNOUNCEMENT BAR
+     ============================================================ -->
+<div class="announcement">
+  Dieser schmale Banner erzeugt Dringlichkeit durch ein zeitlich begrenztes Angebot — Versandkostenfrei ab 69 € &nbsp;|&nbsp; <a href="#">Jetzt Kennenlernpaket sichern</a>
+</div>
+
+<!-- ============================================================
+     2. HEADER
+     ============================================================ -->
+<header class="header">
+  <div class="header__inner">
+    <a href="index.html" class="header__logo">Weingut <em>Mustertal</em></a>
+    <ul class="header__nav">
+      <li class="active"><a href="index.html">Startseite</a></li>
+      <li>
+        <a href="kategorie.html">Weine</a>
+        <!-- Mega Menu — 4 Spalten + Produkt-Teaser -->
+        <div class="mega">
+          <div class="mega__grid mega__grid--wide">
+            <div class="mega__col">
+              <h4>Sortiment</h4>
+              <ul>
+                <li><a href="kategorie.html">Weißweine</a></li>
+                <li><a href="kategorie.html">Rotweine</a></li>
+                <li><a href="kategorie.html">Rosé</a></li>
+                <li><a href="kategorie.html">Sekt & Secco</a></li>
+                <li><a href="kategorie.html">Spirituosen</a></li>
+                <li><a href="kategorie.html">Alle Weine</a></li>
+              </ul>
+            </div>
+            <div class="mega__col">
+              <h4>Terroir</h4>
+              <ul>
+                <li><a href="kategorie.html">Unsere Böden</a></li>
+                <li><a href="kategorie.html">Muschelkalk</a></li>
+                <li><a href="kategorie.html">Löss & Lehm</a></li>
+                <li><a href="kategorie.html">Einzellagen</a></li>
+                <li><a href="kategorie.html">Lagenkarte</a></li>
+              </ul>
+            </div>
+            <div class="mega__col">
+              <h4>Sonstiges</h4>
+              <ul>
+                <li><a href="kategorie.html">Neuheiten</a></li>
+                <li><a href="kategorie.html">Bestseller</a></li>
+                <li><a href="kategorie.html">Kennenlernpakete</a></li>
+                <li><a href="kategorie.html">Geschenksets</a></li>
+                <li><a href="kategorie.html">Wein im Abo</a></li>
+              </ul>
+            </div>
+            <div class="mega__col">
+              <h4>Qualitätsstufen</h4>
+              <ul>
+                <li><a href="kategorie.html">Gutswein</a></li>
+                <li><a href="kategorie.html">Ortswein</a></li>
+                <li><a href="kategorie.html">Lagenwein</a></li>
+                <li><a href="kategorie.html">Große Gewächse</a></li>
+              </ul>
+            </div>
+            <div class="mega__col">
+              <div class="mega__product">
+                <div class="ph" style="height:90px">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1"><rect x="3" y="3" width="18" height="18" rx="2"/><line x1="3" y1="9" x2="21" y2="9"/></svg>
+                  <span>Paket-Teaser</span>
+                </div>
+                <div class="mega__product-name">Kennenlernpaket</div>
+                <div class="mega__product-price">49,90 €</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </li>
+      <li><a href="ueber-uns.html">Weingut</a></li>
+      <li><a href="ueber-uns.html">Über Uns</a></li>
+      <li><a href="events.html">Events</a></li>
+      <li><a href="kontakt.html">Kontakt</a></li>
+    </ul>
+    <div class="header__icons">
+      <!-- Search -->
+      <button aria-label="Suche">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+      </button>
+      <!-- Profile -->
+      <button aria-label="Mein Konto">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+      </button>
+      <!-- Cart -->
+      <button aria-label="Warenkorb" onclick="openCartDrawer()">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"/><line x1="3" y1="6" x2="21" y2="6"/><path d="M16 10a4 4 0 0 1-8 0"/></svg>
+        <span class="cart-badge">2</span>
+      </button>
+    </div>
+  </div>
+</header>
+
+<!-- ============================================================
+     3. HERO SECTION
+     ============================================================ -->
+<section class="section fade-in">
+  <div class="container">
+    <div class="grid-2">
+      <div>
+        <span class="label">01 — Hero</span>
+        <h1>
+          Weine, die Geschichten erzählen
+          <span class="char">(32 Zeichen)</span>
+        </h1>
+        <p class="body-text" style="margin-top:18px;font-size:0.88rem;">
+          Emotionale Subheadline, die den Claim konkretisiert und ein Nutzenversprechen liefert. Warmherzige Ansprache erzeugt Neugier und motiviert zum Weiterscrollen.
+          <span class="char">(~100 Zeichen empfohlen)</span>
+        </p>
+        <ul style="list-style:none;margin-top:22px;display:flex;flex-direction:column;gap:8px;">
+          <li style="display:flex;align-items:center;gap:10px;font-size:0.9rem;color:#555;">
+            <span style="color:#AAA;">&#10022;</span>
+            USP mit konkretem Nutzen — spricht das Sicherheitsbedürfnis an
+            <span class="char">(62 Zeichen)</span>
+          </li>
+          <li style="display:flex;align-items:center;gap:10px;font-size:0.9rem;color:#555;">
+            <span style="color:#AAA;">&#10022;</span>
+            Zweiter USP betont Exklusivität und erzeugt Verknappungseffekt
+            <span class="char">(63 Zeichen)</span>
+          </li>
+          <li style="display:flex;align-items:center;gap:10px;font-size:0.9rem;color:#555;">
+            <span style="color:#AAA;">&#10022;</span>
+            Dritter USP nutzt Autorität und Tradition als Vertrauenssignal
+            <span class="char">(64 Zeichen)</span>
+          </li>
+        </ul>
+        <div style="display:flex;gap:14px;margin-top:28px;flex-wrap:wrap;">
+          <a href="kategorie.html" class="btn btn--dark">Weine entdecken</a>
+          <a href="ueber-uns.html" class="btn btn--outline">Unser Weingut</a>
+        </div>
+        <!-- Social Proof mit Avataren -->
+        <div style="display:flex;align-items:center;gap:12px;margin-top:24px;font-size:0.85rem;color:#888;">
+          <!-- 4 Avatar-Icons -->
+          <div style="display:flex;margin-right:2px;">
+            <div class="tcard__avatar" style="width:28px;height:28px;font-size:0.4rem;margin-right:-8px;border:2px solid white;z-index:4;">A</div>
+            <div class="tcard__avatar" style="width:28px;height:28px;font-size:0.4rem;margin-right:-8px;border:2px solid white;z-index:3;">B</div>
+            <div class="tcard__avatar" style="width:28px;height:28px;font-size:0.4rem;margin-right:-8px;border:2px solid white;z-index:2;">C</div>
+            <div class="tcard__avatar" style="width:28px;height:28px;font-size:0.4rem;border:2px solid white;z-index:1;">D</div>
+          </div>
+          <span style="color:#D4A853;letter-spacing:2px;">&#9733;&#9733;&#9733;&#9733;&#9733;</span>
+          <span>4,9 / 5 aus 327 Bewertungen</span>
+          <a href="#" style="text-decoration:underline;color:#555;">Alle lesen</a>
+        </div>
+      </div>
+      <div class="ph-img" style="height:480px;position:relative;">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><path d="M21 15l-5-5L5 21"/></svg>
+        <span>Hero-Bild — 480px / Weingut-Panorama oder Winzerfamilie im Weinberg</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================
+     4. TRUST BAR
+     ============================================================ -->
+<div class="trust fade-in">
+  <div class="container">
+    <div class="trust__inner">
+      <span class="trust__label">Bekannt aus</span>
+      <div class="trust__logo">Essen & Trinken</div>
+      <div class="trust__logo">Gault & Millau</div>
+      <div class="trust__logo">Falstaff</div>
+      <div class="trust__logo">Vinum</div>
+      <div class="trust__logo">Feinschmecker</div>
+    </div>
+    <div class="note" style="margin-top:16px;display:flex;justify-content:center;width:100%;text-align:center;">
+      Alternativ: USP-Leiste mit Icons (Familienweingut seit 1876, Handgelesen, Versandkostenfrei ab 69 €, Klimaneutraler Versand) — je nach Conversion-Hypothese testen.
+    </div>
+  </div>
+</div>
+
+<!-- ============================================================
+     5. KENNENLERNPAKET PITCH
+     ============================================================ -->
+<section class="section section--alt fade-in">
+  <div class="container">
+    <div class="grid-2">
+      <div>
+        <span class="label">02 — Produkt-Pitch</span>
+        <h2>
+          Das Kennenlernpaket
+          <span class="char">(19 Zeichen)</span>
+        </h2>
+        <p class="body-text" style="margin-top:16px;">
+          Dieser Absatz erklärt den konkreten Inhalt des Pakets, betont den Preisvorteil gegenüber Einzelkauf und erzeugt durch Verknappung und soziale Bewährtheit zusätzliche Kaufmotivation. Psychologisch nutzt diese Sektion die „Foot-in-the-door"-Technik: Das Kennenlernpaket wird als risikofreier Einstieg positioniert — eine kleine Zusage, die zu größerer Kundenbindung führt. Die Sprache sollte warm, persönlich und einladend sein. Empfohlen: 200–280 Zeichen.
+          <span class="char">(ca. 200–280 Zeichen empfohlen)</span>
+        </p>
+        <a href="produktseite.html" class="btn btn--dark" style="margin-top:24px;">Kennenlernpaket ansehen</a>
+      </div>
+      <div class="pcard" style="max-width:340px;margin:0 auto;">
+        <div class="pcard__img" style="height:240px;position:relative;background:#E8EFEA;border:1.5px dashed #B8C8BA;">
+          <span class="pcard__flip">Bestseller</span>
+          <svg viewBox="0 0 24 24" fill="none" stroke="#8A9E8E" stroke-width="1" style="width:32px;height:32px;opacity:0.3;"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><path d="M21 15l-5-5L5 21"/></svg>
+          <span style="color:#8A9E8E;">Kennenlernpaket — 6 Flaschen</span>
+        </div>
+        <div class="pcard__body" style="text-align:center;padding:20px;">
+          <div class="pcard__title">Kennenlernpaket „Mustertal Entdecken"</div>
+          <div class="pcard__price" style="margin-top:8px;">
+            49,90 € <span class="old">62,40 €</span>
+          </div>
+          <a href="produktseite.html" class="btn btn--dark btn--full" style="margin-top:16px;">In den Warenkorb</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================
+     6. WEINGUT PITCH
+     ============================================================ -->
+<section class="section fade-in">
+  <div class="container">
+    <div class="grid-2">
+      <div>
+        <span class="label">03 — Weingut Pitch</span>
+        <h2>
+          Deshalb unser Weingut
+          <span class="char">(21 Zeichen)</span>
+        </h2>
+        <p class="body-text" style="margin-top:16px;">
+          Hier wird die Geschichte des Weinguts erzählt — Authentizität und Handwerkstradition stehen im Vordergrund, damit sich der Besucher als Teil der Familie fühlt. Psychologisch nutzt dieser Text das narrative Transportphänomen: Geschichten senken die rationale Verteidigung und bauen emotionale Nähe auf. Die persönliche Ansprache der Winzerfamilie aktiviert Spiegelneuronen und erzeugt Empathie. Der Ton sollte persönlich und nahbar sein. Empfohlen: 200–260 Zeichen.
+          <span class="char">(ca. 200–260 Zeichen empfohlen)</span>
+        </p>
+        <a href="ueber-uns.html" class="btn btn--dark" style="margin-top:24px;">Unser Weingut entdecken</a>
+      </div>
+      <div class="ph-img" style="height:380px;position:relative;">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><path d="M21 15l-5-5L5 21"/></svg>
+        <span>Weingut-Video — Familie bei der Arbeit im Keller oder Weinberg</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================
+     7. CATEGORY CIRCLES — Nur Überschrift + Bubbles
+     ============================================================ -->
+<section class="section section--alt fade-in">
+  <div class="container" style="text-align:center;">
+    <h2>
+      Unsere Kategorien
+      <span class="char">(18 Zeichen)</span>
+    </h2>
+    <div class="cats" style="margin-top:36px;">
+      <a href="kategorie.html" class="cats__item">
+        <div class="cats__circle" style="">Bild</div>
+        <span class="cats__name">Trocken</span>
+      </a>
+      <a href="kategorie.html" class="cats__item">
+        <div class="cats__circle" style="">Bild</div>
+        <span class="cats__name">Aromatik</span>
+      </a>
+      <a href="kategorie.html" class="cats__item">
+        <div class="cats__circle" style="">Bild</div>
+        <span class="cats__name">Weißburgunder</span>
+      </a>
+      <a href="kategorie.html" class="cats__item">
+        <div class="cats__circle" style="">Bild</div>
+        <span class="cats__name">Rosé / Sekt</span>
+      </a>
+      <a href="kategorie.html" class="cats__item">
+        <div class="cats__circle" style="">Bild</div>
+        <span class="cats__name">Spätburgunder</span>
+      </a>
+      <a href="kategorie.html" class="cats__item">
+        <div class="cats__circle" style="">Bild</div>
+        <span class="cats__name">Spirits</span>
+      </a>
+      <a href="kategorie.html" class="cats__item">
+        <div class="cats__circle" style="">Bild</div>
+        <span class="cats__name">Mix & Match</span>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================
+     8. TERROIR & HANDWERK
+     ============================================================ -->
+<section class="section fade-in">
+  <div class="container">
+    <div class="grid-2">
+      <div class="ph-img" style="height:400px;">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><path d="M21 15l-5-5L5 21"/></svg>
+        <span>Terroir-Bild — Nahaufnahme Boden, Reben, Hände bei der Lese</span>
+      </div>
+      <div>
+        <span class="label">05 — Terroir</span>
+        <h2>
+          Unser Terroir & Handwerk
+          <span class="char">(24 Zeichen)</span>
+        </h2>
+        <p class="body-text" style="margin-top:16px;">
+          Der Text verbindet sensorische Sprache mit Fachwissen und erzeugt dadurch gleichzeitig emotionale Resonanz und kognitive Autorität. Begriffe wie Muschelkalk, Hangneigung und Mikroklima signalisieren Expertise und rechtfertigen den Preis. Psychologisch vermittelt diese Sektion Einzigartigkeit durch Herkunft — Terroir wird als unkopierbares Differenzierungsmerkmal positioniert und hebt den Wein über den Massenmarkt hinaus. Die Sprache sollte sensorisch, konkret und fachlich fundiert sein. Empfohlen: 220–280 Zeichen.
+          <span class="char">(ca. 220–280 Zeichen empfohlen)</span>
+        </p>
+        <a href="ueber-uns.html" class="btn btn--dark" style="margin-top:24px;">Terroir erkunden</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================
+     9. ÜBER UNS / TEAM
+     ============================================================ -->
+<section class="section section--alt fade-in">
+  <div class="container">
+    <div class="grid-2">
+      <div>
+        <span class="label">06 — Über Uns</span>
+        <h2>
+          Die Menschen hinter dem Wein <span class="char" style="white-space:nowrap;">(29 Zeichen)</span>
+        </h2>
+        <p class="body-text" style="margin-top:16px;">
+          Dieser Absatz erzählt die Geschichte der Familie und baut durch das Prinzip der sozialen Bewährtheit Vertrauen auf. Psychologisch nutzt diese persönliche Sektion den „Identifiable Victim Effect": Konkrete Gesichter und Namen erzeugen eine stärkere emotionale Bindung als abstrakte Markenaussagen. Emotionale Sprache aktiviert das limbische System und fördert die parasoziale Beziehung zum Winzer. Der Ton sollte persönlich, warm und authentisch sein. Empfohlen: 200–260 Zeichen.
+          <span class="char">(ca. 200–260 Zeichen empfohlen)</span>
+        </p>
+        <a href="ueber-uns.html" class="btn btn--dark" style="margin-top:24px;">Die Familie kennenlernen</a>
+      </div>
+      <div class="ph-img" style="height:400px;">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><path d="M21 15l-5-5L5 21"/></svg>
+        <span>Familienfoto — authentisch, natürlich, im Weinberg oder Keller</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================
+     10. QUALITÄTSPYRAMIDE
+     ============================================================ -->
+<section class="section section--dark fade-in">
+  <div class="container">
+    <div class="grid-2">
+      <div>
+        <span class="label">Qualitätsphilosophie</span>
+        <h2>
+          Unsere Qualitätsstufen
+          <span class="char">(22 Zeichen)</span>
+        </h2>
+        <p class="body-text" style="margin-top:16px;">
+          Dieser erklärende Text entmystifiziert das deutsche Weinklassifikationssystem auf zugängliche Weise. Die Pyramidenstruktur nutzt visuelle Hierarchie, um Wertigkeit zu kommunizieren — der Besucher versteht sofort die Abstufung und fühlt sich orientiert. Das „Aha-Erlebnis" stärkt das Kompetenzgefühl des Kunden und senkt die Kaufhemmung bei höheren Qualitätsstufen. Der Ton sollte lehrreich, aber zugänglich sein — keine Fachsimpelei. Empfohlen: 200–260 Zeichen.
+          <span class="char">(ca. 200–260 Zeichen empfohlen)</span>
+        </p>
+        <a href="kategorie.html" class="btn btn--white" style="margin-top:24px;">Alle Weine nach Qualität</a>
+      </div>
+      <div>
+        <div style="display:flex;align-items:center;justify-content:center;">
+          <svg viewBox="0 0 400 300" style="width:100%;max-width:400px;">
+            <polygon points="200,10 380,290 20,290" fill="none" stroke="rgba(255,255,255,0.25)" stroke-width="1.5"/>
+            <line x1="140" y1="103" x2="260" y2="103" stroke="rgba(255,255,255,0.2)" stroke-width="1"/>
+            <line x1="80" y1="196" x2="320" y2="196" stroke="rgba(255,255,255,0.2)" stroke-width="1"/>
+            <polygon points="200,10 260,103 140,103" fill="rgba(255,255,255,0.12)"/>
+            <polygon points="140,103 260,103 320,196 80,196" fill="rgba(255,255,255,0.06)"/>
+            <polygon points="80,196 320,196 380,290 20,290" fill="rgba(255,255,255,0.02)"/>
+            <text x="200" y="62" text-anchor="middle" fill="white" font-family="Cormorant Garamond, serif" font-size="16" font-weight="500">Lagenwein</text>
+            <text x="200" y="80" text-anchor="middle" fill="rgba(255,255,255,0.45)" font-family="Outfit, sans-serif" font-size="7.5" letter-spacing="1.5">PRESTIGE AUS EINZELLAGEN</text>
+            <text x="200" y="155" text-anchor="middle" fill="white" font-family="Cormorant Garamond, serif" font-size="18" font-weight="500">Ortswein</text>
+            <text x="200" y="175" text-anchor="middle" fill="rgba(255,255,255,0.45)" font-family="Outfit, sans-serif" font-size="7.5" letter-spacing="1.5">CHARAKTER UNSERER BESTEN LAGEN</text>
+            <text x="200" y="248" text-anchor="middle" fill="white" font-family="Cormorant Garamond, serif" font-size="20" font-weight="500">Gutswein</text>
+            <text x="200" y="270" text-anchor="middle" fill="rgba(255,255,255,0.45)" font-family="Outfit, sans-serif" font-size="7.5" letter-spacing="1.5">VIELSEITIGE ALLTAGSBEGLEITER</text>
+          </svg>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================
+     11. SOCIAL PROOF — Nur Reviews, Google-Branding, kein Text
+     ============================================================ -->
+<section class="section fade-in">
+  <div class="container" style="text-align:center;">
+    <!-- Google Reviews Badge -->
+    <div style="display:inline-flex;align-items:center;gap:10px;margin-bottom:28px;padding:10px 20px;background:var(--gray-50);border:1px solid var(--gray-200);border-radius:24px;">
+      <svg viewBox="0 0 24 24" width="20" height="20" style="flex-shrink:0;">
+        <path d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92a5.06 5.06 0 0 1-2.2 3.32v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.1z" fill="#4285F4"/>
+        <path d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z" fill="#34A853"/>
+        <path d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l2.85-2.22.81-.62z" fill="#FBBC05"/>
+        <path d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z" fill="#EA4335"/>
+      </svg>
+      <span style="font-size:0.85rem;font-weight:600;color:var(--gray-900);">4,9</span>
+      <span style="color:#D4A853;letter-spacing:1px;font-size:0.82rem;">&#9733;&#9733;&#9733;&#9733;&#9733;</span>
+      <span style="font-size:0.78rem;color:var(--gray-500);">327 Google-Bewertungen</span>
+    </div>
+    <div class="grid-3">
+      <!-- Testimonial 1 -->
+      <div class="tcard">
+        <div class="tcard__top">
+          <div class="tcard__avatar" style="background:#E8EFEA;border-color:#B8C8BA;">Foto</div>
+          <div>
+            <div class="tcard__name">Maria K.</div>
+            <div class="tcard__stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+          </div>
+        </div>
+        <div class="tcard__text">
+          „Dieser Testimonial nutzt konkrete Details und emotionale Sprache, um Authentizität zu vermitteln. Die Ich-Perspektive erzeugt Identifikation beim Leser und reduziert kognitive Distanz."
+          <span class="char">(189 Zeichen)</span>
+        </div>
+      </div>
+      <!-- Testimonial 2 -->
+      <div class="tcard">
+        <div class="tcard__top">
+          <div class="tcard__avatar" style="background:#E8EFEA;border-color:#B8C8BA;">Foto</div>
+          <div>
+            <div class="tcard__name">Thomas R.</div>
+            <div class="tcard__stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+          </div>
+        </div>
+        <div class="tcard__text">
+          „Zweite Bewertung betont einen anderen Aspekt — Lieferung, Service oder Geschmack — um verschiedene Kaufmotive abzudecken. Variation der Themen erhöht die Breite der Ansprache."
+          <span class="char">(181 Zeichen)</span>
+        </div>
+      </div>
+      <!-- Testimonial 3 -->
+      <div class="tcard">
+        <div class="tcard__top">
+          <div class="tcard__avatar" style="background:#E8EFEA;border-color:#B8C8BA;">Foto</div>
+          <div>
+            <div class="tcard__name">Sabine & Jörg W.</div>
+            <div class="tcard__stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+          </div>
+        </div>
+        <div class="tcard__text">
+          „Dritter Testimonial zeigt ein Paar — signalisiert, dass der Wein als Geschenk oder gemeinsames Erlebnis funktioniert. Soziale Nutzungsszenarien erweitern die Zielgruppe."
+          <span class="char">(176 Zeichen)</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================
+     12. WEIN VERSCHENKEN & ABONNIEREN — Kein Section-Text
+     ============================================================ -->
+<section class="section section--alt fade-in">
+  <div class="container" style="text-align:center;">
+    <h2>
+      Wein verschenken & abonnieren
+      <span class="char">(31 Zeichen)</span>
+    </h2>
+    <div class="note" style="margin:16px auto 0;display:flex;justify-content:center;text-align:center;">
+      Alternativ: Weingutspezifische Inhalte wie Events, Weinproben, Saisonales oder andere individuelle Optionen — flexibel austauschbar je nach Weingut.
+    </div>
+    <div class="grid-2" style="margin-top:36px;gap:24px;">
+      <!-- Geschenk-Card -->
+      <div class="gcard">
+        <div class="gcard__icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+            <polyline points="20 12 20 22 4 22 4 12"/><rect x="2" y="7" width="20" height="5"/><line x1="12" y1="22" x2="12" y2="7"/><path d="M12 7H7.5a2.5 2.5 0 0 1 0-5C11 2 12 7 12 7z"/><path d="M12 7h4.5a2.5 2.5 0 0 0 0-5C13 2 12 7 12 7z"/>
+          </svg>
+        </div>
+        <h3>Wein verschenken</h3>
+        <p>
+          Dieser Text nutzt die Reziprozitätsnorm — Schenken erzeugt Bindung. Personalisierte Geschenke signalisieren Wertschätzung und positionieren den Wein als Premium-Präsent.
+          <span class="char">(176 Zeichen)</span>
+        </p>
+        <a href="kategorie.html" class="btn btn--dark">Geschenksets entdecken</a>
+      </div>
+      <!-- Abo-Card -->
+      <div class="gcard">
+        <div class="gcard__icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/>
+          </svg>
+        </div>
+        <h3>Wein im Abo</h3>
+        <p>
+          Das Abo-Modell nutzt den Commitment-Bias — einmal abonniert, bleibt der Kunde langfristig. Bequemlichkeit und Überraschung erzeugen einen Dopamin-Effekt bei jeder Lieferung.
+          <span class="char">(180 Zeichen)</span>
+        </p>
+        <a href="kategorie.html" class="btn btn--dark">Abo-Optionen ansehen</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- DROHNENFLUG — ENTFERNT -->
+<!-- FINAL CTA — ENTFERNT -->
+
+<!-- ============================================================
+     13. NEWSLETTER
+     ============================================================ -->
+<div class="nl fade-in">
+  <div class="container">
+    <div class="nl__block">
+      <div class="nl__text">
+        <span class="label">Newsletter</span>
+        <h2>Newsletter & 10 % Rabatt</h2>
+        <p class="desc">
+          Erhalten Sie exklusive Angebote, Weinempfehlungen und Einladungen zu Events — max. 2x im Monat.
+        </p>
+      </div>
+      <div>
+        <form class="nl__form" onsubmit="return false;">
+          <div class="nl__form-row">
+            <input type="text" placeholder="Vorname" aria-label="Vorname">
+            <input type="text" placeholder="Nachname" aria-label="Nachname">
+          </div>
+          <input type="email" placeholder="Ihre E-Mail-Adresse" aria-label="E-Mail-Adresse">
+          <button type="submit">Anmelden und 10 % Rabatt sichern</button>
+        </form>
+        <p class="nl__legal">
+          Mit der Anmeldung stimmen Sie unserer Datenschutzerklärung zu. Abmeldung jederzeit möglich.
+        </p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- WEINFINDER CTA — ENTFERNT -->
+
+<!-- ============================================================
+     14. FOOTER — Ohne "Persönlich vom Winzer" Bar
+     ============================================================ -->
+<footer class="footer">
+  <div class="container">
+    <!-- Footer Grid -->
+    <div class="footer__grid">
+      <!-- Column 1: Contact -->
+      <div class="footer__col">
+        <div class="flogo">Weingut <em>Mustertal</em></div>
+        <p>Familienweingut seit 1876 — Handverlesene Weine aus dem Mustertal mit Leidenschaft und Tradition.</p>
+        <div class="fcontact">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+          Musterstraße 12, 79241 Mustertal
+        </div>
+        <div class="fcontact">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+          +49 (0) 7634 / 123 456
+        </div>
+        <div class="fcontact">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+          info@weingut-mustertal.de
+        </div>
+      </div>
+
+      <!-- Column 2: Service -->
+      <div class="footer__col">
+        <h4>Service</h4>
+        <ul>
+          <li><a href="kontakt.html">Kontakt</a></li>
+          <li><a href="#">FAQ / Hilfe</a></li>
+          <li><a href="#">Versandinformationen</a></li>
+          <li><a href="#">Retouren & Umtausch</a></li>
+          <li><a href="#">Geschenkgutscheine</a></li>
+          <li><a href="#">Weinberatung</a></li>
+        </ul>
+      </div>
+
+      <!-- Column 3: Lieferung & Zahlung -->
+      <div class="footer__col">
+        <h4>Lieferung & Zahlung</h4>
+        <ul>
+          <li><a href="#">Versandkostenfrei ab 69 €</a></li>
+          <li><a href="#">Lieferung in 2–4 Werktagen</a></li>
+          <li><a href="#">Klimaneutraler Versand</a></li>
+          <li><a href="#">Sichere Bezahlung (SSL)</a></li>
+          <li><a href="#">Kauf auf Rechnung</a></li>
+          <li><a href="#">Ratenzahlung möglich</a></li>
+        </ul>
+      </div>
+
+      <!-- Column 4: Unternehmen -->
+      <div class="footer__col">
+        <h4>Unternehmen</h4>
+        <ul>
+          <li><a href="ueber-uns.html">Über Uns</a></li>
+          <li><a href="#">Nachhaltigkeit</a></li>
+          <li><a href="events.html">Events & Weinproben</a></li>
+          <li><a href="#">Presse</a></li>
+          <li><a href="#">Karriere</a></li>
+          <li><a href="#">Händler werden</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- Footer Bottom -->
+    <div class="footer__bottom">
+      <!-- Legal Links -->
+      <div class="footer__bottom-left">
+        <a href="#">Impressum</a>
+        <a href="#">Datenschutz</a>
+        <a href="#">AGB</a>
+        <a href="widerrufsrecht.html" class="footer__widerruf">Vertrag widerrufen</a>
+        <span>&copy; 2026 Weingut Mustertal</span>
+      </div>
+
+      <!-- Payment Icons -->
+      <div class="fpay">
+        <div class="fpay__icon">VISA</div>
+        <div class="fpay__icon">MC</div>
+        <div class="fpay__icon">PayPal</div>
+        <div class="fpay__icon">Klarna</div>
+        <div class="fpay__icon">DHL</div>
+        <div class="fpay__icon">DPD</div>
+      </div>
+
+      <!-- Social Icons -->
+      <div class="fsocial">
+        <a href="#" aria-label="Instagram">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
+        </a>
+        <a href="#" aria-label="Facebook">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg>
+        </a>
+        <a href="#" aria-label="YouTube">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22.54 6.42a2.78 2.78 0 0 0-1.94-2C18.88 4 12 4 12 4s-6.88 0-8.6.46a2.78 2.78 0 0 0-1.94 2A29 29 0 0 0 1 11.75a29 29 0 0 0 .46 5.33A2.78 2.78 0 0 0 3.4 19.13C5.12 19.56 12 19.56 12 19.56s6.88 0 8.6-.46a2.78 2.78 0 0 0 1.94-2 29 29 0 0 0 .46-5.25 29 29 0 0 0-.46-5.33z"/><polygon points="9.75 15.02 15.5 11.75 9.75 8.48 9.75 15.02"/></svg>
+        </a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<!-- ============================================================
+     JAVASCRIPT
+     ============================================================ -->
+<script>
+// Header scroll
+window.addEventListener('scroll',()=>{document.querySelector('.header').classList.toggle('scrolled',window.scrollY>10)});
+// Fade-in observer
+const obs=new IntersectionObserver(entries=>{entries.forEach(e=>{if(e.isIntersecting)e.target.classList.add('visible')})},{rootMargin:'0px 0px -60px 0px',threshold:0.1});
+document.querySelectorAll('.fade-in').forEach(el=>obs.observe(el));
+// Smooth scroll
+document.querySelectorAll('a[href^="#"]').forEach(a=>{a.addEventListener('click',function(e){const h=this.getAttribute('href');if(h==='#')return;e.preventDefault();document.querySelector(h)?.scrollIntoView({behavior:'smooth'})})});
+</script>
+
+<!-- ============================================================
+     CART DRAWER
+     ============================================================ -->
+<div class="cart-overlay" id="cart-overlay" onclick="closeCartDrawer()"></div>
+<div class="cart-drawer" id="cart-drawer">
+  <div class="cart-drawer__header">
+    <h3>Warenkorb (2)</h3>
+    <button class="cart-drawer__close" onclick="closeCartDrawer()" aria-label="Warenkorb schliessen">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" style="width:18px;height:18px;"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+    </button>
+  </div>
+  <div class="cart-drawer__body">
+    <!-- Item 1 -->
+    <div class="cart-drawer__item">
+      <div class="cart-drawer__item-img">Bild</div>
+      <div class="cart-drawer__item-info">
+        <div class="cart-drawer__item-name">Riesling Spätlese 2023</div>
+        <div class="cart-drawer__item-price">14,90 &euro;</div>
+        <div class="cart-drawer__item-qty">
+          <button aria-label="Menge verringern">&minus;</button>
+          <span>1</span>
+          <button aria-label="Menge erhöhen">+</button>
+        </div>
+        <button class="cart-drawer__item-remove">Entfernen</button>
+      </div>
+    </div>
+    <!-- Item 2 -->
+    <div class="cart-drawer__item">
+      <div class="cart-drawer__item-img">Bild</div>
+      <div class="cart-drawer__item-info">
+        <div class="cart-drawer__item-name">Grauburgunder trocken 2023</div>
+        <div class="cart-drawer__item-price">10,90 &euro;</div>
+        <div class="cart-drawer__item-qty">
+          <button aria-label="Menge verringern">&minus;</button>
+          <span>2</span>
+          <button aria-label="Menge erhöhen">+</button>
+        </div>
+        <button class="cart-drawer__item-remove">Entfernen</button>
+      </div>
+    </div>
+    <!-- Upsell -->
+    <div class="cart-drawer__upsell">
+      <div class="cart-drawer__upsell-title">Das könnte dir auch gefallen</div>
+      <div class="cart-drawer__upsell-grid">
+        <div class="cart-drawer__upsell-card">
+          <div class="cart-drawer__upsell-card-img">Bild</div>
+          <div class="cart-drawer__upsell-card-name">Chardonnay Réserve 2022</div>
+          <div class="cart-drawer__upsell-card-price">18,90 &euro;</div>
+          <div class="cart-drawer__upsell-card-btn">+ Hinzufügen</div>
+        </div>
+        <div class="cart-drawer__upsell-card">
+          <div class="cart-drawer__upsell-card-img">Bild</div>
+          <div class="cart-drawer__upsell-card-name">Kennenlernpaket</div>
+          <div class="cart-drawer__upsell-card-price">49,90 &euro;</div>
+          <div class="cart-drawer__upsell-card-btn">+ Hinzufügen</div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="cart-drawer__footer">
+    <div class="cart-drawer__subtotal">
+      <span class="cart-drawer__subtotal-label">Zwischensumme</span>
+      <span class="cart-drawer__subtotal-value">36,70 &euro;</span>
+    </div>
+    <div class="cart-drawer__shipping">Versandkostenfrei ab 69 &euro; &middot; inkl. MwSt.</div>
+    <button class="cart-drawer__checkout">Zur Kasse</button>
+    <button class="cart-drawer__continue" onclick="closeCartDrawer()">Weiter einkaufen</button>
+  </div>
+</div>
+<script>
+function openCartDrawer(){document.getElementById('cart-drawer').classList.add('open');document.getElementById('cart-overlay').classList.add('open');document.body.style.overflow='hidden';}
+function closeCartDrawer(){document.getElementById('cart-drawer').classList.remove('open');document.getElementById('cart-overlay').classList.remove('open');document.body.style.overflow='';}
+document.addEventListener('keydown',function(e){if(e.key==='Escape')closeCartDrawer();});
+</script>
+
+</body>
+</html>
