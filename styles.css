@@ -516,6 +516,49 @@ h4{font-family:var(--font-display);font-size:1.1rem;font-weight:500}
 .sticky-atc__btn{height:36px;padding:0 28px;background:var(--black);color:var(--white);border:none;border-radius:999px;font-size:0.85rem;font-weight:500;cursor:pointer;transition:all var(--ease);white-space:nowrap}
 .sticky-atc__btn:hover{background:var(--gray-900)}
 
+/* ============================================================
+   BUNDLE / PAKET PAGE
+   ============================================================ */
+/* Badge over title */
+.pd__badge{display:inline-block;padding:4px 14px;background:var(--gray-900);color:var(--white);border-radius:999px;font-size:0.72rem;font-weight:500;letter-spacing:0.05em;text-transform:uppercase;margin-bottom:10px}
+
+/* Bundle price block */
+.pd__price--bundle{margin-bottom:8px}
+.pd__price-original{font-size:0.88rem;color:var(--gray-400);text-decoration:line-through;margin-bottom:2px}
+.pd__price-savings{display:inline-block;padding:4px 12px;background:#E8F5E9;color:#2E7D32;border-radius:999px;font-size:0.75rem;font-weight:600;margin-top:4px}
+.pd__omnibus{font-size:0.68rem;color:var(--gray-400);margin-bottom:14px;margin-top:4px}
+
+/* Free shipping badge (replaces shipping bar on bundle pages) */
+.pd__free-shipping{display:flex;align-items:center;gap:8px;padding:10px 16px;background:#E8F5E9;border:1px solid #C8E6C9;border-radius:var(--r);font-size:0.82rem;color:#2E7D32;font-weight:500;margin-bottom:18px}
+
+/* Compact wine list in buy box */
+.pd__bundle-list{margin-bottom:18px;padding:16px;background:var(--gray-50);border:1px solid var(--gray-200);border-radius:var(--r)}
+.pd__bundle-list ul{list-style:none;display:flex;flex-direction:column;gap:4px;font-size:0.85rem;color:var(--gray-700)}
+.pd__bundle-list li::before{content:'•';color:var(--gray-400);margin-right:8px}
+.pd__bundle-list-link{display:inline-block;margin-top:10px;font-size:0.82rem;color:var(--gray-900);font-weight:500;text-decoration:underline;text-underline-offset:3px}
+.pd__bundle-list-link:hover{color:var(--black)}
+
+/* Bundle variant pills */
+.bundle-variants{display:flex;gap:8px;flex-wrap:wrap;justify-content:center}
+.bundle-variants__pill{display:inline-block;padding:8px 18px;border:1.5px solid var(--gray-300);border-radius:999px;font-size:0.82rem;color:var(--gray-700);cursor:pointer;transition:all 0.25s ease;background:var(--white)}
+.bundle-variants__pill:hover{border-color:var(--gray-900);color:var(--black)}
+.bundle-variants__pill--active{background:var(--gray-900);color:var(--white);border-color:var(--gray-900)}
+
+/* Bundle wines grid */
+.bundle-wines-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+.bundle-wine-card{background:var(--white);border:1px solid var(--gray-200);border-radius:var(--r);padding:16px;text-align:center;transition:box-shadow var(--ease)}
+.bundle-wine-card:hover{box-shadow:var(--shadow-md)}
+.bundle-wine-card__img{height:120px;border-radius:4px;margin-bottom:12px}
+.bundle-wine-card__qty{display:inline-block;padding:3px 10px;background:var(--gray-100);border-radius:999px;font-size:0.7rem;font-weight:600;color:var(--gray-700);margin-bottom:8px}
+.bundle-wine-card__name{font-family:var(--font-display);font-size:1.05rem;font-weight:500;color:var(--black);margin-bottom:4px}
+.bundle-wine-card__meta{font-size:0.75rem;color:var(--gray-500);margin-bottom:4px}
+.bundle-wine-card__stars{font-size:0.75rem;color:var(--gray-400);margin-bottom:8px}
+.bundle-wine-card__stars span{color:var(--gray-500)}
+.bundle-wine-card__price{font-size:0.82rem;color:var(--gray-700);margin-bottom:10px}
+.bundle-wine-card__price span{color:var(--gray-400);font-size:0.7rem}
+.bundle-wine-card__link{display:inline-block;font-size:0.78rem;color:var(--gray-900);font-weight:500;text-decoration:underline;text-underline-offset:3px}
+.bundle-wine-card__link:hover{color:var(--black)}
+
 /* Catalog Layout (Filter + Product Grid) */
 .catalog-layout{display:flex;gap:32px}
 .catalog-sidebar{width:220px;flex-shrink:0}
@@ -860,6 +903,7 @@ h4{font-family:var(--font-display);font-size:1.1rem;font-weight:500}
   .kp__grid{grid-template-columns:1fr}
   .fcard-grid{grid-template-columns:1fr 1fr}
   .mcard-grid{grid-template-columns:1fr 1fr}
+  .bundle-wines-grid{grid-template-columns:repeat(2,1fr)}
   .section{padding:60px 0}
   .cats{gap:20px}
   .cats__circle{width:84px;height:84px}
@@ -894,6 +938,12 @@ h4{font-family:var(--font-display);font-size:1.1rem;font-weight:500}
   .fstrip__icon{width:64px;height:64px}
   .mcard__img{height:280px}
   .cart-drawer{width:100%}
+  .bundle-wines-grid{grid-template-columns:1fr}
+  .bundle-wine-card{display:grid;grid-template-columns:100px 1fr;gap:12px;text-align:left;padding:14px}
+  .bundle-wine-card__img{height:100px;grid-row:1/4}
+  .bundle-variants{justify-content:flex-start;overflow-x:auto;flex-wrap:nowrap;-webkit-overflow-scrolling:touch;scrollbar-width:none}
+  .bundle-variants::-webkit-scrollbar{display:none}
+  .bundle-variants__pill{flex-shrink:0;font-size:0.78rem;padding:6px 14px}
   .gcard{padding:28px 20px}
   .trust__inner{gap:16px}
   .grid-2{gap:28px}
@@ -927,4 +977,8 @@ h4{font-family:var(--font-display);font-size:1.1rem;font-weight:500}
   .sticky-atc__inner{padding:0 16px;gap:12px}
   .sticky-atc__title{display:none}
   .sticky-atc__price{font-size:1rem}
+  .bundle-wine-card{display:block;text-align:center}
+  .bundle-wine-card__img{height:100px;grid-row:auto}
+  .pd__bundle-list{padding:12px}
+  .pd__free-shipping{font-size:0.75rem;padding:8px 12px}
 }

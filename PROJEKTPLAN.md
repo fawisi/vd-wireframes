@@ -6,7 +6,7 @@ HTML/CSS-Wireframe-Prototyp zur Veranschaulichung der idealen Informationsarchit
 
 **Auftraggeber:** Fabian Willis-Simon
 **Projekt:** VD FFM Shop-Wireframes
-**Status:** Phase 7 — Sticky Fixes, Add-to-Cart Bar & Katalog-Grid abgeschlossen
+**Status:** Phase 8 — Paketseite (Weinpaket-Template) abgeschlossen
 **Letztes Update:** 2026-03-03
 
 ---
@@ -31,6 +31,7 @@ HTML/CSS-Wireframe-Prototyp zur Veranschaulichung der idealen Informationsarchit
   weine.html              — Alle-Weine-Übersicht (Kategorie-Bubbles + Produkt-Grid) ✅ FERTIG
   kategorie.html          — Einzelkategorie-Seite (Kategorie-Header + Produkte) ✅ FERTIG
   produktseite.html       — Produktdetailseite (2-Spalten-Layout, sticky Galerie) ✅ FERTIG
+  paketseite.html         — Paketseite / Weinpaket-Template (Bundle Buy Box, Wein-Cards) ✅ FERTIG
   weinberatung.html       — Weinberatung (Food-Pairings + Weinmomente) ✅ FERTIG
   ueber-uns.html          — Über Uns (Weingut, Team, Terroir) ✅ FERTIG
   events.html             — Events & Weinproben ✅ FERTIG
@@ -326,7 +327,58 @@ Sektionen:
 16. Footer
 17. Cart Drawer (mit Shipping Bar)
 
-### 5. Weinberatung (`weinberatung.html`) — ✅ FERTIG
+### 5. Paketseite (`paketseite.html`) — ✅ FERTIG
+
+Sektionen:
+1. Announcement Bar
+2. Header + Mega Menu + Hamburger
+3. Mobile Navigation
+4. Promo Bar (Aktionshinweis, optional)
+5. **Produktdetail Paket (2-spaltig):**
+   - Links: **Sticky Gallery** — Gruppenshot aller Flaschen als Hauptbild + 4 Thumbnails (Lifestyle, Einzelflaschen, Verpackung)
+   - Rechts: **Bundle Buy Box** — Badge ("Kennenlernpaket"), Titel, Bewertungen, Flaschen-Meta (6 Flaschen | 4,5l | Pfalz), Beschreibung, Winzer-Zitat, **kompakte Weinliste** (`.pd__bundle-list`) mit Anker-Link, **Spar-Preis-Block** (Streichpreis + Paketpreis + "Sie sparen 44%" Badge + OMNIBUS-Hinweis), **Versandkostenfrei-Badge** (statt Shipping Bar), Qty-Selector, ATC-Button, Trust Badges
+6. **Sticky Add-to-Cart Bar** (Scroll-Event, identisch zur Produktseite)
+7. **USP Bar** (angepasst: Versandkostenfrei, 6 handverlesene Weine, 44% günstiger)
+8. **"Im Paket enthaltene Weine"** Section (`.bundle-wines-grid`): 6 Wein-Cards (3-Spalten-Grid) mit Bild, Menge, Name, Rebsorte, Bewertung, Einzelpreis, Link zur Einzelansicht
+9. **Varianten-Badges** (`.bundle-variants`): 3er Probierpaket | 6er Kennenlernpaket (aktiv) | 12er Vorratspaket
+10. **Details & Paketinfo** (3 Akkordeon-Panels: Über dieses Paket, Versand & Verpackung, Häufige Fragen)
+11. Kategorie-Beschreibung + Bild ("Unsere Weinpakete")
+12. Social Proof (Google-Badge + 5 paket-spezifische Testimonials)
+13. Weingut Pitch (2-spaltig)
+14. **Qualitätspyramide (dark)** — SVG-Pyramide
+15. Kategorien (6 Kreise)
+16. Wein verschenken & abonnieren (2 Cards + Pin-Note)
+17. Newsletter (2-Spalten-Grid)
+18. Footer
+19. Cart Drawer (mit Shipping Bar)
+
+**Unterschied zu `produktseite.html`:**
+- Kein Geschmacksprofil (verschiedene Weine)
+- Kein Versandkosten-Fortschrittsbalken (Pakete immer versandkostenfrei)
+- Kein Cross-Selling ("Passende Weine") — enthaltene Weine ersetzen dies
+- Spar-Preis-Block mit Streichpreis + Ersparnis-Badge + OMNIBUS-Hinweis
+- Kompakte Weinliste in Buy Box + ausführliche Wein-Cards Section darunter
+- Varianten-Badges für Paketgrößen (3er/6er/12er)
+- Angepasstes Akkordeon (3 Panels statt 4-spaltige Weindetails)
+- Pin-Note erklärt Shopify-Metafield-Konzept für automatische Weinverknüpfung
+
+**Shopify-Konzept:** Weine werden über Metafield `bundle_items` (Typ: Produktliste) verknüpft. Template iteriert über `product.metafields.custom.bundle_items.value`.
+
+**Spezielle CSS-Klassen:**
+| Klasse | Verwendung |
+|--------|-----------|
+| `.pd__badge` | Pill-Badge über dem Titel (z.B. "Kennenlernpaket") |
+| `.pd__price--bundle` | Spar-Preis-Block mit Streichpreis |
+| `.pd__price-original` | Durchgestrichener Einzelpreis |
+| `.pd__price-savings` | Grüner Pill-Badge "Sie sparen 44%" |
+| `.pd__omnibus` | OMNIBUS-Hinweis (EU-Pflicht bei Streichpreisen) |
+| `.pd__free-shipping` | Grüner Versandkostenfrei-Badge |
+| `.pd__bundle-list` | Kompakte Weinliste in der Buy Box |
+| `.bundle-wines-grid` | 3-Spalten-Grid für Wein-Cards |
+| `.bundle-wine-card` | Einzelne Wein-Card im Paketinhalt |
+| `.bundle-variants` / `__pill` | Paketgrößen-Pill-Buttons |
+
+### 6. Weinberatung (`weinberatung.html`) — ✅ FERTIG (vorher Nr. 5)
 
 Sektionen:
 1. Announcement Bar
@@ -353,7 +405,7 @@ Sektionen:
 | `.mcard-grid` | Asymmetrisches 2-Spalten-Grid (alternierend groß/klein) |
 | `.wf-cta` / `.wf-cta__box` | CTA-Box für persönliche Beratung |
 
-### 6. Über Uns (`ueber-uns.html`) — ✅ FERTIG
+### 7. Über Uns (`ueber-uns.html`) — ✅ FERTIG
 
 Sektionen:
 1. Announcement Bar
@@ -370,7 +422,7 @@ Sektionen:
 12. Footer
 13. Cart Drawer (mit Shipping Bar)
 
-### 7. Events & Weinprobe (`events.html`) — ✅ FERTIG
+### 8. Events & Weinprobe (`events.html`) — ✅ FERTIG
 
 Sektionen:
 1. Announcement Bar
@@ -391,7 +443,7 @@ Sektionen:
 
 **Keine Pyramide auf dieser Seite.**
 
-### 8. Kontaktseite (`kontakt.html`) — ✅ FERTIG
+### 9. Kontaktseite (`kontakt.html`) — ✅ FERTIG
 
 Sektionen:
 1. Announcement Bar
@@ -404,7 +456,7 @@ Sektionen:
 6. Footer (kein Newsletter auf dieser Seite)
 7. Cart Drawer (mit Shipping Bar)
 
-### 9. Widerrufsrecht (`widerrufsrecht.html`) — ✅ FERTIG
+### 10. Widerrufsrecht (`widerrufsrecht.html`) — ✅ FERTIG
 
 Implementiert gemäß **§356a BGB** (ab 19. Juni 2026):
 - Headline: "Vertrag widerrufen"
@@ -610,6 +662,23 @@ Implementiert gemäß **§356a BGB** (ab 19. Juni 2026):
 | Inline-Styles durch CSS-Klassen ersetzt (`.catalog-layout`, `.catalog-sidebar`, `.catalog-grid`) | kategorie.html, weine.html, styles.css | ✅ |
 | Responsive: Sidebar ausgeblendet ab 1024px, Grid 2-spaltig ab 768px, 1-spaltig ab 480px | styles.css | ✅ |
 
+### Phase 8: Paketseite — Weinpaket-Template (Session 7)
+
+| Änderung | Dateien | Status |
+|----------|---------|--------|
+| `paketseite.html` erstellt (Bundle Buy Box, Wein-Cards, Varianten-Pills) | NEU | ✅ |
+| Bundle Buy Box: Badge, Spar-Preis-Block, OMNIBUS, Versandkostenfrei-Badge | paketseite.html | ✅ |
+| Kompakte Weinliste in Buy Box mit Anker-Link | paketseite.html | ✅ |
+| "Im Paket enthaltene Weine" Section mit 6 Wein-Cards (3-Spalten-Grid) | paketseite.html | ✅ |
+| Varianten-Badges (3er/6er/12er Paket) als Pill-Buttons | paketseite.html | ✅ |
+| Details-Akkordeon (3 Panels: Paketinfo, Versand, FAQ) | paketseite.html | ✅ |
+| Sticky Add-to-Cart Bar (Scroll-Event) | paketseite.html | ✅ |
+| Pin-Note: Shopify-Metafield-Konzept (`bundle_items`) | paketseite.html | ✅ |
+| Neue CSS-Klassen (`.pd__badge`, `.bundle-wines-grid`, `.bundle-wine-card`, etc.) | styles.css | ✅ |
+| Responsive Bundle-Grid (3 → 2 → 1 Spalte) | styles.css | ✅ |
+| Links aktualisiert: Mega Menu, Announcement Bar, Kennenlernpaket-Sections | alle 10 HTML | ✅ |
+| Konsistenz-Matrix um `paketseite.html` erweitert | PROJEKTPLAN.md | ✅ |
+
 ---
 
 ## Text-Regeln
@@ -624,30 +693,35 @@ Implementiert gemäß **§356a BGB** (ab 19. Juni 2026):
 
 ## Konsistenz-Matrix (verifiziert am 03.03.2026)
 
-| Element | index | weine | kategorie | produktseite | weinberatung | ueber-uns | events | kontakt | widerrufsrecht |
-|---------|:-----:|:-----:|:---------:|:------------:|:------------:|:---------:|:------:|:-------:|:--------------:|
-| Announcement Bar (100 €) | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ |
-| Header + Mega Menu | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ |
-| Hamburger-Button | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ |
-| Mobile Navigation | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ |
-| Nav "Alle Weine" | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ |
-| Nav "Events & Weinprobe" | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ |
-| Cart Drawer HTML/JS | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ |
-| Shipping Bar (Cart) | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ |
-| Shipping Bar (Produkt) | — | — | — | ✅ | — | — | — | — | — |
-| Sticky Add-to-Cart Bar | — | — | — | ✅ | — | — | — | — | — |
-| Katalog-Layout (3-Spalten) | — | ✅ | ✅ | — | — | — | — | — | — |
-| Mega Menu "Alkoholfrei" | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ |
-| Kategorie-Bubbles (6x) | ✅ | ✅ 2x | ✅ | ✅ | — | — | — | — | — |
-| Pin-Note "Wein verschenken" | ✅ | ✅ | ✅ | ✅ | — | — | — | — | — |
-| Newsletter (2-Spalten-Grid) | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | — | — |
-| SVG Pyramide | ✅ dark | ✅ dark | ✅ light | ✅ dark | — | ✅ dark | — | — | — |
-| Active Nav | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | — |
-| toggleMobileNav JS | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ |
-| Footer (4 Spalten, 100 €) | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ |
-| "Vertrag widerrufen" Link | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ |
-| Kontakt → kontakt.html | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ |
-| Grüne Platzhalter | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | — |
+| Element | index | weine | kategorie | produktseite | paketseite | weinberatung | ueber-uns | events | kontakt | widerrufsrecht |
+|---------|:-----:|:-----:|:---------:|:------------:|:----------:|:------------:|:---------:|:------:|:-------:|:--------------:|
+| Announcement Bar (100 €) | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ |
+| Header + Mega Menu | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ |
+| Hamburger-Button | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ |
+| Mobile Navigation | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ |
+| Nav "Alle Weine" | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ |
+| Nav "Events & Weinprobe" | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ |
+| Cart Drawer HTML/JS | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ |
+| Shipping Bar (Cart) | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ |
+| Shipping Bar (Produkt) | — | — | — | ✅ | — | — | — | — | — | — |
+| Versandkostenfrei-Badge | — | — | — | — | ✅ | — | — | — | — | — |
+| Spar-Preis-Block | — | — | — | — | ✅ | — | — | — | — | — |
+| Bundle-Wein-Cards | — | — | — | — | ✅ | — | — | — | — | — |
+| Bundle-Varianten-Pills | — | — | — | — | ✅ | — | — | — | — | — |
+| Sticky Add-to-Cart Bar | — | — | — | ✅ | ✅ | — | — | — | — | — |
+| Katalog-Layout (3-Spalten) | — | ✅ | ✅ | — | — | — | — | — | — | — |
+| Mega Menu "Alkoholfrei" | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ |
+| Mega Menu → paketseite.html | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ |
+| Kategorie-Bubbles (6x) | ✅ | ✅ 2x | ✅ | ✅ | ✅ | — | — | — | — | — |
+| Pin-Note "Wein verschenken" | ✅ | ✅ | ✅ | ✅ | ✅ | — | — | — | — | — |
+| Newsletter (2-Spalten-Grid) | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | — | — |
+| SVG Pyramide | ✅ dark | ✅ dark | ✅ light | ✅ dark | ✅ dark | — | ✅ dark | — | — | — |
+| Active Nav | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | — |
+| toggleMobileNav JS | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ |
+| Footer (4 Spalten, 100 €) | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ |
+| "Vertrag widerrufen" Link | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ |
+| Kontakt → kontakt.html | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ |
+| Grüne Platzhalter | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | — |
 
 ---
 
@@ -655,7 +729,7 @@ Implementiert gemäß **§356a BGB** (ab 19. Juni 2026):
 
 ### Sofort-Kontext
 - **Projektordner:** `/Users/fabianwillisimon/Documents/VD Wireframes/`
-- **9 HTML-Dateien** + `styles.css` — alle fertig und konsistenz-gecheckt
+- **10 HTML-Dateien** + `styles.css` — alle fertig und konsistenz-gecheckt (inkl. `paketseite.html`)
 - **Server:** `npx http-server -p 8080 -c-1` (in `.claude/launch.json` konfiguriert)
 - **Git Remote:** `git@github.com:fawisi/vd-wireframes.git` (SSH, Branch: `main`)
 - **Alle Seiten haben:** Announcement Bar, Header + Mega Menu, Hamburger + Mobile Nav, Cart Drawer mit Shipping Bar, Footer

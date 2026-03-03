@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Weingut Mustertal — Produktseite | Wireframe</title>
+  <title>Weingut Mustertal — Paketseite | Wireframe</title>
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400&family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css">
 </head>
@@ -114,7 +114,7 @@
 <nav class="mobile-nav" id="mobile-nav">
   <div class="mobile-nav__links">
     <a href="index.html">Startseite</a>
-    <a href="weine.html">Alle Weine</a>
+    <a href="weine.html" class="active">Alle Weine</a>
     <a href="weinberatung.html">Weinberatung</a>
     <a href="ueber-uns.html">Über Uns</a>
     <a href="events.html">Events &amp; Weinprobe</a>
@@ -123,7 +123,17 @@
 </nav>
 
 <!-- ============================================================
-     3. PRODUCT DETAIL SECTION
+     3. PROMO BAR (optional)
+     ============================================================ -->
+<div class="promo fade-in" style="background:var(--gray-50);padding:12px 0;text-align:center;font-size:0.82rem;border-bottom:1px solid var(--gray-200);">
+  <div class="container">
+    <strong>Sommeraktion:</strong> Nur noch 12 Pakete auf Lager — jetzt zugreifen!
+    <span class="char">(64 Zeichen)</span>
+  </div>
+</div>
+
+<!-- ============================================================
+     4. PRODUCT DETAIL SECTION — PAKET
      ============================================================ -->
 <section class="section fade-in">
   <div class="container">
@@ -133,118 +143,90 @@
         <div style="position:sticky;top:90px;">
           <div class="ph-img pd__main-img" style="height:380px;position:relative;">
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><path d="M21 15l-5-5L5 21"/></svg>
-            <span>Hauptbild — Weinflasche / Produkt im Kontext</span>
+            <span>Hauptbild — Gruppenshot aller 6 Flaschen im Paket</span>
           </div>
           <div class="pd__thumbs">
             <div class="ph-img pd__thumb">
-              <span style="font-size:0.6rem;">Thumb 1</span>
+              <span style="font-size:0.6rem;">Lifestyle</span>
             </div>
             <div class="ph-img pd__thumb">
-              <span style="font-size:0.6rem;">Thumb 2</span>
+              <span style="font-size:0.6rem;">Flasche 1</span>
             </div>
             <div class="ph-img pd__thumb">
-              <span style="font-size:0.6rem;">Thumb 3</span>
+              <span style="font-size:0.6rem;">Flasche 2</span>
             </div>
             <div class="ph-img pd__thumb">
-              <span style="font-size:0.6rem;">Thumb 4</span>
+              <span style="font-size:0.6rem;">Verpackung</span>
             </div>
           </div>
-          <div class="note">Inhalte scrollen mit — Galerie bleibt sichtbar beim Scrollen der Infospalte und erzeugt visuellen Anker.</div>
+          <div class="note">Galerie zeigt Gruppenshot als Hero + Einzelflaschen und Verpackung als Thumbnails. Die Mischung aus Produkt- und Lifestylebildern steigert die Conversion.</div>
         </div>
       </div>
 
-      <!-- CENTER COLUMN — Product Info -->
+      <!-- CENTER COLUMN — Buy Box (Paket) -->
       <div class="pd__info">
+        <!-- Badge -->
+        <span class="pd__badge">Kennenlernpaket</span>
+
         <h1 class="pd__title">
-          Riesling Spätlese 2023
-          <span class="char">(22 Zeichen)</span>
+          Rotwein-Probierpaket Pfalz
+          <span class="char">(27 Zeichen)</span>
         </h1>
         <div class="pd__stars">
           &#9733;&#9733;&#9733;&#9733;&#9734; &nbsp;
-          <span style="font-size:0.78rem;color:var(--gray-500);">4,2 / 5 — 87 Bewertungen <span class="char">(26 Zeichen)</span></span>
+          <span style="font-size:0.78rem;color:var(--gray-500);">4,6 / 5 — 142 Bewertungen <span class="char">(26 Zeichen)</span></span>
         </div>
         <div class="pd__meta">
-          Weißburgunder &nbsp;|&nbsp; Jahrgang 2023 &nbsp;|&nbsp; Kaiserstuhl, Baden
-          <span class="char">(55 Zeichen)</span>
+          6 Flaschen &nbsp;|&nbsp; 4,5 Liter &nbsp;|&nbsp; Pfalz
+          <span class="char">(34 Zeichen)</span>
         </div>
         <p class="pd__desc">
-          Diese Produktbeschreibung nutzt sensorische Sprache, um den Wein erlebbar zu machen, bevor er getrunken wird. Begriffe wie „goldgelb schimmernd" und „cremig-mineralisch" aktivieren Geschmackszentren im Gehirn und erzeugen eine Vorab-Belohnung, die den Kaufimpuls verstärkt.
-          <span class="char">(274 Zeichen)</span>
+          Sechs handverlesene Rotweine aus der Pfalz — vom fruchtigen Dornfelder bis zum kraftvollen Spätburgunder Réserve. Dieses Probierpaket ist der perfekte Einstieg in die Vielfalt unserer Rotweine und macht Lust auf mehr. Ideal als Geschenk oder zum Selbst-Entdecken.
+          <span class="char">(262 Zeichen)</span>
         </p>
 
         <!-- WAS DER WINZER SAGT -->
         <div class="pd__even">
           <h4>WAS DER WINZER SAGT</h4>
           <p>
-            „Persönliche Empfehlung des Winzers — hier spricht der Mensch hinter dem Wein direkt zum Kunden. Die persönliche Note erzeugt Authentizität und Vertrauen."
-            <span class="char">(160 Zeichen)</span>
+            „Ich habe dieses Paket zusammengestellt, damit Sie die ganze Bandbreite unserer Rotweine kennenlernen — vom Alltagswein bis zum Spitzenwein aus unseren besten Lagen."
+            <span class="char">(171 Zeichen)</span>
           </p>
         </div>
 
-        <!-- Geschmacksprofil — Skalen -->
-        <div style="margin-bottom:18px;padding:18px;background:var(--gray-50);border:1px solid var(--gray-200);border-radius:var(--r);">
-          <h4 style="font-size:0.88rem;margin-bottom:14px;">Geschmacksprofil</h4>
-          <div style="display:flex;flex-direction:column;gap:10px;">
-            <div style="display:flex;align-items:center;gap:10px;font-size:0.82rem;">
-              <span style="width:70px;color:var(--gray-500);flex-shrink:0;">Süße</span>
-              <div style="flex:1;height:6px;background:var(--gray-200);border-radius:3px;overflow:hidden;">
-                <div style="width:15%;height:100%;background:var(--gray-700);border-radius:3px;"></div>
-              </div>
-              <span style="width:20px;text-align:right;color:var(--gray-400);font-size:0.72rem;">1/5</span>
-            </div>
-            <div style="display:flex;align-items:center;gap:10px;font-size:0.82rem;">
-              <span style="width:70px;color:var(--gray-500);flex-shrink:0;">Säure</span>
-              <div style="flex:1;height:6px;background:var(--gray-200);border-radius:3px;overflow:hidden;">
-                <div style="width:70%;height:100%;background:var(--gray-700);border-radius:3px;"></div>
-              </div>
-              <span style="width:20px;text-align:right;color:var(--gray-400);font-size:0.72rem;">3.5/5</span>
-            </div>
-            <div style="display:flex;align-items:center;gap:10px;font-size:0.82rem;">
-              <span style="width:70px;color:var(--gray-500);flex-shrink:0;">Körper</span>
-              <div style="flex:1;height:6px;background:var(--gray-200);border-radius:3px;overflow:hidden;">
-                <div style="width:60%;height:100%;background:var(--gray-700);border-radius:3px;"></div>
-              </div>
-              <span style="width:20px;text-align:right;color:var(--gray-400);font-size:0.72rem;">3/5</span>
-            </div>
-            <div style="display:flex;align-items:center;gap:10px;font-size:0.82rem;">
-              <span style="width:70px;color:var(--gray-500);flex-shrink:0;">Frucht</span>
-              <div style="flex:1;height:6px;background:var(--gray-200);border-radius:3px;overflow:hidden;">
-                <div style="width:80%;height:100%;background:var(--gray-700);border-radius:3px;"></div>
-              </div>
-              <span style="width:20px;text-align:right;color:var(--gray-400);font-size:0.72rem;">4/5</span>
-            </div>
-            <div style="display:flex;align-items:center;gap:10px;font-size:0.82rem;">
-              <span style="width:70px;color:var(--gray-500);flex-shrink:0;">Mineralik</span>
-              <div style="flex:1;height:6px;background:var(--gray-200);border-radius:3px;overflow:hidden;">
-                <div style="width:70%;height:100%;background:var(--gray-700);border-radius:3px;"></div>
-              </div>
-              <span style="width:20px;text-align:right;color:var(--gray-400);font-size:0.72rem;">3.5/5</span>
-            </div>
-          </div>
+        <!-- Kompakte Weinliste in der Buy Box -->
+        <div class="pd__bundle-list">
+          <h4 style="font-size:0.88rem;margin-bottom:10px;">Im Paket enthalten:</h4>
+          <ul>
+            <li>2&times; Dornfelder trocken 2023</li>
+            <li>1&times; Spätburgunder Gutswein 2022</li>
+            <li>1&times; Spätburgunder Ortswein 2022</li>
+            <li>1&times; Merlot Réserve 2021</li>
+            <li>1&times; Cuvée „Roter Faden" 2022</li>
+          </ul>
+          <a href="#bundle-wines" class="pd__bundle-list-link">&darr; Alle 6 Weine im Detail ansehen</a>
         </div>
 
-        <!-- Passt hervorragend zu -->
-        <div style="margin-bottom:18px;font-size:0.85rem;">
-          <span style="font-weight:600;">Passt hervorragend zu:</span>
-          <span style="color:var(--gray-700);"> Meeresfrüchte, gegrillter Fisch, Spargel, Ziegenkäse, leichte Salate</span>
+        <!-- Spar-Preis-Block -->
+        <div class="pd__price--bundle">
+          <div class="pd__price-original">Einzelpreis gesamt: 89,40 €</div>
+          <div class="pd__price" style="margin-bottom:4px;">49,90 € <span style="font-size:0.85rem;font-weight:400;color:var(--gray-400);">(11,09 €/l)</span></div>
+          <span class="pd__price-savings">Sie sparen 44%</span>
         </div>
+        <div class="pd__legal">inkl. MwSt. · <strong>Versandkostenfrei</strong> · Enthält Sulfite</div>
+        <div class="pd__omnibus">Niedrigster Preis der letzten 30 Tage: 49,90 €</div>
 
-        <!-- Price -->
-        <div class="pd__price">24,90 € <span style="font-size:0.85rem;font-weight:400;color:var(--gray-400);">(0,75 l &ndash; 33,20 €/l)</span></div>
-        <div class="pd__legal">inkl. MwSt., zzgl. <a href="#">Versandkosten</a> · Enthält Sulfite</div>
-
-        <div class="shipping-bar" style="margin-bottom:18px;">
-          <div class="shipping-bar__text">Noch <strong>85,10 &euro;</strong> bis Versandkostenfrei</div>
-          <div class="shipping-bar__track">
-            <div class="shipping-bar__fill" style="width:15%"></div>
-          </div>
+        <!-- Versandkostenfrei Badge (ersetzt Shipping Bar) -->
+        <div class="pd__free-shipping">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" style="width:16px;height:16px;flex-shrink:0;"><polyline points="20 6 9 17 4 12"/></svg>
+          Versandkostenfrei — kein Mindestbestellwert nötig
         </div>
 
         <!-- Quantity Selector + Add to Cart -->
         <div class="pd__cart-row">
           <div class="pd__qty">
             <button type="button" onclick="this.nextElementSibling.stepDown()">&#8722;</button>
-            <input type="number" value="6" min="1" max="99">
+            <input type="number" value="1" min="1" max="99">
             <button type="button" onclick="this.previousElementSibling.stepUp()">&#43;</button>
           </div>
           <button type="button" class="pd__add-btn" onclick="openCartDrawer()">In den Warenkorb</button>
@@ -252,41 +234,9 @@
 
         <!-- Trust Badges -->
         <div style="display:flex;gap:16px;justify-content:center;flex-wrap:wrap;font-size:0.72rem;color:var(--gray-500);">
-          <span>&#10003; Kostenloser Versand ab 69 € <span class="char">(28 Zeichen)</span></span>
-          <span>&#10003; Sichere Zahlung (SSL) <span class="char">(22 Zeichen)</span></span>
-          <span>&#10003; Lieferung in 2–4 Tagen <span class="char">(23 Zeichen)</span></span>
-        </div>
-
-        <!-- Passende Weine — Cross-Selling -->
-        <div style="margin-top:28px;padding-top:24px;border-top:1px solid var(--gray-200);">
-          <h4 style="margin-bottom:14px;">
-            Passende Weine
-            <span class="char">(14 Zeichen)</span>
-          </h4>
-          <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:12px;">
-            <div class="pd__side-card">
-              <div class="ph-img" style="height:70px;border-radius:4px;margin-bottom:6px;">
-                <span style="font-size:0.6rem;">Produktbild</span>
-              </div>
-              <div class="pname">Grauburgunder trocken</div>
-              <div class="pprice">12,90 € <span style="font-weight:400;color:var(--gray-400);font-size:0.65rem;">(17,20 €/l)</span></div>
-            </div>
-            <div class="pd__side-card">
-              <div class="ph-img" style="height:70px;border-radius:4px;margin-bottom:6px;">
-                <span style="font-size:0.6rem;">Produktbild</span>
-              </div>
-              <div class="pname">Chardonnay Réserve</div>
-              <div class="pprice">18,90 € <span style="font-weight:400;color:var(--gray-400);font-size:0.65rem;">(25,20 €/l)</span></div>
-            </div>
-            <div class="pd__side-card">
-              <div class="ph-img" style="height:70px;border-radius:4px;margin-bottom:6px;">
-                <span style="font-size:0.6rem;">Produktbild</span>
-              </div>
-              <div class="pname">Spätburgunder Ortswein</div>
-              <div class="pprice">16,90 € <span style="font-weight:400;color:var(--gray-400);font-size:0.65rem;">(22,53 €/l)</span></div>
-            </div>
-          </div>
-          <div class="note" style="margin-top:12px;">Produktempfehlungen — Cross-Selling erhöht den Warenkorbwert durch kontextuelle Relevanz und sozialen Beweis.</div>
+          <span>&#10003; Versandkostenfrei</span>
+          <span>&#10003; Sichere Zahlung (SSL)</span>
+          <span>&#10003; Lieferung in 2–4 Tagen</span>
         </div>
       </div>
     </div>
@@ -300,73 +250,198 @@
   <div class="container">
     <div class="usp__inner" style="gap:24px;">
       <div class="usp__item" style="font-size:0.78rem;">
-        <div class="usp__icon" style="width:26px;height:26px;font-size:0.6rem;">&#10022;</div>
-        <span>Familienweingut seit 1876</span>
+        <div class="usp__icon" style="width:26px;height:26px;font-size:0.6rem;">&#10003;</div>
+        <span>Versandkostenfrei</span>
       </div>
       <div class="usp__item" style="font-size:0.78rem;">
         <div class="usp__icon" style="width:26px;height:26px;font-size:0.6rem;">&#10022;</div>
-        <span>Handverlesene Trauben</span>
+        <span>6 handverlesene Weine</span>
       </div>
       <div class="usp__item" style="font-size:0.78rem;">
-        <div class="usp__icon" style="width:26px;height:26px;font-size:0.6rem;">&#10022;</div>
-        <span>Klimaneutraler Versand</span>
+        <div class="usp__icon" style="width:26px;height:26px;font-size:0.6rem;">&#9733;</div>
+        <span>Bis zu 44% günstiger als Einzelkauf</span>
       </div>
     </div>
   </div>
 </div>
 
 <!-- ============================================================
-     5b. DETAILS & LAGEREMPFEHLUNG (ausklappbar, 4 Spalten)
+     6. IM PAKET ENTHALTENE WEINE
+     ============================================================ -->
+<section class="section section--alt fade-in" id="bundle-wines">
+  <div class="container">
+    <span class="label">Paketinhalt</span>
+    <h2>
+      Diese Weine sind im Paket enthalten
+      <span class="char">(38 Zeichen)</span>
+    </h2>
+    <p class="body-text" style="margin:8px 0 12px;text-align:center;">
+      Jeder Wein ist auch als Einzelflasche erhältlich — klicke auf „Zur Einzelansicht" für alle Details.
+    </p>
+    <div class="note" style="margin:0 auto 28px;max-width:700px;text-align:center;">
+      In Shopify werden die Weine automatisch über das Metafield <code>bundle_items</code> (Typ: Produktliste) verknüpft. Beim Anlegen des Pakets wählt man die Einzelweine aus dem Backend — Bild, Name, Rebsorte, Jahrgang und Preis werden automatisch ausgespielt.
+    </div>
+
+    <!-- Varianten-Badges: Paketgrößen -->
+    <div class="bundle-variants" style="margin-bottom:32px;">
+      <span class="bundle-variants__pill">3er Probierpaket</span>
+      <span class="bundle-variants__pill bundle-variants__pill--active">6er Kennenlernpaket</span>
+      <span class="bundle-variants__pill">12er Vorratspaket</span>
+    </div>
+
+    <!-- Wein-Cards Grid -->
+    <div class="bundle-wines-grid">
+      <!-- Wein 1 -->
+      <div class="bundle-wine-card">
+        <div class="ph-img bundle-wine-card__img">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1" style="width:20px;height:20px;"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><path d="M21 15l-5-5L5 21"/></svg>
+          <span style="font-size:0.55rem;">Flasche</span>
+        </div>
+        <span class="bundle-wine-card__qty">2&times; im Paket</span>
+        <h4 class="bundle-wine-card__name">Dornfelder trocken 2023</h4>
+        <div class="bundle-wine-card__meta">Rotwein · Trocken · Pfalz</div>
+        <div class="bundle-wine-card__stars">&#9733;&#9733;&#9733;&#9733;&#9734; <span>4,3 (64)</span></div>
+        <div class="bundle-wine-card__price">Einzelpreis: 9,90 € <span>(13,20 €/l)</span></div>
+        <a href="produktseite.html" class="bundle-wine-card__link">Zur Einzelansicht &rarr;</a>
+      </div>
+      <!-- Wein 2 -->
+      <div class="bundle-wine-card">
+        <div class="ph-img bundle-wine-card__img">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1" style="width:20px;height:20px;"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><path d="M21 15l-5-5L5 21"/></svg>
+          <span style="font-size:0.55rem;">Flasche</span>
+        </div>
+        <span class="bundle-wine-card__qty">1&times; im Paket</span>
+        <h4 class="bundle-wine-card__name">Spätburgunder Gutswein 2022</h4>
+        <div class="bundle-wine-card__meta">Rotwein · Trocken · Pfalz</div>
+        <div class="bundle-wine-card__stars">&#9733;&#9733;&#9733;&#9733;&#9733; <span>4,8 (112)</span></div>
+        <div class="bundle-wine-card__price">Einzelpreis: 14,90 € <span>(19,87 €/l)</span></div>
+        <a href="produktseite.html" class="bundle-wine-card__link">Zur Einzelansicht &rarr;</a>
+      </div>
+      <!-- Wein 3 -->
+      <div class="bundle-wine-card">
+        <div class="ph-img bundle-wine-card__img">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1" style="width:20px;height:20px;"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><path d="M21 15l-5-5L5 21"/></svg>
+          <span style="font-size:0.55rem;">Flasche</span>
+        </div>
+        <span class="bundle-wine-card__qty">1&times; im Paket</span>
+        <h4 class="bundle-wine-card__name">Spätburgunder Ortswein 2022</h4>
+        <div class="bundle-wine-card__meta">Rotwein · Trocken · Pfalz</div>
+        <div class="bundle-wine-card__stars">&#9733;&#9733;&#9733;&#9733;&#9734; <span>4,5 (89)</span></div>
+        <div class="bundle-wine-card__price">Einzelpreis: 18,90 € <span>(25,20 €/l)</span></div>
+        <a href="produktseite.html" class="bundle-wine-card__link">Zur Einzelansicht &rarr;</a>
+      </div>
+      <!-- Wein 4 -->
+      <div class="bundle-wine-card">
+        <div class="ph-img bundle-wine-card__img">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1" style="width:20px;height:20px;"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><path d="M21 15l-5-5L5 21"/></svg>
+          <span style="font-size:0.55rem;">Flasche</span>
+        </div>
+        <span class="bundle-wine-card__qty">1&times; im Paket</span>
+        <h4 class="bundle-wine-card__name">Merlot Réserve 2021</h4>
+        <div class="bundle-wine-card__meta">Rotwein · Trocken · Pfalz</div>
+        <div class="bundle-wine-card__stars">&#9733;&#9733;&#9733;&#9733;&#9733; <span>4,9 (56)</span></div>
+        <div class="bundle-wine-card__price">Einzelpreis: 22,90 € <span>(30,53 €/l)</span></div>
+        <a href="produktseite.html" class="bundle-wine-card__link">Zur Einzelansicht &rarr;</a>
+      </div>
+      <!-- Wein 5 -->
+      <div class="bundle-wine-card">
+        <div class="ph-img bundle-wine-card__img">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1" style="width:20px;height:20px;"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><path d="M21 15l-5-5L5 21"/></svg>
+          <span style="font-size:0.55rem;">Flasche</span>
+        </div>
+        <span class="bundle-wine-card__qty">1&times; im Paket</span>
+        <h4 class="bundle-wine-card__name">Cuvée „Roter Faden" 2022</h4>
+        <div class="bundle-wine-card__meta">Rotwein · Halbtrocken · Pfalz</div>
+        <div class="bundle-wine-card__stars">&#9733;&#9733;&#9733;&#9733;&#9734; <span>4,4 (73)</span></div>
+        <div class="bundle-wine-card__price">Einzelpreis: 12,90 € <span>(17,20 €/l)</span></div>
+        <a href="produktseite.html" class="bundle-wine-card__link">Zur Einzelansicht &rarr;</a>
+      </div>
+      <!-- Wein 6 (leer — Platzhalter für 2. Dornfelder) -->
+      <div class="bundle-wine-card">
+        <div class="ph-img bundle-wine-card__img">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1" style="width:20px;height:20px;"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><path d="M21 15l-5-5L5 21"/></svg>
+          <span style="font-size:0.55rem;">Flasche</span>
+        </div>
+        <span class="bundle-wine-card__qty">Bonuswein</span>
+        <h4 class="bundle-wine-card__name">Portugieser Weißherbst 2023</h4>
+        <div class="bundle-wine-card__meta">Rosé · Halbtrocken · Pfalz</div>
+        <div class="bundle-wine-card__stars">&#9733;&#9733;&#9733;&#9733;&#9734; <span>4,1 (38)</span></div>
+        <div class="bundle-wine-card__price">Einzelpreis: 8,90 € <span>(11,87 €/l)</span></div>
+        <a href="produktseite.html" class="bundle-wine-card__link">Zur Einzelansicht &rarr;</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================
+     7. DETAILS & PAKETINFO (Akkordeon)
      ============================================================ -->
 <div class="fade-in" style="border-top:1px solid var(--gray-200);border-bottom:1px solid var(--gray-200);">
   <div class="container">
+    <!-- Panel 1: Über dieses Paket -->
     <details>
       <summary style="padding:18px 0;font-family:var(--font-display);font-weight:500;font-size:1.05rem;cursor:pointer;display:flex;justify-content:space-between;align-items:center;list-style:none;color:var(--black);">
-        Details & Lagerempfehlung
+        Über dieses Paket
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" style="width:18px;height:18px;color:var(--gray-400);transition:transform 0.2s;"><polyline points="6 9 12 15 18 9"/></svg>
       </summary>
-      <div style="padding:0 0 24px;display:grid;grid-template-columns:repeat(4,1fr);gap:0;">
-        <div style="padding:0 24px 0 0;">
-          <h5 style="font-size:0.72rem;text-transform:uppercase;letter-spacing:0.08em;color:var(--gray-400);margin-bottom:10px;font-weight:600;">Weindetails</h5>
-          <div style="display:flex;flex-direction:column;gap:5px;font-size:0.8rem;">
-            <div style="display:flex;justify-content:space-between;"><span style="color:var(--gray-500);">Rebsorte</span><span>Riesling</span></div>
-            <div style="display:flex;justify-content:space-between;"><span style="color:var(--gray-500);">Jahrgang</span><span>2023</span></div>
-            <div style="display:flex;justify-content:space-between;"><span style="color:var(--gray-500);">Qualität</span><span>Spätlese</span></div>
-            <div style="display:flex;justify-content:space-between;"><span style="color:var(--gray-500);">Geschmack</span><span>Trocken</span></div>
-            <div style="display:flex;justify-content:space-between;"><span style="color:var(--gray-500);">Lage</span><span>Kaiserstuhl</span></div>
+      <div style="padding:0 0 24px;">
+        <p style="font-size:0.88rem;color:var(--gray-700);line-height:1.7;max-width:680px;">
+          Unser Rotwein-Probierpaket vereint sechs Weine, die die Vielfalt der Pfälzer Rotweinkultur abbilden — vom zugänglichen Alltagswein bis zum Réserve-Wein aus unseren besten Lagen. Die Zusammenstellung ist so gewählt, dass Sie die verschiedenen Rebsorten, Ausbauarten und Qualitätsstufen unseres Weinguts kennenlernen. Ob zum Grillabend, als Begleitung zum Abendessen oder zum puren Genuss — für jeden Anlass ist der passende Wein dabei.
+          <span class="char">(438 Zeichen)</span>
+        </p>
+      </div>
+    </details>
+
+    <!-- Panel 2: Versand & Verpackung -->
+    <details style="border-top:1px solid var(--gray-200);">
+      <summary style="padding:18px 0;font-family:var(--font-display);font-weight:500;font-size:1.05rem;cursor:pointer;display:flex;justify-content:space-between;align-items:center;list-style:none;color:var(--black);">
+        Versand & Verpackung
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" style="width:18px;height:18px;color:var(--gray-400);transition:transform 0.2s;"><polyline points="6 9 12 15 18 9"/></svg>
+      </summary>
+      <div style="padding:0 0 24px;">
+        <div style="display:grid;grid-template-columns:repeat(2,1fr);gap:16px;font-size:0.85rem;">
+          <div>
+            <div style="display:flex;align-items:center;gap:8px;margin-bottom:6px;">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" style="width:16px;height:16px;flex-shrink:0;color:var(--gray-500);"><polyline points="20 6 9 17 4 12"/></svg>
+              <span><strong>Versandkostenfrei</strong> — alle Pakete</span>
+            </div>
+            <div style="display:flex;align-items:center;gap:8px;margin-bottom:6px;">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" style="width:16px;height:16px;flex-shrink:0;color:var(--gray-500);"><polyline points="20 6 9 17 4 12"/></svg>
+              <span>Lieferung in <strong>2–4 Werktagen</strong></span>
+            </div>
+          </div>
+          <div>
+            <div style="display:flex;align-items:center;gap:8px;margin-bottom:6px;">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" style="width:16px;height:16px;flex-shrink:0;color:var(--gray-500);"><polyline points="20 6 9 17 4 12"/></svg>
+              <span><strong>Bruchsichere</strong> Spezialverpackung</span>
+            </div>
+            <div style="display:flex;align-items:center;gap:8px;margin-bottom:6px;">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" style="width:16px;height:16px;flex-shrink:0;color:var(--gray-500);"><polyline points="20 6 9 17 4 12"/></svg>
+              <span><strong>Klimaneutraler</strong> Versand</span>
+            </div>
           </div>
         </div>
-        <div style="padding:0 24px;border-left:1px solid var(--gray-200);">
-          <h5 style="font-size:0.72rem;text-transform:uppercase;letter-spacing:0.08em;color:var(--gray-400);margin-bottom:10px;font-weight:600;">Analytik</h5>
-          <div style="display:flex;flex-direction:column;gap:5px;font-size:0.8rem;">
-            <div style="display:flex;justify-content:space-between;"><span style="color:var(--gray-500);">Alkohol</span><span>12,5 % vol.</span></div>
-            <div style="display:flex;justify-content:space-between;"><span style="color:var(--gray-500);">Restzucker</span><span>6,2 g/l</span></div>
-            <div style="display:flex;justify-content:space-between;"><span style="color:var(--gray-500);">Säure</span><span>7,4 g/l</span></div>
-            <div style="display:flex;justify-content:space-between;"><span style="color:var(--gray-500);">Boden</span><span>Muschelkalk</span></div>
-            <div style="display:flex;justify-content:space-between;"><span style="color:var(--gray-500);">Ausbau</span><span>Edelstahl</span></div>
-          </div>
+      </div>
+    </details>
+
+    <!-- Panel 3: Häufige Fragen zum Paket -->
+    <details style="border-top:1px solid var(--gray-200);">
+      <summary style="padding:18px 0;font-family:var(--font-display);font-weight:500;font-size:1.05rem;cursor:pointer;display:flex;justify-content:space-between;align-items:center;list-style:none;color:var(--black);">
+        Häufige Fragen zum Paket
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" style="width:18px;height:18px;color:var(--gray-400);transition:transform 0.2s;"><polyline points="6 9 12 15 18 9"/></svg>
+      </summary>
+      <div style="padding:0 0 24px;font-size:0.85rem;color:var(--gray-700);line-height:1.7;">
+        <div style="margin-bottom:16px;">
+          <strong style="color:var(--black);">Kann ich einzelne Weine im Paket austauschen?</strong><br>
+          Nein, die Zusammenstellung ist fest — sie wurde von unserem Winzer persönlich kuratiert, um ein ausgewogenes Geschmackserlebnis zu bieten.
         </div>
-        <div style="padding:0 24px;border-left:1px solid var(--gray-200);">
-          <h5 style="font-size:0.72rem;text-transform:uppercase;letter-spacing:0.08em;color:var(--gray-400);margin-bottom:10px;font-weight:600;">Lagerung</h5>
-          <div style="display:flex;flex-direction:column;gap:5px;font-size:0.8rem;">
-            <div style="display:flex;justify-content:space-between;"><span style="color:var(--gray-500);">Temperatur</span><span>8–10 °C</span></div>
-            <div style="display:flex;justify-content:space-between;"><span style="color:var(--gray-500);">Trinkreife</span><span>2024–2028</span></div>
-            <div style="display:flex;justify-content:space-between;"><span style="color:var(--gray-500);">Lagerfähig</span><span>5–8 Jahre</span></div>
-            <div style="display:flex;justify-content:space-between;"><span style="color:var(--gray-500);">Lagerung</span><span>Liegend, dunkel</span></div>
-            <div style="display:flex;justify-content:space-between;"><span style="color:var(--gray-500);">Dekantieren</span><span>Nicht nötig</span></div>
-          </div>
+        <div style="margin-bottom:16px;">
+          <strong style="color:var(--black);">Wie lagere ich die Weine am besten?</strong><br>
+          Kühl (12–16 °C) und dunkel lagern, idealerweise liegend. Die Weine sind sofort trinkreif, können aber auch 2–5 Jahre reifen.
         </div>
-        <div style="padding:0 0 0 24px;border-left:1px solid var(--gray-200);">
-          <h5 style="font-size:0.72rem;text-transform:uppercase;letter-spacing:0.08em;color:var(--gray-400);margin-bottom:10px;font-weight:600;">Verpackung</h5>
-          <div style="display:flex;flex-direction:column;gap:5px;font-size:0.8rem;">
-            <div style="display:flex;justify-content:space-between;"><span style="color:var(--gray-500);">Inhalt</span><span>0,75 l</span></div>
-            <div style="display:flex;justify-content:space-between;"><span style="color:var(--gray-500);">Verschluss</span><span>Naturkork</span></div>
-            <div style="display:flex;justify-content:space-between;"><span style="color:var(--gray-500);">Allergene</span><span>Enthält Sulfite</span></div>
-            <div style="display:flex;justify-content:space-between;"><span style="color:var(--gray-500);">Abfüller</span><span>Weingut Mustertal, 65366 Musterstadt</span></div>
-            <div style="display:flex;justify-content:space-between;"><span style="color:var(--gray-500);">Zutaten</span><span>Trauben, Sulfite</span></div>
-            <div style="display:flex;justify-content:space-between;"><span style="color:var(--gray-500);">EAN</span><span>4012345678901</span></div>
-            <div style="display:flex;justify-content:space-between;"><span style="color:var(--gray-500);">Art.-Nr.</span><span>WM-RIE-23-SL</span></div>
-          </div>
+        <div>
+          <strong style="color:var(--black);">Kann der Inhalt variieren?</strong><br>
+          In seltenen Fällen kann ein Wein durch einen gleichwertigen ersetzt werden, falls ein Jahrgang vergriffen ist. Wir informieren Sie vorab.
         </div>
       </div>
     </details>
@@ -374,7 +449,7 @@
 </div>
 
 <!-- ============================================================
-     6. KATEGORIE-SPEZIFISCHE BESCHREIBUNG
+     8. KATEGORIE-SPEZIFISCHE BESCHREIBUNG
      ============================================================ -->
 <section class="section section--alt fade-in">
   <div class="container">
@@ -382,25 +457,25 @@
       <div>
         <span class="label">Kategorie-Beschreibung</span>
         <h2>
-          Über diese Kategorie
-          <span class="char">(20 Zeichen)</span>
+          Unsere Weinpakete
+          <span class="char">(17 Zeichen)</span>
         </h2>
         <p class="body-text" style="margin-top:16px;">
-          Die Überschrift erklärt die Rebsorte oder Weinart und positioniert sie als besonderes Erlebnis — der Besucher versteht, warum genau dieser Weintyp zu ihm passt. Dieser Text liefert tiefergehendes Wissen zur Kategorie und nutzt das Prinzip des „Information Gap" — der Besucher will mehr erfahren, weil gerade genug verraten wird, um Neugier zu wecken, aber nicht alles preisgegeben wird. Fachbegriffe werden verständlich erklärt.
-          <span class="char">(436 Zeichen)</span>
+          Die Überschrift erklärt die Kategorie „Weinpakete" und positioniert sie als den smartesten Weg, unser Sortiment zu entdecken — der Besucher versteht sofort den Mehrwert gegenüber Einzelkauf. Dieser Text nutzt das Prinzip des „Information Gap" und erzeugt Neugier auf weitere Pakete.
+          <span class="char">(284 Zeichen)</span>
         </p>
-        <a href="kategorie.html" class="btn btn--dark" style="margin-top:24px;">Alle Weißburgunder entdecken</a>
+        <a href="kategorie.html" class="btn btn--dark" style="margin-top:24px;">Alle Weinpakete entdecken</a>
       </div>
       <div class="ph-img" style="height:320px;position:relative;">
         <svg viewBox="0 0 24 24" fill="none" stroke="#8A9E8E" stroke-width="1"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><path d="M21 15l-5-5L5 21"/></svg>
-        <span>Video — Rebsorte im Weinberg, Vinifikation, Sensorik</span>
+        <span>Video — Paketzusammenstellung, Weinauswahl, Verpackung</span>
       </div>
     </div>
   </div>
 </section>
 
 <!-- ============================================================
-     7. SOCIAL PROOF
+     9. SOCIAL PROOF
      ============================================================ -->
 <section class="section section--alt fade-in">
   <div class="container" style="text-align:center;">
@@ -421,54 +496,54 @@
       <span style="font-size:0.78rem;color:var(--gray-500);">327 Google-Bewertungen</span>
     </div>
     <div style="display:flex;justify-content:center;gap:28px;margin-top:36px;flex-wrap:wrap;">
-      <!-- Avatar 1 -->
+      <!-- Avatar 1 — Paket-spezifisch -->
       <div style="text-align:center;max-width:160px;">
         <div class="tcard__avatar" style="margin:0 auto 8px;width:52px;height:52px;background:#E8EFEA;border:1.5px dashed #B8C8BA;color:#8A9E8E;font-size:0.6rem;">Foto</div>
-        <div style="font-weight:600;font-size:0.85rem;">Andrea M.</div>
+        <div style="font-weight:600;font-size:0.85rem;">Katrin S.</div>
         <div style="color:var(--gray-400);font-size:0.78rem;letter-spacing:1px;margin:2px 0;">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
         <p style="font-size:0.8rem;color:var(--gray-700);font-style:italic;line-height:1.5;">
-          „Kompaktes Zitat nutzt Authentizität durch Alltagssprache und konkretes Detail."
-          <span class="char">(81 Zeichen)</span>
+          „Das Kennenlernpaket war eine wunderbare Entdeckungsreise — jede Flasche ein Erlebnis!"
+          <span class="char">(90 Zeichen)</span>
         </p>
       </div>
       <!-- Avatar 2 -->
       <div style="text-align:center;max-width:160px;">
         <div class="tcard__avatar" style="margin:0 auto 8px;width:52px;height:52px;background:#E8EFEA;border:1.5px dashed #B8C8BA;color:#8A9E8E;font-size:0.6rem;">Foto</div>
-        <div style="font-weight:600;font-size:0.85rem;">Markus T.</div>
+        <div style="font-weight:600;font-size:0.85rem;">Thomas R.</div>
         <div style="color:var(--gray-400);font-size:0.78rem;letter-spacing:1px;margin:2px 0;">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
         <p style="font-size:0.8rem;color:var(--gray-700);font-style:italic;line-height:1.5;">
-          „Zweites Zitat betont anderen Aspekt — Vielfalt der Meinungen erhöht Glaubwürdigkeit."
-          <span class="char">(89 Zeichen)</span>
+          „Super Preis-Leistung — habe direkt das 12er-Paket nachbestellt."
+          <span class="char">(66 Zeichen)</span>
         </p>
       </div>
       <!-- Avatar 3 -->
       <div style="text-align:center;max-width:160px;">
         <div class="tcard__avatar" style="margin:0 auto 8px;width:52px;height:52px;background:#E8EFEA;border:1.5px dashed #B8C8BA;color:#8A9E8E;font-size:0.6rem;">Foto</div>
-        <div style="font-weight:600;font-size:0.85rem;">Sabine L.</div>
+        <div style="font-weight:600;font-size:0.85rem;">Heike & Jörg M.</div>
         <div style="color:var(--gray-400);font-size:0.78rem;letter-spacing:1px;margin:2px 0;">&#9733;&#9733;&#9733;&#9733;&#9734;</div>
         <p style="font-size:0.8rem;color:var(--gray-700);font-style:italic;line-height:1.5;">
-          „Drittes Zitat mit leicht niedrigerer Bewertung wirkt realistischer und ehrlicher."
-          <span class="char">(84 Zeichen)</span>
+          „Perfektes Geschenk — toll verpackt und jeder Wein war ein Treffer."
+          <span class="char">(69 Zeichen)</span>
         </p>
       </div>
       <!-- Avatar 4 -->
       <div style="text-align:center;max-width:160px;">
         <div class="tcard__avatar" style="margin:0 auto 8px;width:52px;height:52px;background:#E8EFEA;border:1.5px dashed #B8C8BA;color:#8A9E8E;font-size:0.6rem;">Foto</div>
-        <div style="font-weight:600;font-size:0.85rem;">Jürgen W.</div>
+        <div style="font-weight:600;font-size:0.85rem;">Martin K.</div>
         <div style="color:var(--gray-400);font-size:0.78rem;letter-spacing:1px;margin:2px 0;">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
         <p style="font-size:0.8rem;color:var(--gray-700);font-style:italic;line-height:1.5;">
-          „Viertes Zitat erwähnt Wiederkauf — signalisiert langfristige Zufriedenheit."
-          <span class="char">(79 Zeichen)</span>
+          „Versandkostenfrei und bruchsicher verpackt — alles bestens!"
+          <span class="char">(62 Zeichen)</span>
         </p>
       </div>
       <!-- Avatar 5 -->
       <div style="text-align:center;max-width:160px;">
         <div class="tcard__avatar" style="margin:0 auto 8px;width:52px;height:52px;background:#E8EFEA;border:1.5px dashed #B8C8BA;color:#8A9E8E;font-size:0.6rem;">Foto</div>
-        <div style="font-weight:600;font-size:0.85rem;">Claudia & Peter H.</div>
+        <div style="font-weight:600;font-size:0.85rem;">Stefanie W.</div>
         <div style="color:var(--gray-400);font-size:0.78rem;letter-spacing:1px;margin:2px 0;">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
         <p style="font-size:0.8rem;color:var(--gray-700);font-style:italic;line-height:1.5;">
-          „Paar-Zitat erweitert den Nutzungskontext auf gemeinsame Erlebnisse."
-          <span class="char">(70 Zeichen)</span>
+          „Wir bestellen jetzt regelmäßig — der Merlot Réserve ist unser Favorit."
+          <span class="char">(75 Zeichen)</span>
         </p>
       </div>
     </div>
@@ -476,7 +551,7 @@
 </section>
 
 <!-- ============================================================
-     9. WEINGUT PITCH
+     10. WEINGUT PITCH
      ============================================================ -->
 <section class="section fade-in">
   <div class="container">
@@ -502,46 +577,6 @@
 </section>
 
 <!-- ============================================================
-     10. KENNENLERNPAKET PITCH
-     ============================================================ -->
-<section class="section section--alt fade-in">
-  <div class="container" style="text-align:center;">
-    <span class="label">Kennenlernpaket</span>
-    <h2>
-      Das Kennenlernpaket
-      <span class="char">(19 Zeichen)</span>
-    </h2>
-    <p class="body-text" style="margin:12px auto 0;text-align:center;">
-      Das Kennenlernpaket als risikofreier Einstieg nutzt die „Foot-in-the-door"-Technik und senkt die Hemmschwelle für den ersten Kauf.
-      <span class="char">(130 Zeichen)</span>
-    </p>
-    <div class="kp" style="margin-top:36px;">
-      <div class="kp__grid">
-        <div style="text-align:left;">
-          <h3>
-            Kennenlernpaket „Mustertal Entdecken" — sechs handverlesene Weine für den perfekten Einstieg
-            <span class="char">(97 Zeichen)</span>
-          </h3>
-          <p class="body-text" style="margin-top:14px;">
-            Der Fließtext erklärt den konkreten Paketinhalt, betont den Preisvorteil gegenüber Einzelkauf und erzeugt durch Verknappung Handlungsdruck. Die Sprache ist einladend und vermittelt, dass man mit diesem Paket nichts falsch machen kann.
-            <span class="char">(237 Zeichen)</span>
-          </p>
-          <a href="paketseite.html" class="btn btn--dark" style="margin-top:20px;">Kennenlernpaket bestellen</a>
-        </div>
-        <div class="kp__product">
-          <div class="ph-img" style="height:180px;border-radius:var(--r);">
-            <svg viewBox="0 0 24 24" fill="none" stroke="#8A9E8E" stroke-width="1"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><path d="M21 15l-5-5L5 21"/></svg>
-            <span>Kennenlernpaket — 6 Flaschen</span>
-          </div>
-          <div class="kp__product-name">Kennenlernpaket „Mustertal Entdecken"</div>
-          <div class="kp__product-price">49,90 € <span style="text-decoration:line-through;color:var(--gray-400);font-size:0.85rem;font-weight:400;">62,40 €</span></div>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- ============================================================
      11. QUALITÄTSPYRAMIDE
      ============================================================ -->
 <section class="section section--dark fade-in">
@@ -561,22 +596,16 @@
       </div>
       <div style="display:flex;align-items:center;justify-content:center;">
         <svg viewBox="0 0 400 300" style="width:100%;max-width:400px;">
-          <!-- Pyramid outline -->
           <polygon points="200,10 380,290 20,290" fill="none" stroke="rgba(255,255,255,0.25)" stroke-width="1.5"/>
-          <!-- Horizontal dividers -->
           <line x1="140" y1="103" x2="260" y2="103" stroke="rgba(255,255,255,0.2)" stroke-width="1"/>
           <line x1="80" y1="196" x2="320" y2="196" stroke="rgba(255,255,255,0.2)" stroke-width="1"/>
-          <!-- Fill bands -->
           <polygon points="200,10 260,103 140,103" fill="rgba(255,255,255,0.12)"/>
           <polygon points="140,103 260,103 320,196 80,196" fill="rgba(255,255,255,0.06)"/>
           <polygon points="80,196 320,196 380,290 20,290" fill="rgba(255,255,255,0.02)"/>
-          <!-- Level 1 — Lagenwein -->
           <text x="200" y="62" text-anchor="middle" fill="white" font-family="Cormorant Garamond, serif" font-size="16" font-weight="500">Lagenwein</text>
           <text x="200" y="80" text-anchor="middle" fill="rgba(255,255,255,0.45)" font-family="Outfit, sans-serif" font-size="7.5" letter-spacing="1.5" text-transform="uppercase">PRESTIGE AUS EINZELLAGEN</text>
-          <!-- Level 2 — Ortswein -->
           <text x="200" y="155" text-anchor="middle" fill="white" font-family="Cormorant Garamond, serif" font-size="18" font-weight="500">Ortswein</text>
           <text x="200" y="175" text-anchor="middle" fill="rgba(255,255,255,0.45)" font-family="Outfit, sans-serif" font-size="7.5" letter-spacing="1.5">CHARAKTER UNSERER BESTEN LAGEN</text>
-          <!-- Level 3 — Gutswein -->
           <text x="200" y="248" text-anchor="middle" fill="white" font-family="Cormorant Garamond, serif" font-size="20" font-weight="500">Gutswein</text>
           <text x="200" y="270" text-anchor="middle" fill="rgba(255,255,255,0.45)" font-family="Outfit, sans-serif" font-size="7.5" letter-spacing="1.5">VIELSEITIGE ALLTAGSBEGLEITER</text>
         </svg>
@@ -637,7 +666,6 @@
       Dieser Bereich wird individuell für jedes Weingut angepasst. Mögliche Inhalte: Events, Weinabo, Rebpatenschaft, Weinproben, saisonale Aktionen oder andere weingutspezifische Angebote.
     </div>
     <div class="grid-2" style="margin-top:36px;gap:24px;">
-      <!-- Wein verschenken -->
       <div class="gcard">
         <div class="gcard__icon">
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
@@ -651,7 +679,6 @@
         </p>
         <a href="kategorie.html" class="btn btn--dark">Geschenksets entdecken</a>
       </div>
-      <!-- Veranstaltungen -->
       <div class="gcard">
         <div class="gcard__icon">
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
@@ -704,9 +731,7 @@
      ============================================================ -->
 <footer class="footer">
   <div class="container">
-    <!-- Footer Grid -->
     <div class="footer__grid">
-      <!-- Column 1: Contact -->
       <div class="footer__col">
         <div class="flogo">Weingut <em>Mustertal</em></div>
         <p>Familienweingut seit 1876 — Handverlesene Weine aus dem Mustertal mit Leidenschaft und Tradition.</p>
@@ -723,8 +748,6 @@
           info@weingut-mustertal.de
         </div>
       </div>
-
-      <!-- Column 2: Service -->
       <div class="footer__col">
         <h4>Service</h4>
         <ul>
@@ -736,8 +759,6 @@
           <li><a href="weinberatung.html">Weinberatung</a></li>
         </ul>
       </div>
-
-      <!-- Column 3: Lieferung & Zahlung -->
       <div class="footer__col">
         <h4>Lieferung & Zahlung</h4>
         <ul>
@@ -749,8 +770,6 @@
           <li><a href="#">Ratenzahlung möglich</a></li>
         </ul>
       </div>
-
-      <!-- Column 4: Unternehmen -->
       <div class="footer__col">
         <h4>Unternehmen</h4>
         <ul>
@@ -763,10 +782,7 @@
         </ul>
       </div>
     </div>
-
-    <!-- Footer Bottom -->
     <div class="footer__bottom">
-      <!-- Legal Links -->
       <div class="footer__bottom-left">
         <a href="#">Impressum</a>
         <a href="#">Datenschutz</a>
@@ -774,8 +790,6 @@
         <a href="widerrufsrecht.html" class="footer__widerruf">Vertrag widerrufen</a>
         <span>&copy; 2026 Weingut Mustertal</span>
       </div>
-
-      <!-- Payment Icons -->
       <div class="fpay">
         <div class="fpay__icon">VISA</div>
         <div class="fpay__icon">MC</div>
@@ -784,8 +798,6 @@
         <div class="fpay__icon">DHL</div>
         <div class="fpay__icon">DPD</div>
       </div>
-
-      <!-- Social Icons -->
       <div class="fsocial">
         <a href="#" aria-label="Instagram">
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
@@ -860,9 +872,11 @@ document.querySelectorAll('.fade-in').forEach(el=>obs.observe(el));
           <div class="cart-drawer__upsell-card-btn">+ Hinzufügen</div>
         </div>
         <div class="cart-drawer__upsell-card">
-          <div class="cart-drawer__upsell-card-img">Bild</div>
-          <div class="cart-drawer__upsell-card-name">Kennenlernpaket</div>
-          <div class="cart-drawer__upsell-card-price">49,90 &euro; <span style="font-weight:400;color:var(--gray-400);font-size:0.6rem;">(11,09 &euro;/l)</span></div>
+          <a href="paketseite.html">
+            <div class="cart-drawer__upsell-card-img">Bild</div>
+            <div class="cart-drawer__upsell-card-name">Kennenlernpaket</div>
+            <div class="cart-drawer__upsell-card-price">49,90 &euro; <span style="font-weight:400;color:var(--gray-400);font-size:0.6rem;">(11,09 &euro;/l)</span></div>
+          </a>
           <div class="cart-drawer__upsell-card-btn">+ Hinzufügen</div>
         </div>
       </div>
@@ -902,13 +916,13 @@ function toggleMobileNav(){
 <div class="sticky-atc" id="sticky-atc">
   <div class="sticky-atc__inner">
     <div class="sticky-atc__info">
-      <span class="sticky-atc__title">Riesling Spätlese 2023</span>
-      <span class="sticky-atc__price">24,90 €</span>
+      <span class="sticky-atc__title">Rotwein-Probierpaket Pfalz</span>
+      <span class="sticky-atc__price">49,90 €</span>
     </div>
     <div class="sticky-atc__actions">
       <div class="sticky-atc__qty">
         <button type="button" onclick="this.nextElementSibling.stepDown()">&#8722;</button>
-        <input type="number" value="6" min="1" max="99">
+        <input type="number" value="1" min="1" max="99">
         <button type="button" onclick="this.previousElementSibling.stepUp()">&#43;</button>
       </div>
       <button type="button" class="sticky-atc__btn" onclick="openCartDrawer()">In den Warenkorb</button>
