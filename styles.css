@@ -545,28 +545,32 @@ h4{font-family:var(--font-display);font-size:1.1rem;font-weight:500}
 .bundle-variants__pill--active{background:var(--gray-900);color:var(--white);border-color:var(--gray-900)}
 
 /* Bundle wines grid */
-.bundle-wines-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:16px}
-.bundle-wine-card{background:var(--white);border:1px solid var(--gray-200);border-radius:var(--r);padding:16px;text-align:left;transition:box-shadow var(--ease)}
+.bundle-wines-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:12px}
+.bundle-wine-card{background:var(--white);border:1px solid var(--gray-200);border-radius:var(--r);padding:12px;text-align:left;transition:box-shadow var(--ease)}
 .bundle-wine-card:hover{box-shadow:var(--shadow-md)}
-.bundle-wine-card__head{display:flex;align-items:flex-start;gap:12px}
-.bundle-wine-card__qty{display:inline-block;padding:3px 10px;background:var(--gray-100);border-radius:999px;font-size:0.7rem;font-weight:600;color:var(--gray-700);white-space:nowrap;flex-shrink:0;margin-top:3px}
-.bundle-wine-card__name{font-family:var(--font-display);font-size:1rem;font-weight:500;color:var(--black);margin-bottom:2px}
+.bundle-wine-card__head{display:flex;align-items:flex-start;gap:10px}
+.bundle-wine-card__bottle{width:28px;flex-shrink:0}
+.bundle-wine-card__bottle svg{width:100%;height:auto;opacity:0.5}
+.bundle-wine-card__info{flex:1;min-width:0}
+.bundle-wine-card__top{display:flex;align-items:baseline;gap:8px;margin-bottom:2px}
+.bundle-wine-card__qty{display:inline-block;padding:2px 8px;background:var(--gray-100);border-radius:999px;font-size:0.68rem;font-weight:600;color:var(--gray-700);white-space:nowrap;flex-shrink:0}
+.bundle-wine-card__name{font-family:var(--font-display);font-size:1rem;font-weight:500;color:var(--black)}
 .bundle-wine-card__row{display:flex;align-items:center;gap:10px;flex-wrap:wrap}
 .bundle-wine-card__meta{font-size:0.75rem;color:var(--gray-500)}
 .bundle-wine-card__stars{font-size:0.75rem;color:var(--gray-400)}
 .bundle-wine-card__price{font-size:0.82rem;color:var(--gray-700);font-weight:500}
-.bundle-wine-card__taste{margin-top:10px;border-top:1px solid var(--gray-100);padding-top:8px}
+.bundle-wine-card__taste{margin-top:8px;border-top:1px solid var(--gray-100);padding-top:6px}
 .bundle-wine-card__taste summary{font-size:0.78rem;color:var(--gray-500);cursor:pointer;font-weight:500;list-style:none;display:flex;align-items:center;gap:6px}
 .bundle-wine-card__taste summary::before{content:"▸";font-size:0.7rem;transition:transform 0.2s ease}
 .bundle-wine-card__taste[open] summary::before{transform:rotate(90deg)}
 .bundle-wine-card__taste summary::-webkit-details-marker{display:none}
-.taste-grid{display:grid;grid-template-columns:1fr 1fr;gap:6px 20px;margin-top:10px;padding:12px;background:var(--gray-50);border-radius:6px}
-.taste-bar{display:flex;align-items:center;gap:8px}
-.taste-bar__label{width:58px;font-size:0.72rem;color:var(--gray-500);flex-shrink:0}
-.taste-bar__track{flex:1;height:5px;background:var(--gray-200);border-radius:3px;overflow:hidden;min-width:50px}
+.taste-grid{display:grid;grid-template-columns:1fr 1fr;gap:4px 16px;margin-top:6px;padding:8px 10px;background:var(--gray-50);border-radius:6px}
+.taste-bar{display:flex;align-items:center;gap:6px}
+.taste-bar__label{width:54px;font-size:0.7rem;color:var(--gray-500);flex-shrink:0}
+.taste-bar__track{flex:1;height:4px;background:var(--gray-200);border-radius:3px;overflow:hidden;min-width:40px}
 .taste-bar__fill{height:100%;background:var(--gray-700);border-radius:3px}
-.taste-bar__val{width:26px;font-size:0.65rem;color:var(--gray-400);text-align:right;flex-shrink:0}
-.bundle-wine-card__link{display:block;font-size:0.78rem;color:var(--gray-900);font-weight:500;text-decoration:underline;text-underline-offset:3px;margin-top:10px;text-align:right}
+.taste-bar__val{width:24px;font-size:0.63rem;color:var(--gray-400);text-align:right;flex-shrink:0}
+.bundle-wine-card__link{display:block;font-size:0.75rem;color:var(--gray-900);font-weight:500;text-decoration:underline;text-underline-offset:3px;margin-top:6px;text-align:right}
 .bundle-wine-card__link:hover{color:var(--black)}
 
 /* Catalog Layout (Filter + Product Grid) */
@@ -988,6 +992,7 @@ h4{font-family:var(--font-display);font-size:1.1rem;font-weight:500}
   .sticky-atc__title{display:none}
   .sticky-atc__price{font-size:1rem}
   .bundle-wine-card__row{flex-direction:column;align-items:flex-start;gap:2px}
+  .bundle-wine-card__bottle{width:22px}
   .pd__bundle-list{padding:12px}
   .pd__free-shipping{font-size:0.75rem;padding:8px 12px}
 }

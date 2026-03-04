@@ -6,8 +6,8 @@ HTML/CSS-Wireframe-Prototyp zur Veranschaulichung der idealen Informationsarchit
 
 **Auftraggeber:** Fabian Willis-Simon
 **Projekt:** VD FFM Shop-Wireframes
-**Status:** Phase 8 — Paketseite (Weinpaket-Template) abgeschlossen
-**Letztes Update:** 2026-03-03
+**Status:** Phase 9 — Paket-Link-Konsistenz & Deployment abgeschlossen
+**Letztes Update:** 2026-03-04
 
 ---
 
@@ -681,6 +681,33 @@ Implementiert gemäß **§356a BGB** (ab 19. Juni 2026):
 
 ---
 
+### Phase 9: Paket-Link-Konsistenz & GitHub Pages Deployment (Session 8)
+
+**Problem:** Paketseite (`paketseite.html`) war von den Produkt-Grids aus nicht erreichbar. Alle Produkt-Cards in `weine.html` und `kategorie.html` verlinkten ausschließlich auf `produktseite.html`. Klick auf ein Paket landete auf dem Einzelwein-Template statt dem Paket-Template.
+
+**Analyse:**
+1. Navigation-Links (Announcement Bar, Mega Menu, Kennenlernpaket-Sections) zeigten bereits korrekt auf `paketseite.html`
+2. Der "In den Warenkorb"-Button der Kennenlernpaket-Card auf `index.html` verlinkte fälschlich auf `produktseite.html`
+3. Auf `weine.html` gab es **keine einzige Paket-Card** im Produkt-Grid — nur 24 Einzelweine
+4. Auf `kategorie.html` ebenfalls keine Paket-Cards
+
+| Änderung | Dateien | Status |
+|----------|---------|--------|
+| Kennenlernpaket-Button auf Startseite: `produktseite.html` → `paketseite.html` | index.html | ✅ |
+| 2 Paket-Cards ins Weine-Grid eingefügt (Pos. 5+6: Kennenlernpaket + Rotwein-Probierpaket) | weine.html | ✅ |
+| 1 Paket-Card ins Kategorie-Grid eingefügt (Pos. 11: Kennenlernpaket) | kategorie.html | ✅ |
+| Paket-Cards mit Badge (`pcard__flip`: "Kennenlernpaket"/"Probierpaket") | weine.html, kategorie.html | ✅ |
+| Paket-Cards mit Spar-Preis (`<span class="old">`) und Paket-Bildbeschreibung | weine.html, kategorie.html | ✅ |
+| Qty-Default auf `1` statt `6` für Pakete (sinnvoller Default) | weine.html, kategorie.html | ✅ |
+| Verifiziert: 0 Paket-Referenzen zeigen auf `produktseite.html` | alle HTML-Dateien | ✅ |
+| Feature-Branch `feat/paketseite-weinpaket-template` in `main` gemergt | Git | ✅ |
+| GitHub Pages Deployment gefixt (Status 500 → Re-run + Empty Commit Trigger) | GitHub Actions | ✅ |
+| Live-URL verifiziert: `https://fawisi.github.io/vd-wireframes/paketseite.html` | GitHub Pages | ✅ |
+
+**Technischer Hinweis:** Das initiale GitHub Pages Deployment (#7) scheiterte mit HTTP 500 ("Server error, is githubstatus.com reporting a Pages outage?"). Lösung: Re-run failed jobs + leerer Commit als Trigger für neues Deployment (#8).
+
+---
+
 ## Text-Regeln
 
 1. **Alle Texte sind deutsche Blindtexte** — KEIN Lorem Ipsum
@@ -691,7 +718,7 @@ Implementiert gemäß **§356a BGB** (ab 19. Juni 2026):
 
 ---
 
-## Konsistenz-Matrix (verifiziert am 03.03.2026)
+## Konsistenz-Matrix (verifiziert am 04.03.2026)
 
 | Element | index | weine | kategorie | produktseite | paketseite | weinberatung | ueber-uns | events | kontakt | widerrufsrecht |
 |---------|:-----:|:-----:|:---------:|:------------:|:----------:|:------------:|:---------:|:------:|:-------:|:--------------:|
@@ -707,6 +734,7 @@ Implementiert gemäß **§356a BGB** (ab 19. Juni 2026):
 | Versandkostenfrei-Badge | — | — | — | — | ✅ | — | — | — | — | — |
 | Spar-Preis-Block | — | — | — | — | ✅ | — | — | — | — | — |
 | Bundle-Wein-Cards | — | — | — | — | ✅ | — | — | — | — | — |
+| Paket-Cards im Produkt-Grid | — | ✅ 2x | ✅ 1x | — | — | — | — | — | — | — |
 | Bundle-Varianten-Pills | — | — | — | — | ✅ | — | — | — | — | — |
 | Sticky Add-to-Cart Bar | — | — | — | ✅ | ✅ | — | — | — | — | — |
 | Katalog-Layout (3-Spalten) | — | ✅ | ✅ | — | — | — | — | — | — | — |
@@ -730,6 +758,7 @@ Implementiert gemäß **§356a BGB** (ab 19. Juni 2026):
 ### Sofort-Kontext
 - **Projektordner:** `/Users/fabianwillisimon/Documents/VD Wireframes/`
 - **10 HTML-Dateien** + `styles.css` — alle fertig und konsistenz-gecheckt (inkl. `paketseite.html`)
+- **Live:** `https://fawisi.github.io/vd-wireframes/` (GitHub Pages, deployed von `main`)
 - **Server:** `npx http-server -p 8080 -c-1` (in `.claude/launch.json` konfiguriert)
 - **Git Remote:** `git@github.com:fawisi/vd-wireframes.git` (SSH, Branch: `main`)
 - **Alle Seiten haben:** Announcement Bar, Header + Mega Menu, Hamburger + Mobile Nav, Cart Drawer mit Shipping Bar, Footer
