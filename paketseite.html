@@ -282,91 +282,156 @@
       In Shopify werden die Weine automatisch über das Metafield <code>bundle_items</code> (Typ: Produktliste) verknüpft. Beim Anlegen des Pakets wählt man die Einzelweine aus dem Backend — Bild, Name, Rebsorte, Jahrgang und Preis werden automatisch ausgespielt.
     </div>
 
-    <!-- Varianten-Badges: Paketgrößen -->
-    <div class="bundle-variants" style="margin-bottom:32px;">
-      <span class="bundle-variants__pill">3er Probierpaket</span>
-      <span class="bundle-variants__pill bundle-variants__pill--active">6er Kennenlernpaket</span>
-      <span class="bundle-variants__pill">12er Vorratspaket</span>
-    </div>
-
     <!-- Wein-Cards Grid -->
     <div class="bundle-wines-grid">
       <!-- Wein 1 -->
       <div class="bundle-wine-card">
-        <div class="ph-img bundle-wine-card__img">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1" style="width:20px;height:20px;"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><path d="M21 15l-5-5L5 21"/></svg>
-          <span style="font-size:0.55rem;">Flasche</span>
+        <div class="bundle-wine-card__head">
+          <span class="bundle-wine-card__qty">2&times;</span>
+          <div>
+            <h4 class="bundle-wine-card__name">Dornfelder trocken 2023</h4>
+            <div class="bundle-wine-card__row">
+              <span class="bundle-wine-card__meta">Rotwein · Trocken · Pfalz</span>
+              <span class="bundle-wine-card__price">9,90 €</span>
+              <span class="bundle-wine-card__stars">&#9733; 4,3</span>
+            </div>
+          </div>
         </div>
-        <span class="bundle-wine-card__qty">2&times; im Paket</span>
-        <h4 class="bundle-wine-card__name">Dornfelder trocken 2023</h4>
-        <div class="bundle-wine-card__meta">Rotwein · Trocken · Pfalz</div>
-        <div class="bundle-wine-card__stars">&#9733;&#9733;&#9733;&#9733;&#9734; <span>4,3 (64)</span></div>
-        <div class="bundle-wine-card__price">Einzelpreis: 9,90 € <span>(13,20 €/l)</span></div>
+        <details class="bundle-wine-card__taste">
+          <summary>Geschmacksprofil</summary>
+          <div class="taste-grid">
+            <div class="taste-bar"><span class="taste-bar__label">Süße</span><div class="taste-bar__track"><div class="taste-bar__fill" style="width:15%"></div></div><span class="taste-bar__val">1/5</span></div>
+            <div class="taste-bar"><span class="taste-bar__label">Frucht</span><div class="taste-bar__track"><div class="taste-bar__fill" style="width:80%"></div></div><span class="taste-bar__val">4/5</span></div>
+            <div class="taste-bar"><span class="taste-bar__label">Säure</span><div class="taste-bar__track"><div class="taste-bar__fill" style="width:50%"></div></div><span class="taste-bar__val">2.5/5</span></div>
+            <div class="taste-bar"><span class="taste-bar__label">Mineralik</span><div class="taste-bar__track"><div class="taste-bar__fill" style="width:40%"></div></div><span class="taste-bar__val">2/5</span></div>
+            <div class="taste-bar"><span class="taste-bar__label">Körper</span><div class="taste-bar__track"><div class="taste-bar__fill" style="width:70%"></div></div><span class="taste-bar__val">3.5/5</span></div>
+          </div>
+        </details>
         <a href="produktseite.html" class="bundle-wine-card__link">Zur Einzelansicht &rarr;</a>
       </div>
       <!-- Wein 2 -->
       <div class="bundle-wine-card">
-        <div class="ph-img bundle-wine-card__img">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1" style="width:20px;height:20px;"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><path d="M21 15l-5-5L5 21"/></svg>
-          <span style="font-size:0.55rem;">Flasche</span>
+        <div class="bundle-wine-card__head">
+          <span class="bundle-wine-card__qty">1&times;</span>
+          <div>
+            <h4 class="bundle-wine-card__name">Spätburgunder Gutswein 2022</h4>
+            <div class="bundle-wine-card__row">
+              <span class="bundle-wine-card__meta">Rotwein · Trocken · Pfalz</span>
+              <span class="bundle-wine-card__price">14,90 €</span>
+              <span class="bundle-wine-card__stars">&#9733; 4,8</span>
+            </div>
+          </div>
         </div>
-        <span class="bundle-wine-card__qty">1&times; im Paket</span>
-        <h4 class="bundle-wine-card__name">Spätburgunder Gutswein 2022</h4>
-        <div class="bundle-wine-card__meta">Rotwein · Trocken · Pfalz</div>
-        <div class="bundle-wine-card__stars">&#9733;&#9733;&#9733;&#9733;&#9733; <span>4,8 (112)</span></div>
-        <div class="bundle-wine-card__price">Einzelpreis: 14,90 € <span>(19,87 €/l)</span></div>
+        <details class="bundle-wine-card__taste">
+          <summary>Geschmacksprofil</summary>
+          <div class="taste-grid">
+            <div class="taste-bar"><span class="taste-bar__label">Süße</span><div class="taste-bar__track"><div class="taste-bar__fill" style="width:10%"></div></div><span class="taste-bar__val">0.5/5</span></div>
+            <div class="taste-bar"><span class="taste-bar__label">Frucht</span><div class="taste-bar__track"><div class="taste-bar__fill" style="width:70%"></div></div><span class="taste-bar__val">3.5/5</span></div>
+            <div class="taste-bar"><span class="taste-bar__label">Säure</span><div class="taste-bar__track"><div class="taste-bar__fill" style="width:60%"></div></div><span class="taste-bar__val">3/5</span></div>
+            <div class="taste-bar"><span class="taste-bar__label">Mineralik</span><div class="taste-bar__track"><div class="taste-bar__fill" style="width:70%"></div></div><span class="taste-bar__val">3.5/5</span></div>
+            <div class="taste-bar"><span class="taste-bar__label">Körper</span><div class="taste-bar__track"><div class="taste-bar__fill" style="width:80%"></div></div><span class="taste-bar__val">4/5</span></div>
+          </div>
+        </details>
         <a href="produktseite.html" class="bundle-wine-card__link">Zur Einzelansicht &rarr;</a>
       </div>
       <!-- Wein 3 -->
       <div class="bundle-wine-card">
-        <div class="ph-img bundle-wine-card__img">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1" style="width:20px;height:20px;"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><path d="M21 15l-5-5L5 21"/></svg>
-          <span style="font-size:0.55rem;">Flasche</span>
+        <div class="bundle-wine-card__head">
+          <span class="bundle-wine-card__qty">1&times;</span>
+          <div>
+            <h4 class="bundle-wine-card__name">Spätburgunder Ortswein 2022</h4>
+            <div class="bundle-wine-card__row">
+              <span class="bundle-wine-card__meta">Rotwein · Trocken · Pfalz</span>
+              <span class="bundle-wine-card__price">18,90 €</span>
+              <span class="bundle-wine-card__stars">&#9733; 4,5</span>
+            </div>
+          </div>
         </div>
-        <span class="bundle-wine-card__qty">1&times; im Paket</span>
-        <h4 class="bundle-wine-card__name">Spätburgunder Ortswein 2022</h4>
-        <div class="bundle-wine-card__meta">Rotwein · Trocken · Pfalz</div>
-        <div class="bundle-wine-card__stars">&#9733;&#9733;&#9733;&#9733;&#9734; <span>4,5 (89)</span></div>
-        <div class="bundle-wine-card__price">Einzelpreis: 18,90 € <span>(25,20 €/l)</span></div>
+        <details class="bundle-wine-card__taste">
+          <summary>Geschmacksprofil</summary>
+          <div class="taste-grid">
+            <div class="taste-bar"><span class="taste-bar__label">Süße</span><div class="taste-bar__track"><div class="taste-bar__fill" style="width:10%"></div></div><span class="taste-bar__val">0.5/5</span></div>
+            <div class="taste-bar"><span class="taste-bar__label">Frucht</span><div class="taste-bar__track"><div class="taste-bar__fill" style="width:60%"></div></div><span class="taste-bar__val">3/5</span></div>
+            <div class="taste-bar"><span class="taste-bar__label">Säure</span><div class="taste-bar__track"><div class="taste-bar__fill" style="width:60%"></div></div><span class="taste-bar__val">3/5</span></div>
+            <div class="taste-bar"><span class="taste-bar__label">Mineralik</span><div class="taste-bar__track"><div class="taste-bar__fill" style="width:80%"></div></div><span class="taste-bar__val">4/5</span></div>
+            <div class="taste-bar"><span class="taste-bar__label">Körper</span><div class="taste-bar__track"><div class="taste-bar__fill" style="width:90%"></div></div><span class="taste-bar__val">4.5/5</span></div>
+          </div>
+        </details>
         <a href="produktseite.html" class="bundle-wine-card__link">Zur Einzelansicht &rarr;</a>
       </div>
       <!-- Wein 4 -->
       <div class="bundle-wine-card">
-        <div class="ph-img bundle-wine-card__img">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1" style="width:20px;height:20px;"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><path d="M21 15l-5-5L5 21"/></svg>
-          <span style="font-size:0.55rem;">Flasche</span>
+        <div class="bundle-wine-card__head">
+          <span class="bundle-wine-card__qty">1&times;</span>
+          <div>
+            <h4 class="bundle-wine-card__name">Merlot Réserve 2021</h4>
+            <div class="bundle-wine-card__row">
+              <span class="bundle-wine-card__meta">Rotwein · Trocken · Pfalz</span>
+              <span class="bundle-wine-card__price">22,90 €</span>
+              <span class="bundle-wine-card__stars">&#9733; 4,9</span>
+            </div>
+          </div>
         </div>
-        <span class="bundle-wine-card__qty">1&times; im Paket</span>
-        <h4 class="bundle-wine-card__name">Merlot Réserve 2021</h4>
-        <div class="bundle-wine-card__meta">Rotwein · Trocken · Pfalz</div>
-        <div class="bundle-wine-card__stars">&#9733;&#9733;&#9733;&#9733;&#9733; <span>4,9 (56)</span></div>
-        <div class="bundle-wine-card__price">Einzelpreis: 22,90 € <span>(30,53 €/l)</span></div>
+        <details class="bundle-wine-card__taste">
+          <summary>Geschmacksprofil</summary>
+          <div class="taste-grid">
+            <div class="taste-bar"><span class="taste-bar__label">Süße</span><div class="taste-bar__track"><div class="taste-bar__fill" style="width:15%"></div></div><span class="taste-bar__val">0.5/5</span></div>
+            <div class="taste-bar"><span class="taste-bar__label">Frucht</span><div class="taste-bar__track"><div class="taste-bar__fill" style="width:90%"></div></div><span class="taste-bar__val">4.5/5</span></div>
+            <div class="taste-bar"><span class="taste-bar__label">Säure</span><div class="taste-bar__track"><div class="taste-bar__fill" style="width:50%"></div></div><span class="taste-bar__val">2.5/5</span></div>
+            <div class="taste-bar"><span class="taste-bar__label">Mineralik</span><div class="taste-bar__track"><div class="taste-bar__fill" style="width:60%"></div></div><span class="taste-bar__val">3/5</span></div>
+            <div class="taste-bar"><span class="taste-bar__label">Körper</span><div class="taste-bar__track"><div class="taste-bar__fill" style="width:90%"></div></div><span class="taste-bar__val">4.5/5</span></div>
+          </div>
+        </details>
         <a href="produktseite.html" class="bundle-wine-card__link">Zur Einzelansicht &rarr;</a>
       </div>
       <!-- Wein 5 -->
       <div class="bundle-wine-card">
-        <div class="ph-img bundle-wine-card__img">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1" style="width:20px;height:20px;"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><path d="M21 15l-5-5L5 21"/></svg>
-          <span style="font-size:0.55rem;">Flasche</span>
+        <div class="bundle-wine-card__head">
+          <span class="bundle-wine-card__qty">1&times;</span>
+          <div>
+            <h4 class="bundle-wine-card__name">Cuvée „Roter Faden" 2022</h4>
+            <div class="bundle-wine-card__row">
+              <span class="bundle-wine-card__meta">Rotwein · Halbtrocken · Pfalz</span>
+              <span class="bundle-wine-card__price">12,90 €</span>
+              <span class="bundle-wine-card__stars">&#9733; 4,4</span>
+            </div>
+          </div>
         </div>
-        <span class="bundle-wine-card__qty">1&times; im Paket</span>
-        <h4 class="bundle-wine-card__name">Cuvée „Roter Faden" 2022</h4>
-        <div class="bundle-wine-card__meta">Rotwein · Halbtrocken · Pfalz</div>
-        <div class="bundle-wine-card__stars">&#9733;&#9733;&#9733;&#9733;&#9734; <span>4,4 (73)</span></div>
-        <div class="bundle-wine-card__price">Einzelpreis: 12,90 € <span>(17,20 €/l)</span></div>
+        <details class="bundle-wine-card__taste">
+          <summary>Geschmacksprofil</summary>
+          <div class="taste-grid">
+            <div class="taste-bar"><span class="taste-bar__label">Süße</span><div class="taste-bar__track"><div class="taste-bar__fill" style="width:30%"></div></div><span class="taste-bar__val">1.5/5</span></div>
+            <div class="taste-bar"><span class="taste-bar__label">Frucht</span><div class="taste-bar__track"><div class="taste-bar__fill" style="width:80%"></div></div><span class="taste-bar__val">4/5</span></div>
+            <div class="taste-bar"><span class="taste-bar__label">Säure</span><div class="taste-bar__track"><div class="taste-bar__fill" style="width:50%"></div></div><span class="taste-bar__val">2.5/5</span></div>
+            <div class="taste-bar"><span class="taste-bar__label">Mineralik</span><div class="taste-bar__track"><div class="taste-bar__fill" style="width:50%"></div></div><span class="taste-bar__val">2.5/5</span></div>
+            <div class="taste-bar"><span class="taste-bar__label">Körper</span><div class="taste-bar__track"><div class="taste-bar__fill" style="width:70%"></div></div><span class="taste-bar__val">3.5/5</span></div>
+          </div>
+        </details>
         <a href="produktseite.html" class="bundle-wine-card__link">Zur Einzelansicht &rarr;</a>
       </div>
-      <!-- Wein 6 (leer — Platzhalter für 2. Dornfelder) -->
+      <!-- Wein 6 -->
       <div class="bundle-wine-card">
-        <div class="ph-img bundle-wine-card__img">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1" style="width:20px;height:20px;"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><path d="M21 15l-5-5L5 21"/></svg>
-          <span style="font-size:0.55rem;">Flasche</span>
+        <div class="bundle-wine-card__head">
+          <span class="bundle-wine-card__qty">Bonus</span>
+          <div>
+            <h4 class="bundle-wine-card__name">Portugieser Weißherbst 2023</h4>
+            <div class="bundle-wine-card__row">
+              <span class="bundle-wine-card__meta">Rosé · Halbtrocken · Pfalz</span>
+              <span class="bundle-wine-card__price">8,90 €</span>
+              <span class="bundle-wine-card__stars">&#9733; 4,1</span>
+            </div>
+          </div>
         </div>
-        <span class="bundle-wine-card__qty">Bonuswein</span>
-        <h4 class="bundle-wine-card__name">Portugieser Weißherbst 2023</h4>
-        <div class="bundle-wine-card__meta">Rosé · Halbtrocken · Pfalz</div>
-        <div class="bundle-wine-card__stars">&#9733;&#9733;&#9733;&#9733;&#9734; <span>4,1 (38)</span></div>
-        <div class="bundle-wine-card__price">Einzelpreis: 8,90 € <span>(11,87 €/l)</span></div>
+        <details class="bundle-wine-card__taste">
+          <summary>Geschmacksprofil</summary>
+          <div class="taste-grid">
+            <div class="taste-bar"><span class="taste-bar__label">Süße</span><div class="taste-bar__track"><div class="taste-bar__fill" style="width:40%"></div></div><span class="taste-bar__val">2/5</span></div>
+            <div class="taste-bar"><span class="taste-bar__label">Frucht</span><div class="taste-bar__track"><div class="taste-bar__fill" style="width:70%"></div></div><span class="taste-bar__val">3.5/5</span></div>
+            <div class="taste-bar"><span class="taste-bar__label">Säure</span><div class="taste-bar__track"><div class="taste-bar__fill" style="width:60%"></div></div><span class="taste-bar__val">3/5</span></div>
+            <div class="taste-bar"><span class="taste-bar__label">Mineralik</span><div class="taste-bar__track"><div class="taste-bar__fill" style="width:40%"></div></div><span class="taste-bar__val">2/5</span></div>
+            <div class="taste-bar"><span class="taste-bar__label">Körper</span><div class="taste-bar__track"><div class="taste-bar__fill" style="width:40%"></div></div><span class="taste-bar__val">2/5</span></div>
+          </div>
+        </details>
         <a href="produktseite.html" class="bundle-wine-card__link">Zur Einzelansicht &rarr;</a>
       </div>
     </div>
@@ -617,7 +682,7 @@
 <!-- ============================================================
      12. KATEGORIEN
      ============================================================ -->
-<section class="section fade-in">
+<section class="section fade-in" style="padding-bottom:40px;">
   <div class="container" style="text-align:center;">
     <span class="label">Kategorien</span>
     <h2>
